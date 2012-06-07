@@ -1,0 +1,11 @@
+<script type="text/javascript" src="admin.js"></script>
+<center><img class="banner2" src="http://i.imgur.com/18eEh.png"></center>
+<div id="adminPage">
+<h2>Site Manager </h2>
+    <br /><br />
+    <%= link_to 'APARTMENTS', :action=>'index', :controller=>'apartments' %><br /><br />
+
+    <%= link_to 'USERS', :action=>'index', :controller=>'users' %><br /><br />
+    <span class="logoutButton">  <%= link_to image_tag("exit.png"), {:action => 'destroy', :controller => 'sessions'} %> </span>
+    </div>
+</div>

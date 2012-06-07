@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  Bed: 1
+  Bath: 1
+  Rent: MyString
+  Pets: MyString
+  Security_Deposit: MyString
+  Parking: MyString
+  Laundy: MyString
+  Owner: MyString
+  Date_Avail: 2012-05-29
+  Type_Heat: MyString
+  AC: MyString
+
+two:
+  Bed: 1
+  Bath: 1
+  Rent: MyString
+  Pets: MyString
+  Security_Deposit: MyString
+  Parking: MyString
+  Laundy: MyString
+  Owner: MyString
+  Date_Avail: 2012-05-29
+  Type_Heat: MyString
+  AC: MyString
