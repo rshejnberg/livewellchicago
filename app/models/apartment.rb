@@ -1,6 +1,6 @@
 class Apartment < ActiveRecord::Base
     attr_accessible :AC, :Bath, :Bed, :Date_Avail, :Laundy, :Owner, :Parking, :Pets, :Rent, :Security_Deposit, :Type_Heat, :location, :availability, :agent, :description, :photo
-    belongs_to :user
+    
     has_attached_file :photo, :styles => {:small => "200x200>", :large => "350x350>"}
     AGENTS = ['Jason Gold', 'Serafin Herrera', 'Alexia Kouklowsky']
     LAUNDRYSEL = ['In Building', 'In Unit', 'None']
