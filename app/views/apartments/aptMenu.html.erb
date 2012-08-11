@@ -1,24 +1,19 @@
 <head>
 <script src="assets/aptMenu.js"></script>
 </head>
-
-<header><img class="bannerApt" src="http://i.imgur.com/18eEh.png"></header>
+<br /><br />
  <nav>
-       <span class="aptMenuNav"
-       <%= link_to image_tag("home.png"), root_url %>
+      
+    <span class="home"> <%= link_to image_tag("home.png"), root_url %></span>
        <%= link_to image_tag("apartments.png"), {:action => 			'aptMenu', :controller => 'apartments'} %>
-       <span class="aptForms"> <%= link_to image_tag("forms.png"), root_url %></span>
-        <%= link_to image_tag("landlords2.png"), root_url %>
-        <%= link_to image_tag("contactus.png"), root_url %>
- </span>
+        <%= link_to image_tag("forms.png"), root_url %>
+        <%= link_to image_tag("landlords.png"), root_url %>
+        <span class="contactUs"><%= link_to image_tag("contactus.png"), root_url %></span>
    
     </nav>
 <div id="aptMenuTable">
-<br /><br />
+<br /><br /><br /><br /><br />
 
-
- 
- 
     <div id="aptMenu" class="aptMenu">
     <span class="menuSel" id="studioBut"> Studio </span>
     <span class="menuSel" id="1bdr"> 1BDR </span>
@@ -30,8 +25,8 @@
   <br /><br /><br />
   
   <table id="aptAll">
-    <div id="allApt">
-        <% @apartments.each do |apartment| %>   
+    <div id="allApt" >
+        <% @apartments.each do |apartment| %>
        <tr><td>
         Area: <%= apartment.location %><br />  
         <%= apartment.availability %><br />
@@ -47,8 +42,8 @@
         Heat: <%= apartment.Type_Heat %><br />
         AC: <%= apartment.AC %> </td><td><%= link_to (apartment) do  %>
         <%= image_tag apartment.photo.url (:small) %> <br /><% end %>
-        </td> </tr>
-        <% end %></div>
+        <hr></td></tr>
+        <% end %><hr></div>
   </table>
     <table id="studio">
     <div id="studio0">

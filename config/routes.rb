@@ -8,6 +8,8 @@ LiveWell::Application.routes.draw do
   get "main/admin"
     
   get "apartments/aptMenu"
+  
+  get "apartments/pic1"
 
   resources :apartments
 

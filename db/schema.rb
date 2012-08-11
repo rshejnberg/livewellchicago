@@ -10,7 +10,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120605202328) do
+ActiveRecord::Schema.define(:version => 20120801181057) do
+
+  create_table "apartment_images", :force => true do |t|
+    t.string   "caption"
+    t.integer  "apartment_id"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+  end
 
   create_table "apartments", :force => true do |t|
     t.integer  "Bed"
@@ -24,8 +35,8 @@ ActiveRecord::Schema.define(:version => 20120605202328) do
     t.date     "Date_Avail"
     t.string   "Type_Heat"
     t.string   "AC"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
     t.string   "location"
     t.text     "description"
     t.string   "availability"
@@ -36,6 +47,18 @@ ActiveRecord::Schema.define(:version => 20120605202328) do
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
     t.integer  "user_id"
+    t.string   "photo2_file_name"
+    t.string   "photo2_content_type"
+    t.integer  "photo2_file_size"
+    t.datetime "photo2_updated_at"
+    t.string   "photo3_file_name"
+    t.string   "photo3_content_type"
+    t.integer  "photo3_file_size"
+    t.datetime "photo3_updated_at"
+    t.string   "photo4_file_name"
+    t.string   "photo4_content_type"
+    t.integer  "photo4_file_size"
+    t.datetime "photo4_updated_at"
   end
 
   create_table "photo_admins", :force => true do |t|

@@ -15,75 +15,94 @@
     <div class="field">
     <%= f.label :agent %><br />
   <%= f.collection_select :agent, Apartment::AGENTS, :to_s, :to_s, 
-       :include_blank => true %>
+       :include_blank => true %><br />
          </div>
   <div class="field">
     <%= f.label :location %><br />
-    <%= f.text_field :location %>
+    <%= f.text_field :location %><br />
   </div>
     <div class="field">
     <%= f.label :availability %><br />
     <%= f.collection_select :availability, Apartment::AVAILSEL, :to_s, :to_s, 
-       :include_blank => true %>
+       :include_blank => true %><br />
   </div>
   <div class="field">
     <%= f.label :Bed %><br />
-    <%= f.number_field :Bed %>
+    <%= f.number_field :Bed %><br />
   </div>
   <div class="field">
     <%= f.label :Bath %><br />
-    <%= f.number_field :Bath %>
+    <%= f.number_field :Bath %><br />
   </div>
   <div class="field">
     <%= f.label :Rent %><br />
-    <%= f.text_field :Rent %>
+    <%= f.text_field :Rent %><br />
   </div>
   <div class="field">
     <%= f.label :Pets %><br />
      <%= f.collection_select :Pets, Apartment::PETSSEL, :to_s, :to_s, 
-       :include_blank => true %>
+       :include_blank => true %><br />
   </div>
   <div class="field">
     <%= f.label :Security_Deposit %><br />
-    <%= f.text_field :Security_Deposit %>
+    <%= f.text_field :Security_Deposit %><br />
   </div>
   <div class="field">
     <%= f.label :Parking %><br />
-    <%= f.text_field :Parking %>
+    <%= f.text_field :Parking %><br />
   </div>
   <div class="field">
     <%= f.label :Laundry %><br />
      <%= f.collection_select :Laundy, Apartment::LAUNDRYSEL, :to_s, :to_s, 
-       :include_blank => true %>
+       :include_blank => true %><br />
   </div>
   <div class="field">
     <%= f.label :Owner %><br />
-    <%= f.text_field :Owner %>
+    <%= f.text_field :Owner %><br />
   </div>
   <div class="field">
     <%= f.label :Date_Avail %><br />
-    <%= f.date_select :Date_Avail %>
+    <%= f.date_select :Date_Avail %><br />
   </div>
   <div class="field">
     <%= f.label :Type_Heat %><br />
     <%= f.collection_select :Type_Heat, Apartment::HEATSEL, :to_s, :to_s, 
-       :include_blank => true %>
+       :include_blank => true %><br />
   </div>
   <div class="field">
     <%= f.label :AC %><br />
      <%= f.collection_select :AC, Apartment::ACSEL, :to_s, :to_s, 
-       :include_blank => true %>
-  </div>
+       :include_blank => true %><br />
+  </div><br />
+    
     <div class="field">
     <%= f.file_field :photo %><br />
-    
+     <%= f.file_field :photo2 %><br />
+     <%= f.file_field :photo3 %><br />
+     <%= f.file_field :photo4 %><br />
   </div>
+  
     <div class="field">
     <%= f.label :Description %><br />
-    <%= text_area "apartment", "description", "cols" => 80, "rows" => 10 %>
+    <%= text_area "apartment", "description", "cols" => 60, "rows" => 10 %><br />
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
-<% end %>
+    <div class="field">
+  <% f.fields_for :apartment_image do |apartment| %>
+  <% if apartment.object.new_record? %>
+  <p>
+  <%= apartment.label :caption, "Image Caption" %>
+  <%= apartment.text_field :caption %>
+  </p>
+  <p>
+ <% end %>
+
+ 
+  </p>
+  
+  </div>
+  <% end %><% end %>
 </div>

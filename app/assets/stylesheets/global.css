@@ -69,9 +69,9 @@ body {
 */
 
 .slides_container {
-	width:540px;
+	width:1040px;
     float:center;
-	height:270px;
+	height:870px;
 	overflow:hidden;
 	position:relative;
 	display:none;

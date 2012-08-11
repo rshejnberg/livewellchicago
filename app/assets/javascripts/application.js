@@ -16,11 +16,11 @@
 
 //Project created by Raphael Shejnberg, 2012, IT238
 
-
+$(window).load(function() {
+        $('#slider').nivoSlider();
+    });
 $(function()//event handling function
   {
-  
-  //$("#aptMenu").hide();
   
   $("#forms").hide();
   $(".hovApart").hide();
@@ -32,6 +32,9 @@ $(function()//event handling function
   $("#twoBdr").hide();
   $("#threeBdr").hide();
   $("#fourBdr").hide();
+  $(".pic2big").hide();
+  $(".pic3big").hide();
+  $(".pic4big").hide();
   
   $(".home").click(function(){
                    $("#home").show();
@@ -39,32 +42,37 @@ $(function()//event handling function
                    $("#landlords").hide();
                    $("#contactUs").hide();
                    $("#apartments").hide();
+                   $("#aboutUs").show();
                    });
                    
  $('.backButton').click(function () {
           history.back();
     });
+    	
   $(".forms").click(function(){
                     $("#forms").show();
                     $("#landlords").hide();
                     $("#contactUs").hide();
                     $("#apartments").hide();
                     $("#home").hide();
-                    
+                    $("#aboutUs").hide();
                     });
   $(".contactUs").click(function(){
+  					$(document).ready(function() {
                         $("#contactUs").show();
                         $("#forms").hide();
                         $("#landlords").hide();
                         $("#apartments").hide();
                         $("#home").hide();
-                        });
+                        $("#aboutUs").hide();
+                        }); });
   $(".landlords").click(function(){
                         $("#landlords").show();
                         $("#forms").hide();
                         $("#contactUs").hide();
                         $("#apartments").hide();
                         $("#home").hide();
+                        $("#aboutUs").hide();
                         });
 
   $("#studioBut").click(function(){
@@ -78,11 +86,11 @@ $(function()//event handling function
                        });
   $("#1bdr").click(function(){
                    		$("studio").hide();
-                         $("#oneBdr").show();
-                         $("#aptAll").hide();
-                         $("#twoBdr").hide();
-                         $("#threeBdr").hide();
-                         $("#fourBdr").hide();
+                        $("#oneBdr").show();
+                        $("#aptAll").hide();
+                        $("#twoBdr").hide();
+                        $("#threeBdr").hide();
+                        $("#fourBdr").hide();
                          });
   $("#2bdr").click(function(){
                    $("studio").hide();
@@ -116,19 +124,47 @@ $(function()//event handling function
                       $("#threeBdr").hide();
                       $("#fourBdr").hide();
                       });
-    $(".aptForms").click(function(){
+  $(".aptForms").click(function(){
 	    	$("#homePage").ready(function(){
-	    	
   				   $("#home").hide();
                    $("#forms").show();
                    $("#landlords").hide();
                    $("#contactUs").hide();
                    $("#apartments").hide();
-                   });	});
+                   });	
+     });
+     
+   
+    $(".pic1small").click(function(){
+ 			$(".pic1big").fadeIn('1000');
+ 			$(".pic2big").hide();
+            $(".pic3big").hide();
+ 			$(".pic4big").hide();
+   });
+   $(".pic2small").click(function(){
+ 			$(".pic1big").hide();
+ 			$(".pic2big").fadeIn('1000');
+ 			$(".pic3big").hide();
+ 			$(".pic4big").hide();             
+   });
+   $(".pic3small").click(function(){
+ 			$(".pic1big").hide();
+ 			$(".pic2big").hide();
+ 			$(".pic3big").fadeIn('1000');
+ 			$(".pic4big").hide();             
+   });
+   $(".pic4small").click(function(){
+ 			$(".pic1big").hide();
+ 			$(".pic2big").hide();
+ 			$(".pic3big").hide();
+ 			$(".pic4big").fadeIn('1000');             
+   });
+   
+   
 
   $(".landlords").hover(
-                        function(){this.src = this.src.replace("assets/landlords2","assets/							hovlandlords2");},
-                        function(){this.src = this.src.replace("assets/hovlandlords2","assets/						landlords2");}
+                        function(){this.src = this.src.replace("assets/landlords","assets/							hovlandlords");},
+                        function(){this.src = this.src.replace("assets/hovlandlords","assets/						landlords");}
                         );
 $(".apartments").hover(
                         function(){ $(".aptBut").hide();$(".hovApart").show();},
@@ -143,8 +179,8 @@ $(".apartments").hover(
                     function(){this.src = this.src.replace("assets/hovforms","assets/forms");}
                     );
   $(".contactUs").hover(
-                    function(){this.src = this.src.replace("assets/contactus","assets/							hovcontactus2");},
-                    function(){this.src = this.src.replace("assets/hovcontactus2","assets/						contactus");}
+                    function(){this.src = this.src.replace("assets/contactus","assets/							hovcontactus");},
+                    function(){this.src = this.src.replace("assets/hovcontactus","assets/						contactus");}
                         );
   $(".1bdr").hover(
                    function(){this.src = this.src.replace("assets/1bdr","assets/hov1bdr");},
@@ -182,8 +218,8 @@ $(document).ready(function()
                                       preloadImage: 'img/loading.gif',
                                       generatePagination: true,
                                       play: 5000,
-                                      pause: 1500,
-                                      hoverPause: true,
+                                      pause: 3000,
+                                      hoverPause: false,
                                       // Get the starting slide
                                       start: startSlide,
                                       animationComplete: function(current){

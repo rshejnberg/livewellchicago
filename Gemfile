@@ -9,6 +9,8 @@ gem 'rails', '3.2.3'
 
 gem 'json'
 
+gem 'mysql2'
+
 #gem "rmagick"
 
 
