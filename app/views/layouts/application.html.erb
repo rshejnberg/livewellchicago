@@ -3,7 +3,27 @@
 <head>
 <meta charset="UTF-8" />
 
+<script type="text/javascript" src="livewell.js"></script>
+<script type="text/javascript" src="assets/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="assets/jquery.nivo.slider.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>  
+<link rel="stylesheet" type="text/css" href="livewell.css"  />
+<link rel="stylesheet" href="assets/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="assets/style.css" type="text/css" media="screen" />
 
+
+  <title>Live Well Chicago L.L.C</title>
+  
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+<br />
+<header><div id="banner">Live Well </div></header> 
+<br /><br /><br /><br /><br /><br /><br />
+<%= yield %>
 
 
 </body>
