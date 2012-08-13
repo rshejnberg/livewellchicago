@@ -19,7 +19,7 @@ $(window).load(function() {$('#slider').nivoSlider();});
 
 $(function()//event handling function
   {
-  $('#slider').nivoSlider();
+  
   $("#forms").hide();
   $(".hovApart").hide();
   $("#contactUs").hide();
