@@ -15,9 +15,10 @@
 
 
 //Project created by Raphael Shejnberg, 2012, IT238
-$(window).load(function() {$('#slider').nivoSlider();});
+
 $(function()//event handling function
   {
+  $('#slider').nivoSlider();
   $("#forms").hide();
   $(".hovApart").hide();
   $("#contactUs").hide();
