@@ -1,5 +1,5 @@
 class Apartment < ActiveRecord::Base
-    attr_accessible :AC, :Bath, :Bed, :Date_Avail, :Laundry, :Owner, :Parking, :Pets, :Rent, :Security_Deposit, :Type_Heat, :location, :availability, :agent, :description, :photo, :photo2, :photo3, :photo4
+    attr_accessible :AC, :Bath, :bed, :Date_Avail, :Laundry, :Owner, :Parking, :Pets, :Rent, :Security_Deposit, :Type_Heat, :location, :availability, :agent, :description, :photo, :photo2, :photo3, :photo4
     
     has_many :apartment_image, :dependent => :destroy
     

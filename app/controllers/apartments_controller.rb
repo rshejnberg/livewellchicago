@@ -14,9 +14,9 @@ class ApartmentsController < ApplicationController
     
   def aptMenu
       @apartments = Apartment.all
-      @studio = Apartment.find(:all, :conditions => ["Bed = 0"])
-      @oneBdr = Apartment.find(:all, :conditions => ["Bed = 1"])
-      @twoBdr = Apartment.find(:all, :conditions => ["Bed = 2"])
+      @studio = Apartment.find(:all, :conditions => ["bed = 0"])
+      @oneBdr = Apartment.find(:all, :conditions => ["bed = 1"])
+      @twoBdr = Apartment.find(:all, :conditions => ["bed = 2"])
       @threeBdr = Apartment.find(:all, :conditions => ["bed = 3"])
       @fourPlusBdr = Apartment.find(:all, :conditions => ["bed >= 4"])
       
