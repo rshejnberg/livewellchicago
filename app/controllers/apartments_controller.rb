@@ -15,10 +15,10 @@ class ApartmentsController < ApplicationController
   def aptMenu
       @apartments = Apartment.all
       @studio = Apartment.where(:Bed => '0').all
-      @oneBdr = Apartment.find(:all, :conditions => ["bed = 1"])
-      @twoBdr = Apartment.find(:all, :conditions => ["bed = 2"])
-      @threeBdr = Apartment.find(:all, :conditions => ["bed = 3"])
-      @fourPlusBdr = Apartment.find(:all, :conditions => ["bed >= 4"])
+      @oneBdr = Apartment.where(:Bed => '1').all
+      @twoBdr = Apartment.where(:Bed => '2').all
+      @threeBdr = Apartment.where(:Bed => '3').all
+      @fourPlusBdr = Apartment.where(:Bed => '4').all
       
         respond_to do |format|
             format.html # index.html.erb
