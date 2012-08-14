@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(:version => 20120801181057) do
   end
 
   create_table "apartments", :force => true do |t|
-    t.integer  "bed"
+    t.integer  "Bed"
     t.integer  "Bath"
     t.string   "Rent"
     t.string   "Pets"
