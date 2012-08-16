@@ -16,32 +16,13 @@
 
 //Project created by Raphael Shejnberg, 2012, IT238
 $(window).load(function() {
-        $('#slider').nivoSlider(
-        effect: 'random', // Specify sets like: 'fold,fade,sliceDown'
-        slices: 15, // For slice animations
-        boxCols: 8, // For box animations
-        boxRows: 4, // For box animations
-        animSpeed: 500, // Slide transition speed
-        pauseTime: 3000, // How long each slide will show
-        startSlide: 0, // Set starting Slide (0 index)
-        directionNav: true, // Next & Prev navigation
-        directionNavHide: true, // Only show on hover
-        controlNav: true, // 1,2,3... navigation
-        controlNavThumbs: false, // Use thumbnails for Control Nav
-        pauseOnHover: true, // Stop animation while hovering
-        manualAdvance: false, // Force manual transitions
-        prevText: 'Prev', // Prev directionNav text
-        nextText: 'Next', // Next directionNav text
-        randomStart: false, // Start on a random slide
-        beforeChange: function(){}, // Triggers before a slide transition
-        afterChange: function(){}, // Triggers after a slide transition
-        slideshowEnd: function(){}, // Triggers after all slides have been shown
-        lastSlide: function(){}, // Triggers when last slide is shown
-        afterLoad: function(){} // Triggers when slider has loaded);
-    )});
+    $('#slider').nivoSlider();
+});
 $(function()//event handling function
   {
+  
   $("#forms").hide();
+  $("#aptMenuTable").hide();
   $(".hovApart").hide();
   $("#contactUs").hide();
   $("#landlords").hide();
@@ -54,44 +35,53 @@ $(function()//event handling function
   $(".pic2big").hide();
   $(".pic3big").hide();
   $(".pic4big").hide();
-  
-  $(".home").click(function(){
+  var formApt = false;
+  $(".home").click(showHome());                  	
+  $(".forms").click(showForms());
+  $(".contactUs").click(showContactUs());
+  $(".landlords").click(showLandlords());
+  $(".forms").click(showForms());
+  var formsApt = false;
+ $(".forms2").click(function(){formsApt = true;});
+ $(window).load(function(){
+ 			if(formsApt == true)
+ 			{showForms();}
+ 			});
+  function showHome(){
                     $("#home").show();
                     $("#forms").hide();
                     $("#landlords").hide();
                     $("#contactUs").hide();
                     $("#apartments").hide();
                     $("#aboutUs").show();
-                    });                  
- $('.backButton').click(function () {
-          		    history.back();
-          		    });  	
-  $(".forms").click(function(){
+                    }
+  function showForms(){
                     $("#forms").show();
                     $("#landlords").hide();
                     $("#contactUs").hide();
                     $("#apartments").hide();
                     $("#home").hide();
                     $("#aboutUs").hide();
-                    });
-  $(".contactUs").click(function(){
-  					$(document).ready(function() {
+                    }
+  function showContactUs(){
                         $("#contactUs").show();
                         $("#forms").hide();
                         $("#landlords").hide();
                         $("#apartments").hide();
                         $("#home").hide();
                         $("#aboutUs").hide();
-                        }); 
-                    });
-  $(".landlords").click(function(){
+                        }
+  function showLandlords(){
                     $("#landlords").show();
                     $("#forms").hide();
                     $("#contactUs").hide();
                     $("#apartments").hide();
                     $("#home").hide();
                     $("#aboutUs").hide();
-                    });
+                    }
+  $('.backButton').click(function () {
+          		    history.back();
+          		    });
   $("#studioBut").click(function(){               
                    	$("studio").show();
                     $("#oneBdr").hide();
@@ -173,7 +163,7 @@ $(function()//event handling function
  			$(".pic3big").hide();
  			$(".pic4big").fadeIn('1000');             
  			});
-   
+ 			
    
 
   $(".landlords").hover(

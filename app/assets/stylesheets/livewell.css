@@ -2,23 +2,23 @@
 body {background-image: url("green-wallpaper.jpeg");  font-size: 12px; font-family: "Lucida Sans Unicode"; }
 #main, #new, #aptMenuTable {position: relative; width: 1000px; height: 1200px; top: -300px; background-color: rgba(0,0,0,0.71);  margin: 0 auto; color: white; opacity: 0.9;}
 #homePage { margin: 0 auto; }
-#agents {position: relative; left: 270px; top: 100px;}
+#agents {position: relative; left: 270px; top: 1000px;}
 #aboutUs{color: white; width: 800px; position: relative; margin: 0 auto; top: -175px;}
 .equalHousingPic{height: 50px; width: 50px}
 #footer {font-size: 10px; color: white; position: relative; margin: 0 auto; width: 900px; top:-250px;}
-#forms {text-align: left; padding: 20px; width: 500px;}
-#landlords {text-align: left; padding: 100px; }
+#forms {text-align: left; padding: 20px; width: 500px; position: relative; top: -70px}
+#landlords {text-align: left; padding: 100px; postion: relative; top:1250px}
 .agentName {font-weight: bold}
 #wrapper {width: 900px; position: relative; margin: 0 auto; top: -100px; }
 .button {font-size: 35px; color: white; padding: 15px; letter-spacing: 3px; text-family: helvetica; background-color: rgba(0,0,0,0.73); opacity: 0.8}
-header {width: 625px; margin: 0 auto; color: white; font-size: 80px;text-shadow: none; font-family: "Brush Script MT"; position: relative; top: -30px; left: -160px;}
+header {width: 625px; margin: 0 auto; color: white; font-size: 60px;text-shadow: none; font-family: "Brush Script MT"; position: relative; top: -30px; left: -180px;}
 td > #table {border: solid 1px white;}
 #new {top: -130px; padding: 40px;  }
 #aptMenu { z-index: 3; letter-spacing: 1px; width: 500px;  position: relative; margin: 0 auto; }
 #mapInfo{text-align: left; position: relative; left: 600px; top: 0px; color: white }
 .slidePics {float: right; opacity: 1.0}
 .slideText {position: relative; left: 10px; top: 50px; background-color: gray; opacity: 0.8; color: white; border: solid 5px gray}
-nav {letter-spacing: 30px; z-index: -10; width: 1100px; position: relative; margin: 0 auto; right: -250px; top:-245px; z-index: 4}
+nav {letter-spacing: 20px; z-index: -10; width: 1100px; position: relative; margin: 0 auto; right: -450px; top:-245px; z-index: 4}
 .aptMenuNav {letter-spacing: 30px; width: 1100px; position: relative; margin: 0 auto;  z-index: 4}
 a:hover {text-decoration: none; color: gray}
 #banner {z-index: 1; position: relative; top: -10px; color: white; }
