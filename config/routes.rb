@@ -13,7 +13,6 @@ LiveWell::Application.routes.draw do
 
   resources :apartments
 
-    resources :photo_admins
   get "sessions/new"
 
   resources :users

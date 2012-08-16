@@ -42,8 +42,7 @@ $(function()//event handling function
   $(".landlords").click(showLandlords());
   $(".forms").click(showForms());
 
-  var str = location.pathname;
-  alert( str.charAt( str.length-1 ) );
+ 
 
   function showHome(){
                     $("#home").show();
