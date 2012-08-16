@@ -41,12 +41,10 @@ $(function()//event handling function
   $(".contactUs").click(showContactUs());
   $(".landlords").click(showLandlords());
   $(".forms").click(showForms());
-  var formsApt = false;
- $(".forms2").click(function(){formsApt = true;});
- $(window).load(function(){
- 			if(formsApt == true)
- 			{showForms();}
- 			});
+
+  var str = location.pathname;
+  alert( str.charAt( str.length-1 ) );
+
   function showHome(){
                     $("#home").show();
                     $("#forms").hide();
