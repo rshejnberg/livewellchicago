@@ -42,7 +42,6 @@ $(function()//event handling function
   $(".landlords").click(showLandlords());
   $(".forms").click(showForms());
 
- document.write("TTESTESTESTEST");
 
   function showHome(){
                     $("#home").show();
