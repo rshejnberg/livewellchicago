@@ -35,7 +35,7 @@ $(function()//event handling function
   $(".pic2big").hide();
   $(".pic3big").hide();
   $(".pic4big").hide();
-  var formApt = false;
+  
   $(".home").click(showHome());                  	
   $(".forms").click(showForms());
   $(".contactUs").click(showContactUs());
