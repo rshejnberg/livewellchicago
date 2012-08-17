@@ -230,7 +230,7 @@ $(document).ready(function()
 
 //Url Parser (From Reflection at webmasterworld.com /*
 var category = QueryString("cat");
-if(category == "forms"){showForms();}
+//if(category == "forms"){showForms();}
 function QueryString(key) 
 { 
 var value = null; 
