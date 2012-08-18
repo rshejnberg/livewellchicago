@@ -32,13 +32,11 @@ $(function()//event handling function
   $(".pic2big").hide();
   $(".pic3big").hide();
   $(".pic4big").hide();
-  
-  $(".home").click(showHome());                  	
-  $(".forms").click(showForms());
+                    	
   $(".forms").click(showForms());
   $(".contactUs").click(showContactUs());
   $(".landlords").click(showLandlords());
-
+  $(".home").click(showHome());
 
   function showHome(){
                     $("#home").show();
@@ -192,7 +190,7 @@ $(".apartments").hover(
 
 //Url Parser (From Reflection at webmasterworld.com 
 
-var category = QueryString("cat");
+
 
 
 function QueryString(key) 
@@ -228,6 +226,7 @@ QueryString.values[QueryString.values.length] = value;
 } 
 } 
 } 
-
+var category = QueryString("cat");
+alert(QueryString("cat"));
 QueryString_Parse()
 
