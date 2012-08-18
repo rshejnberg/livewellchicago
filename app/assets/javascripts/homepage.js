@@ -21,13 +21,10 @@ $(window).load(function() {
 $(function()//event handling function
   {
   
-  $("#forms").hide();
+  showHome();
+  $("#aptAll").show();
   $("#aptMenuTable").hide();
   $(".hovApart").hide();
-  $("#contactUs").hide();
-  $("#landlords").hide();
-  $("#apartments").hide();
-  $("#aptAll").show();
   $("#oneBdr").hide();
   $("#twoBdr").hide();
   $("#threeBdr").hide();
@@ -35,12 +32,12 @@ $(function()//event handling function
   $(".pic2big").hide();
   $(".pic3big").hide();
   $(".pic4big").hide();
-  var formApt = false;
+  
   $(".home").click(showHome());                  	
+  $(".forms").click(showForms());
   $(".forms").click(showForms());
   $(".contactUs").click(showContactUs());
   $(".landlords").click(showLandlords());
-  $(".forms").click(showForms());
 
 
   function showHome(){
@@ -60,13 +57,13 @@ $(function()//event handling function
                     $("#aboutUs").hide();
                     }
   function showContactUs(){
-                        $("#contactUs").show();
-                        $("#forms").hide();
-                        $("#landlords").hide();
-                        $("#apartments").hide();
-                        $("#home").hide();
-                        $("#aboutUs").hide();
-                        }
+                    $("#contactUs").show();
+                    $("#forms").hide();
+                    $("#landlords").hide();
+                    $("#apartments").hide();
+                    $("#home").hide();
+                    $("#aboutUs").hide();
+                    }
   function showLandlords(){
                     $("#landlords").show();
                     $("#forms").hide();
@@ -75,9 +72,7 @@ $(function()//event handling function
                     $("#home").hide();
                     $("#aboutUs").hide();
                     }
-  $('.backButton').click(function () {
-          		    history.back();
-          		    });
+  
   $("#studioBut").click(function(){               
                    	$("studio").show();
                     $("#oneBdr").hide();
@@ -119,23 +114,17 @@ $(function()//event handling function
                     $("studio").hide();
                     });
   $("#all").click(function(){
+  					$("#aptAll").show();
   					$("studio").hide();
                     $("#oneBdr").hide();
-                    $("#aptAll").show();
                     $("#twoBdr").hide();
                     $("#threeBdr").hide();
                     $("#fourBdr").hide();
                     });
-  $(".aptForms").click(function(){
-	    	$("#homePage").ready(function(){
-  				   $("#home").hide();
-                   $("#forms").show();
-                   $("#landlords").hide();
-                   $("#contactUs").hide();
-                   $("#apartments").hide();
-                   });	
-             });
-    $(".pic1small").click(function(){
+  $('.backButton').click(function () {history.back();});
+             
+    //Individual apartment slideshow
+   $(".pic1small").click(function(){
  			$(".pic1big").fadeIn('1000');
  			$(".pic2big").hide();
             $(".pic3big").hide();
@@ -161,63 +150,64 @@ $(function()//event handling function
  			});
  			
    
-
+//Hover image swaps
   $(".landlords").hover(
-                        function(){this.src = this.src.replace("assets/landlords","assets/							hovlandlords");},
-                        function(){this.src = this.src.replace("assets/hovlandlords","assets/						landlords");}
+                  function(){this.src = this.src.replace("assets/landlords","assets/hovlandlords");},
+                  function(){this.src = this.src.replace("assets/hovlandlords","assets/landlords");}
                         );
 $(".apartments").hover(
-                        function(){ $(".aptBut").hide();$(".hovApart").show();},
-                        function(){$(".hovApart").hide(); $(".aptBut").show();}
+                  function(){ $(".aptBut").hide();$(".hovApart").show();},
+                  function(){$(".hovApart").hide(); $(".aptBut").show();}
                         );
   $(".home").hover(
-                   function(){this.src = this.src.replace("assets/home","assets/hovhome");},
-                   function(){this.src = this.src.replace("assets/hovhome","assets/home");}
+                  function(){this.src = this.src.replace("assets/home","assets/hovhome");},
+                  function(){this.src = this.src.replace("assets/hovhome","assets/home");}
                    );
   $(".forms").hover(
-                    function(){this.src = this.src.replace("assets/forms","assets/								hovforms");},
-                    function(){this.src = this.src.replace("assets/hovforms","assets/forms");}
+                  function(){this.src = this.src.replace("assets/forms","assets/hovforms");},
+                  function(){this.src = this.src.replace("assets/hovforms","assets/forms");}
                     );
   $(".contactUs").hover(
-                    function(){this.src = this.src.replace("assets/contactus","assets/							hovcontactus");},
-                    function(){this.src = this.src.replace("assets/hovcontactus","assets/						contactus");}
+                  function(){this.src = this.src.replace("assets/contactus","assets/hovcontactus");},
+                  function(){this.src = this.src.replace("assets/hovcontactus","assets/contactus");}
                         );
   $(".1bdr").hover(
-                   function(){this.src = this.src.replace("assets/1bdr","assets/hov1bdr");},
-                   function(){this.src = this.src.replace("assets/hov1bdr","assets/1bdr");});
+                  function(){this.src = this.src.replace("assets/1bdr","assets/hov1bdr");},
+                  function(){this.src = this.src.replace("assets/hov1bdr","assets/1bdr");});
   $(".2bdr").hover(
-                   function(){this.src = this.src.replace("assets/2bdr","assets/hov2bdr");},
-                   function(){this.src = this.src.replace("assets/hov2bdr","assets/2bdr");});
+                  function(){this.src = this.src.replace("assets/2bdr","assets/hov2bdr");},
+                  function(){this.src = this.src.replace("assets/hov2bdr","assets/2bdr");});
   $(".3bdr").hover(
-                   function(){this.src = this.src.replace("assets/3bdr","assets/hov3bdr");},
-                   function(){this.src = this.src.replace("assets/hov3bdr","assets/3bdr");});
+                  function(){this.src = this.src.replace("assets/3bdr","assets/hov3bdr");},
+                  function(){this.src = this.src.replace("assets/hov3bdr","assets/3bdr");});
   $(".4+bdr").hover(
-                    function(){this.src = this.src.replace("assets/4+bdr","assets/hov4+bdr");},
-                    function(){this.src = this.src.replace("assets/hov4+bdr","assets/4+bdr");});
+                  function(){this.src = this.src.replace("assets/4+bdr","assets/hov4+bdr");},
+                  function(){this.src = this.src.replace("assets/hov4+bdr","assets/4+bdr");});
   $(".studio").hover(
-                     function(){this.src = this.src.replace("assets/studio","assets/hovstudio");},
-                     function(){this.src = this.src.replace("assets/hovstudio","assets/studio");});
-   $(".menuSel").hover(function(){
-                    $(this).css('background-color', 'gray', 'color', 'black');
-                    },function() {
-                    $(this).css('background-color', '#2E272A', 'color', 'white');});
+                  function(){this.src = this.src.replace("assets/studio","assets/hovstudio");},
+                  function(){this.src = this.src.replace("assets/hovstudio","assets/studio");});
+  $(".menuSel").hover(function(){$(this).css('background-color', 'gray', 'color', 'black');},
+  				      function() {$(this).css('background-color', '#2E272A', 'color', 'white');});
   });
 
 //Url Parser (From Reflection at webmasterworld.com 
-var category = QueryString(cat)
+
+var category = QueryString("cat");
+
+
 function QueryString(key) 
-{ 
-var value = null; 
-for (var i=0;i<QueryString.keys.length;i++) 
-{ 
-if (QueryString.keys[i]==key) 
-{ 
-value = QueryString.values[i]; 
-break; 
-} 
-} 
-return value; 
-} 
+	{ 
+		var value = null; 
+		for (var i=0;i<QueryString.keys.length;i++) 
+			{ 
+				if (QueryString.keys[i]==key) 
+				{ 
+				value = QueryString.values[i]; 
+				break; 
+				} 
+			} 
+		return value; 
+	} 
 QueryString.keys = new Array(); 
 QueryString.values = new Array();
 
@@ -238,5 +228,6 @@ QueryString.values[QueryString.values.length] = value;
 } 
 } 
 } 
+
 QueryString_Parse()
 
