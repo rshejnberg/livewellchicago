@@ -18,7 +18,7 @@
 $(window).load(function() {$('#slider').nivoSlider();});
 $(function()//event handling function
   {
-  
+  $("#home").show();
   $("#forms").hide();
   $("#aptMenuTable").hide();
   $(".hovApart").hide();
