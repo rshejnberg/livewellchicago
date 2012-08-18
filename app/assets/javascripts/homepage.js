@@ -12,13 +12,15 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+
 
 //Project created by Raphael Shejnberg, 2012, IT238
-$(window).load(function() {$('#slider').nivoSlider();});
+$(window).load(function() {
+    $('#slider').nivoSlider();
+});
 $(function()//event handling function
   {
-  $("#home").show();
+  
   $("#forms").hide();
   $("#aptMenuTable").hide();
   $(".hovApart").hide();
@@ -33,13 +35,14 @@ $(function()//event handling function
   $(".pic2big").hide();
   $(".pic3big").hide();
   $(".pic4big").hide();
-  
+  var formApt = false;
   $(".home").click(showHome());                  	
   $(".forms").click(showForms());
   $(".contactUs").click(showContactUs());
   $(".landlords").click(showLandlords());
   $(".forms").click(showForms());
 
+ document.write("TTESTESTESTEST");
 
   function showHome(){
                     $("#home").show();
@@ -201,36 +204,8 @@ $(".apartments").hover(
                     $(this).css('background-color', '#2E272A', 'color', 'white');});
   });
 
-
-
-$(document).ready(function()
-                  {
-                  // Set starting slide to 1
-                  var startSlide = 1;
-                  // Get slide number if it exists
-                  if (window.location.hash) {
-                  startSlide = window.location.hash.replace('#','');
-                  }
-                  // Initialize Slides
-                  $('#slides').slides({
-                                      preload: true,
-                                      preloadImage: 'img/loading.gif',
-                                      generatePagination: true,
-                                      play: 5000,
-                                      pause: 3000,
-                                      hoverPause: false,
-                                      // Get the starting slide
-                                      start: startSlide,
-                                      animationComplete: function(current){
-                                      // Set the slide number as a hash
-                                      window.location.hash = '#' + current;
-                                      }
-                                      });
-                  });
-
-//Url Parser (From Reflection at webmasterworld.com /*
-var category = QueryString("cat");
-//if(category == "forms"){showForms();}
+//Url Parser (From Reflection at webmasterworld.com 
+var category = QueryString(cat)
 function QueryString(key) 
 { 
 var value = null; 
