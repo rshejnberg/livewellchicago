@@ -9,6 +9,10 @@
 //
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
+//
+//= require jquery
+//= require jquery_ujs
+
 
 
 //Project created by Raphael Shejnberg, 2012, IT238
@@ -19,7 +23,7 @@ $(function()//event handling function
   {
  
   
-  
+ // showHome();
   $("#aptAll").show();
   $("#aptMenuTable").hide();
   $(".hovApart").hide();
@@ -30,7 +34,8 @@ $(function()//event handling function
   $(".pic2big").hide();
   $(".pic3big").hide();
   $(".pic4big").hide();
-    
+                
+         $("#home").hide();
                         
                   	
   $(".formsNav").click(showForms());
@@ -38,7 +43,6 @@ $(function()//event handling function
   $(".landlords").click(showLandlords());
   $(".home").click(showHome());
 
-  
 
 
   function showHome(){
