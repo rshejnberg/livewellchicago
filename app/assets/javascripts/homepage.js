@@ -9,9 +9,6 @@
 //
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
-//
-//= require jquery
-//= require jquery_ujs
 
 
 //Project created by Raphael Shejnberg, 2012, IT238
@@ -20,8 +17,9 @@ $(window).load(function() {
 });
 $(function()//event handling function
   {
+ 
   
-  showHome();
+  
   $("#aptAll").show();
   $("#aptMenuTable").hide();
   $(".hovApart").hide();
@@ -32,11 +30,16 @@ $(function()//event handling function
   $(".pic2big").hide();
   $(".pic3big").hide();
   $(".pic4big").hide();
-                    	
-  $(".forms").click(showForms());
+    
+                        
+                  	
+  $(".formsNav").click(showForms());
   $(".contactUs").click(showContactUs());
   $(".landlords").click(showLandlords());
   $(".home").click(showHome());
+
+  
+
 
   function showHome(){
                     $("#home").show();
@@ -54,6 +57,8 @@ $(function()//event handling function
                     $("#home").hide();
                     $("#aboutUs").hide();
                     }
+                    
+                    $(".forms").click(function(){$("#forms").show(),$("#landlords").hide(),$("#contactUs").hide(),$("#apartments").hide(),$("#home").hide(),$("#aboutUs").hide()}),
   function showContactUs(){
                     $("#contactUs").show();
                     $("#forms").hide();
@@ -210,23 +215,30 @@ QueryString.keys = new Array();
 QueryString.values = new Array();
 
 function QueryString_Parse() 
-{ 
-var query = window.location.search.substring(1); 
-var pairs = query.split("&");
+	{ 
+		var query = window.location.search.substring(1); 
+		var pairs = query.split("&");
 
-for (var i=0;i<pairs.length;i++) 
-{ 
-var pos = pairs[i].indexOf('='); 
-if (pos >= 0) 
-{ 
-var argname = pairs[i].substring(0,pos); 
-var value = pairs[i].substring(pos+1); 
-QueryString.keys[QueryString.keys.length] = argname; 
-QueryString.values[QueryString.values.length] = value; 
-} 
-} 
-} 
+		for (var i=0;i<pairs.length;i++) 
+			{ 
+				var pos = pairs[i].indexOf('='); 
+				if (pos >= 0) 
+				{ 
+					var argname = pairs[i].substring(0,pos); 
+					var value = pairs[i].substring(pos+1); 
+					QueryString.keys[QueryString.keys.length] = argname; 
+					QueryString.values[QueryString.values.length] = value; 
+	} } } 
+QueryString_Parse();
 var category = QueryString("cat");
-alert(QueryString("cat"));
-QueryString_Parse()
+
+
+
+//alert(QueryString("cat"));
+
+function testForms()
+{
+$("#home").hide();
+$("#forms").show();
+}
 
