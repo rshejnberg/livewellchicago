@@ -32,22 +32,22 @@
   <table id="aptAll">
     <div id="allApt" >
         <% @apartments.each do |apartment| %>
-       <tr><td>
+       <tr><td><hr>
         Area: <%= apartment.location %><br />  
         <%= apartment.availability %><br />
         Available: <%= apartment.Date_Avail %><br />
         Bed: <%= apartment.Bed %>&nbsp&nbsp
         Bath: <%= apartment.Bath %><br />
         Agent: <%= apartment.agent %><br />
-        Rent: <%= apartment.Rent %><br /></td><td>
+        Rent: <%= apartment.Rent %><br /><hr></td><td><hr>
         Deposit: <%= apartment.Security_Deposit %><br />
         Pets: <%= apartment.Pets %><br />
         Parking: <%= apartment.Parking %><br />
         Laundy: <%= apartment.Laundy %><br />
         Heat: <%= apartment.Type_Heat %><br />
-        AC: <%= apartment.AC %> </td><td><%= link_to (apartment) do  %>
+        AC: <%= apartment.AC %> <hr></td><td><%= link_to (apartment) do  %>
         <%= image_tag apartment.photo.url (:small) %> <br /><% end %>
-        <hr></td></tr>
+        </td></tr>
         <% end %><hr></div>
   </table>
     <table id="studio">
