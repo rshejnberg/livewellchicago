@@ -20,13 +20,15 @@ $(window).ready(function() {
     $("#forms").hide();
     $("#home").show();
     $("#aboutUs").show();
-    
+    if(QueryString("cat") == "forms"){$("#forms").show(); $("#home").hide();}
+    if(QueryString("cat") == "contactUs"){$("#contactUs").show(); $("#home").hide();}
+    if(QueryString("cat") == "landlords"){$("#landlords").show(); $("#home").hide();}
+
     showHome();
 });
 $(function()//event handling function
   {
  
-  
   
   $("#aptAll").show();
   $("#aptMenuTable").hide();
@@ -236,12 +238,13 @@ function QueryString_Parse()
 					QueryString.keys[QueryString.keys.length] = argname; 
 					QueryString.values[QueryString.values.length] = value; 
 	} } } 
+
 QueryString_Parse();
 var category = QueryString("cat");
+if(category == "forms"){$("#forms").show();}
 
 
 
-//alert(QueryString("cat"));
 
 function testForms()
 {
