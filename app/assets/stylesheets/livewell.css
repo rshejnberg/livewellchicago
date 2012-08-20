@@ -11,7 +11,7 @@ body {background-image: url("green-wallpaper.jpeg");  font-size: 12px; font-fami
 .agentName {font-weight: bold}
 #wrapper {width: 900px; position: relative; margin: 0 auto; top: -100px; }
 .button {font-size: 35px; color: white; padding: 15px; letter-spacing: 3px; text-family: helvetica; background-color: rgba(0,0,0,0.73); opacity: 0.8}
-header {width: 625px; margin: 0 auto; color: white; font-size: 60px;text-shadow: none; font-family: "Brush Script MT"; position: relative; top: -30px; left: -160px;}
+header {width: 625px; margin: 0 auto; color: white; font-size: 45px;text-shadow: none; font-family: "Trebuchet MS"; position: relative; top: -15px; left: -160px;}
 header > a:link {color: white}
 td > #table {border: solid 1px white;}
 #new {top: -130px; padding: 40px;  }
