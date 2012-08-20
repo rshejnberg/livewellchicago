@@ -20,6 +20,7 @@ $(window).ready(function() {
     $("#forms").hide();
     $("#home").show();
     $("#aboutUs").show();
+    
     showHome();
 });
 $(function()//event handling function
