@@ -15,8 +15,11 @@
 //= require_tree .
 
 //Project created by Raphael Shejnberg, 2012, IT238
-$(window).load(function() {
+$(window).ready(function() {
     $('#slider').nivoSlider();
+    $("#forms").hide();
+    $("#home").show();
+    $("#aboutUs").show();
     showHome();
 });
 $(function()//event handling function
