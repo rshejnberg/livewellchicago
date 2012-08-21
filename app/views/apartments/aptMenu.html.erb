@@ -1,5 +1,5 @@
 <head>
-
+ <%= stylesheet_link_tag "tableStyle", :media => "all" %>
 </head>
 <br /><br />
  <nav>
@@ -19,36 +19,36 @@
 <div id="aptMenuTable">
 <br /><br /><br /><br /><br />
 
-    <div id="aptMenu" class="aptMenu">
+    <div id="aptMenu" class="aptMenu"><center>
     <span class="menuSel" id="studioBut"> Studio </span>
     <span class="menuSel" id="1bdr"> 1BDR </span>
     <span class="menuSel" id="2bdr"> 2BDR </span>
     <span class="menuSel" id="3bdr"> 3BDR </span>
     <span class="menuSel" id="4bdrSel"> 4+BDR </span>
-    <span class="menuSel" id="all"> All Units </span>
+    <span class="menuSel" id="all"> All Units </span></center>
     </div>
   <br /><br /><br />
   
   <table id="aptAll">
     <div id="allApt" >
         <% @apartments.each do |apartment| %>
-       <tr><td><hr>
+       <tr><td>
         Area: <%= apartment.location %><br />  
         <%= apartment.availability %><br />
         Available: <%= apartment.Date_Avail %><br />
         Bed: <%= apartment.Bed %>&nbsp&nbsp
         Bath: <%= apartment.Bath %><br />
         Agent: <%= apartment.agent %><br />
-        Rent: <%= apartment.Rent %><br /><hr></td><td><hr>
+        Rent: <%= apartment.Rent %><br /></td><td>
         Deposit: <%= apartment.Security_Deposit %><br />
         Pets: <%= apartment.Pets %><br />
         Parking: <%= apartment.Parking %><br />
         Laundy: <%= apartment.Laundy %><br />
         Heat: <%= apartment.Type_Heat %><br />
-        AC: <%= apartment.AC %> <hr></td><td><%= link_to (apartment) do  %>
+        AC: <%= apartment.AC %> </td><td><%= link_to (apartment) do  %>
         <%= image_tag apartment.photo.url (:small) %> <br /><% end %>
         </td></tr>
-        <% end %><hr></div>
+        <% end %></div>
   </table>
     <table id="studio">
     <div id="studio0">

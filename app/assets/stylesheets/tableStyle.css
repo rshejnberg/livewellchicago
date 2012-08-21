@@ -1,0 +1,164 @@
+/* ------------------
+ styling for the tables 
+   ------------------   */
+
+
+body
+{
+	line-height: 1.6em;
+}
+#aptAll, #studio, #oneBdr, #twoBdr, #threeBdr, #fourBdr
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	margin: 0 auto;
+	width: 530px;
+	text-align: left;
+	border-collapse: collapse;
+}
+#aptAll th
+{
+	font-size: 13px;
+	font-weight: normal;
+	padding: 8px;
+	background: #b9c9fe;
+	border-top: 4px solid #aabcfe;
+	border-bottom: 1px solid rgba(255,255,255,);
+	color: white;
+}
+#aptAll td
+{
+	padding: 8px;
+	background: #2E272A; 
+	border-bottom: 1px solid #5d4f55;
+	color: white;
+	border-top: 1px solid transparent;
+}
+#aptAll tr:hover td
+{
+	background: #5d4f55;
+	color: white;
+}
+
+#studio th
+{
+	font-size: 13px;
+	font-weight: normal;
+	padding: 8px;
+	background: #b9c9fe;
+	border-top: 4px solid #aabcfe;
+	border-bottom: 1px solid #fff;
+	color: white;
+}
+#studio td
+{
+	padding: 8px;
+	background: #2E272A; 
+	border-bottom: 1px solid #fff;
+	color: white;
+	border-top: 1px solid transparent;
+}
+#studio tr:hover td
+{
+	background: rgba(228,228,228,0);;
+	color: white;
+}
+
+#oneBdr th
+{
+	font-size: 13px;
+	font-weight: normal;
+	padding: 8px;
+	background: #b9c9fe;
+	border-top: 4px solid #aabcfe;
+	border-bottom: 1px solid #fff;
+	color: white;
+}
+#oneBdr td
+{
+	padding: 8px;
+	background: #2E272A; 
+	border-bottom: 1px solid #fff;
+	color: white;
+	border-top: 1px solid transparent;
+}
+#oneBdr tr:hover td
+{
+	background: #5d4f55;;
+	color: white;
+}
+
+#twoBdr th
+{
+	font-size: 13px;
+	font-weight: normal;
+	padding: 8px;
+	background: #b9c9fe;
+	border-top: 4px solid #aabcfe;
+	border-bottom: 1px solid #fff;
+	color: white;
+}
+#twoBdr td
+{
+	padding: 8px;
+	background: #2E272A; 
+	border-bottom: 1px solid #fff;
+	color: white;
+	border-top: 1px solid transparent;
+}
+#twoBdr tr:hover td
+{
+	background: #5d4f55;;
+	color: white;
+}
+
+#threeBdr th
+{
+	font-size: 13px;
+	font-weight: normal;
+	padding: 8px;
+	background: #b9c9fe;
+	border-top: 4px solid #aabcfe;
+	border-bottom: 1px solid #fff;
+	color: white;
+}
+#threeBdr td
+{
+	padding: 8px;
+	background: #2E272A; 
+	border-bottom: 1px solid #fff;
+	color: white;
+	border-top: 1px solid transparent;
+}
+#threeBdr tr:hover td
+{
+	background: #5d4f55;;
+	color: white;
+}
+
+#fourBdr th
+{
+	font-size: 13px;
+	font-weight: normal;
+	padding: 8px;
+	background: #b9c9fe;
+	border-top: 4px solid #aabcfe;
+	border-bottom: 1px solid #fff;
+	color: white;
+}
+#fourBdr td
+{
+	padding: 8px;
+	background: #2E272A; 
+	border-bottom: 1px solid #fff;
+	color: white;
+	border-top: 1px solid transparent;
+}
+#fourBdr tr:hover td
+{
+	background: #5d4f55;;
+	color: white;
+}
+
+
+

@@ -16,7 +16,7 @@ header > a:link {color: white}
 td > #table {border: solid 1px white;}
 hr {}
 #new {top: -130px; padding: 40px;  }
-#aptMenu { z-index: 3; letter-spacing: 1px; width: 500px;  position: relative; margin: 0 auto; }
+#aptMenu {background-color: #2E272A; z-index: 3; letter-spacing: 1px; width: 950px; height: 50px;  position: relative; margin: 0 auto; }
 #mapInfo{text-align: left; position: relative; margin: 0 auto; left: 300px; color: white }
 .slidePics {float: right; opacity: 1.0}
 .slideText {position: relative; left: 10px; top: 50px; background-color: gray; opacity: 0.8; color: white; border: solid 5px gray}
@@ -48,7 +48,7 @@ a:hover {color: white}
 .logoutButton {float: left; position: relative; top: -100px; left: 40px;opacity: 0.5;}
 
 #aptList{background-color: white; opacity: 0.5; color: black; width: 350px; text-align: left; padding: 20px}
-.menuSel {background-color: #2E272A; height: 500px; float: center; font-size: 15px; padding: 10px}
+.menuSel {background-color: #2E272A; height: 500px; position:relative; top:15px; font-size: 15px; padding: 10px; }
 .allApt {position: relative;}
 b {color :#599100;}
 .backButton {position: absolute; left: -125px; top: 125px}

@@ -1,0 +1,93 @@
+
+<div id="new">
+<div id="picBackground"><br />
+	<center><span class="pic1big" id="bigPic"> <%= image_tag @apartment.photo.url (:large) %></span>
+	<span class="pic2big" id="bigPic"> <%= image_tag @apartment.photo2.url (:large) %></span>
+	<span class="pic3big" id="bigPic"> <%= image_tag @apartment.photo3.url (:large) %></span>
+	<span class="pic4big" id="bigPic"> <%= image_tag @apartment.photo4.url (:large) %></span>
+	</center>
+<br />
+</div>
+<p id="notice"><%= notice %></p>
+<p><center>
+ <span class="pic1small"> <%= image_tag @apartment.photo.url (:small) %></span>
+<span class="pic2small"> <%= image_tag @apartment.photo2.url (:small) %></span>
+<span class="pic3small"> <%= image_tag @apartment.photo3.url (:small) %></span>
+<span class="pic4small"> <%= image_tag @apartment.photo4.url (:small) %></span>
+
+
+  </center></p><br />
+<p>
+  <b>Agent:</b>
+  <%= @apartment.agent %>
+</p>
+<p>
+  <b>Location:</b>
+  <%= @apartment.location %>
+</p>
+<p>
+  <b>Availability:</b>
+  <%= @apartment.availability %>
+</p>
+<p>
+  <b>Bed:</b>
+  <%= @apartment.Bed %>
+</p>
+
+<p>
+  <b>Bath:</b>
+  <%= @apartment.Bath %>
+</p>
+
+<p>
+  <b>Rent:</b>
+  <%= @apartment.Rent %>
+</p>
+
+<p>
+  <b>Pets:</b>
+  <%= @apartment.Pets %>
+</p>
+
+<p>
+  <b>Security deposit:</b>
+  <%= @apartment.Security_Deposit %>
+</p>
+
+<p>
+  <b>Parking:</b>
+  <%= @apartment.Parking %>
+</p>
+
+<p>
+  <b>Laundy:</b>
+  <%= @apartment.Laundy %>
+</p>
+
+<p>
+  <b>Owner:</b>
+  <%= @apartment.Owner %>
+</p>
+
+<p>
+  <b>Date avail:</b>
+  <%= @apartment.Date_Avail %>
+</p>
+
+<p>
+  <b>Type heat:</b>
+  <%= @apartment.Type_Heat %>
+</p>
+
+<p>
+  <b>Ac:</b>
+  <%= @apartment.AC %>
+</p>
+<p>
+  <b>Description:</b>
+  <%= @apartment.description %>
+</p>
+
+<center>
+<%= link_to image_tag("apartments.png"), {:action => 			'aptMenu', :controller => 'apartments'} %>
+</div>
