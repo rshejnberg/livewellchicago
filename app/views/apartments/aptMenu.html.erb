@@ -1,8 +1,8 @@
 <head>
  <%= stylesheet_link_tag "tableStyle", :media => "all" %>
 </head>
-<br /><br />
- <nav>
+<br />
+ <navApt>
  
  	<span id="home2"> <%= link_to image_tag("home.png"), root_url %></span>
     <span id="apartments2"><%= link_to image_tag("apartments.png"), {:action =>'aptMenu', :controller => 'apartments'} %></span>
@@ -11,7 +11,7 @@
     <a href="http://livewellchicago.herokuapp.com/?cat=contactUs"><%= image_tag("contactus.png") %></a>
     
    
-    </nav>
+    </navApt>
     
     
     
@@ -39,8 +39,8 @@
         Bed: <%= apartment.Bed %>&nbsp&nbsp
         Bath: <%= apartment.Bath %><br />
         Agent: <%= apartment.agent %><br />
-        Rent: <%= apartment.Rent %><br /></td><td>
-        Deposit: <%= apartment.Security_Deposit %><br />
+        Rent: $<%= apartment.Rent %><br /></td><td>
+        Deposit: $<%= apartment.Security_Deposit %><br />
         Pets: <%= apartment.Pets %><br />
         Parking: <%= apartment.Parking %><br />
         Laundy: <%= apartment.Laundy %><br />
@@ -60,8 +60,8 @@
         Bed: <%= apartment.Bed %>&nbsp&nbsp
         Bath: <%= apartment.Bath %><br />
         Agent: <%= apartment.agent %><br />
-        Rent: <%= apartment.Rent %><br /></td><td>
-        Deposit: <%= apartment.Security_Deposit %><br />
+        Rent: $<%= apartment.Rent %><br /></td><td>
+        Deposit: $<%= apartment.Security_Deposit %><br />
         Pets: <%= apartment.Pets %><br />
         Parking: <%= apartment.Parking %><br />
         Laundy: <%= apartment.Laundy %><br />
@@ -81,8 +81,8 @@
         Bed: <%= apartment.Bed %>&nbsp&nbsp
         Bath: <%= apartment.Bath %><br />
         Agent: <%= apartment.agent %><br />
-        Rent: <%= apartment.Rent %><br /></td><td>
-        Deposit: <%= apartment.Security_Deposit %><br />
+        Rent: $<%= apartment.Rent %><br /></td><td>
+        Deposit: $<%= apartment.Security_Deposit %><br />
         Pets: <%= apartment.Pets %><br />
         Parking: <%= apartment.Parking %><br />
         Laundy: <%= apartment.Laundy %><br />
@@ -102,8 +102,8 @@
         Bed: <%= apartment.Bed %>&nbsp&nbsp
         Bath: <%= apartment.Bath %><br />
         Agent: <%= apartment.agent %><br />
-        Rent: <%= apartment.Rent %><br /></td><td>
-        Deposit: <%= apartment.Security_Deposit %><br />
+        Rent: $<%= apartment.Rent %><br /></td><td>
+        Deposit: $<%= apartment.Security_Deposit %><br />
         Pets: <%= apartment.Pets %><br />
         Parking: <%= apartment.Parking %><br />
         Laundy: <%= apartment.Laundy %><br />
@@ -123,8 +123,8 @@
         Bed: <%= apartment.Bed %>&nbsp&nbsp
         Bath: <%= apartment.Bath %><br />
         Agent: <%= apartment.agent %><br />
-        Rent: <%= apartment.Rent %><br /></td><td>
-        Deposit: <%= apartment.Security_Deposit %><br />
+        Rent: $<%= apartment.Rent %><br /></td><td>
+        Deposit: $<%= apartment.Security_Deposit %><br />
         Pets: <%= apartment.Pets %><br />
         Parking: <%= apartment.Parking %><br />
         Laundy: <%= apartment.Laundy %><br />
@@ -144,8 +144,8 @@
         Bed: <%= apartment.Bed %>&nbsp&nbsp
         Bath: <%= apartment.Bath %><br />
         Agent: <%= apartment.agent %><br />
-        Rent: <%= apartment.Rent %><br /></td><td>
-        Deposit: <%= apartment.Security_Deposit %><br />
+        Rent: $<%= apartment.Rent %><br /></td><td>
+        Deposit: $<%= apartment.Security_Deposit %><br />
         Pets: <%= apartment.Pets %><br />
         Parking: <%= apartment.Parking %><br />
         Laundy: <%= apartment.Laundy %><br />
@@ -159,4 +159,9 @@
 <br />
 
 
+</div>
+<div id="footer">
+    Live Well Chicago L.L.C  3725 N Western Ave  Chicago, IL 60618 <br />
+    All information deemed reliable but not guaranteed. All properties are 	subject to, change or withdrawal. <br /> Neither broker(s), agent(s) nor 	Livewellchicago.com, LLC. shall be responsible for any typographical 	errors, misinformation<br /> or misprints, and shall be held totally 	harmless.<br />
+    <%= link_to image_tag("equalHousing.png"), {:action => 	'admin', :controller => 'main'} %>   
 </div>

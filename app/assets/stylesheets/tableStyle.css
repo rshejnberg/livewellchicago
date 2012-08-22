@@ -15,6 +15,7 @@ body
 	width: 530px;
 	text-align: left;
 	border-collapse: collapse;
+	border: solid 10px #2E272A;
 }
 #aptAll th
 {
@@ -22,9 +23,10 @@ body
 	font-weight: normal;
 	padding: 8px;
 	background: #b9c9fe;
-	border-top: 4px solid #aabcfe;
-	border-bottom: 1px solid rgba(255,255,255,);
+	
+	
 	color: white;
+	padding-bottom: 10px;
 }
 #aptAll td
 {
@@ -47,14 +49,14 @@ body
 	padding: 8px;
 	background: #b9c9fe;
 	border-top: 4px solid #aabcfe;
-	border-bottom: 1px solid #fff;
+	
 	color: white;
 }
 #studio td
 {
 	padding: 8px;
 	background: #2E272A; 
-	border-bottom: 1px solid #fff;
+	
 	color: white;
 	border-top: 1px solid transparent;
 }
@@ -71,14 +73,14 @@ body
 	padding: 8px;
 	background: #b9c9fe;
 	border-top: 4px solid #aabcfe;
-	border-bottom: 1px solid #fff;
+	
 	color: white;
 }
 #oneBdr td
 {
 	padding: 8px;
 	background: #2E272A; 
-	border-bottom: 1px solid #fff;
+	
 	color: white;
 	border-top: 1px solid transparent;
 }
@@ -95,14 +97,14 @@ body
 	padding: 8px;
 	background: #b9c9fe;
 	border-top: 4px solid #aabcfe;
-	border-bottom: 1px solid #fff;
+	
 	color: white;
 }
 #twoBdr td
 {
 	padding: 8px;
 	background: #2E272A; 
-	border-bottom: 1px solid #fff;
+	
 	color: white;
 	border-top: 1px solid transparent;
 }
@@ -119,14 +121,14 @@ body
 	padding: 8px;
 	background: #b9c9fe;
 	border-top: 4px solid #aabcfe;
-	border-bottom: 1px solid #fff;
+	
 	color: white;
 }
 #threeBdr td
 {
 	padding: 8px;
 	background: #2E272A; 
-	border-bottom: 1px solid #fff;
+	
 	color: white;
 	border-top: 1px solid transparent;
 }
@@ -143,14 +145,14 @@ body
 	padding: 8px;
 	background: #b9c9fe;
 	border-top: 4px solid #aabcfe;
-	border-bottom: 1px solid #fff;
+	
 	color: white;
 }
 #fourBdr td
 {
 	padding: 8px;
 	background: #2E272A; 
-	border-bottom: 1px solid #fff;
+	
 	color: white;
 	border-top: 1px solid transparent;
 }

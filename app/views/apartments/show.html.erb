@@ -61,14 +61,16 @@
 </head>
 
 <body>
-<div id="new">
+
+<div id="new"><br /><br /><br /><br /><br /><br /><br /><br />
+
+<br /><br />
 	<ul id="myGallery">
             <li> <%= image_tag @apartment.photo.url (:large) %>
             <li> <%= image_tag @apartment.photo2.url (:large) %>
             <li> <%= image_tag @apartment.photo3.url (:large) %>
             <li> <%= image_tag @apartment.photo4.url (:large) %>
-            
-        </ul>
+    </ul>
         
         <p>
   <b>Agent:</b>
@@ -94,7 +96,7 @@
 
 <p>
   <b>Rent:</b>
-  <%= @apartment.Rent %>
+  $<%= @apartment.Rent %>
 </p>
 
 <p>
@@ -104,7 +106,7 @@
 
 <p>
   <b>Security deposit:</b>
-  <%= @apartment.Security_Deposit %>
+  $<%= @apartment.Security_Deposit %>
 </p>
 
 <p>
@@ -141,8 +143,18 @@
   <%= @apartment.description %>
 </p>
 
-<center><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-<%= link_to image_tag("apartments.png"), {:action =>'aptMenu', :controller => 'apartments'} %>
+<center>
+
+ <nav2>
+ 
+ 	<span id="home2"> <%= link_to image_tag("home.png"), root_url %></span>
+    <span id="apartments2"><%= link_to image_tag("apartments.png"), {:action =>'aptMenu', :controller => 'apartments'} %></span>
+    <a href="http://livewellchicago.herokuapp.com/?cat=forms"> <%= image_tag("forms.png") %></a>
+   <a href="http://livewellchicago.herokuapp.com/?cat=landlords"><%= image_tag("landlords.png")%></a>
+    <a href="http://livewellchicago.herokuapp.com/?cat=contactUs"><%= image_tag("contactus.png") %></a>
+    
+   
+    </nav2>
 </div>
 </body>
 </html>
