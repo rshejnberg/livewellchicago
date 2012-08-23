@@ -4,8 +4,8 @@ class Apartment < ActiveRecord::Base
     has_many :apartment_image, :dependent => :destroy
     
     accepts_nested_attributes_for :apartment_image, :reject_if => 	 lambda { |t| t['apartment_image'].nil? }
-    has_attached_file :photo, :styles => {:small => "150x150>", :large => "800x720>", :convert_options => { :all => 	'-auto-orient' }}
-    has_attached_file :photo2, :styles => {:small => "150x150>", :large => "800x720>" , :convert_options => { :all => 	'-auto-orient' }}
+    has_attached_file :photo, :styles => {:small => "150x150>", :large => "800x720>"}
+    has_attached_file :photo2, :styles => {:small => "150x150>", :large => "800x720>" }
     has_attached_file :photo3, :styles => {:small => "150x150>", :large => "800x720>"}
     has_attached_file :photo4, :styles => {:small => "150x150>", :large => "800x720>"}
     AGENTS = ['Jason Gold', 'Serafin Herrera', 'Alexia Kouklowsky']

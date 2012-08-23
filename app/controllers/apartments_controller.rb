@@ -49,7 +49,7 @@ class ApartmentsController < ApplicationController
   # GET /apartments/new.json
   def new
     @apartment = Apartment.new
-    3.times {@apartment.apartment_image.build}
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render :json => @apartment }
@@ -59,7 +59,7 @@ class ApartmentsController < ApplicationController
   # GET /apartments/1/edit
   def edit
     @apartment = Apartment.find(params[:id])
-    3.times { @apartment.apartment_image.build }
+    
   end
 
   # POST /apartments
