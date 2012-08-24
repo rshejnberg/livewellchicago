@@ -15,7 +15,7 @@ class Apartment < ActiveRecord::Base
     ACSEL = ['Window Unit', 'Central', 'None', 'N/A']
     PETSSEL = ['Cats & Dogs OK', 'Cats Only', 'Dogs Only', 'No Pets', 'N/A']
     AVAILSEL = ['RENTED', 'AVAILABLE']
-validates_presence_of  :Bath, :Bed, :Date_Avail, :Owner, :Rent, :Security_Deposit, :Type_Heat, :location, :availability, :agent  
+validates_presence_of  :Bath, :Bed, :Date_Avail, :Rent, :location, :availability, :agent  
 validates_numericality_of :Rent, :Security_Deposit, :Bed, :Bath
 
 end
