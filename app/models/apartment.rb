@@ -9,10 +9,11 @@ class Apartment < ActiveRecord::Base
     has_attached_file :photo3, :styles => {:small => "150x150>", :large => "800x720>"}
     has_attached_file :photo4, :styles => {:small => "150x150>", :large => "800x720>"}
     AGENTS = ['Jason Gold', 'Serafin Herrera', 'Alexia Kouklowsky']
-    LAUNDRYSEL = ['In Building', 'In Unit', 'None']
-    HEATSEL = ['Radiator', 'Central']
-    ACSEL = ['Window Unit', 'Central', 'None']
-    PETSSEL = ['Cats & Dogs OK', 'Cats Only', 'Dogs Only', 'No Pets']
+    LAUNDRYSEL = ['In Building', 'In Unit', 'None', 'N/A']
+    HEATSEL = ['Radiator', 'Central', 'N/A']
+    PARKINGSEL = ['Outside', 'Garage', 'None', 'N/A']
+    ACSEL = ['Window Unit', 'Central', 'None', 'N/A']
+    PETSSEL = ['Cats & Dogs OK', 'Cats Only', 'Dogs Only', 'No Pets', 'N/A']
     AVAILSEL = ['RENTED', 'AVAILABLE']
 validates_presence_of  :Bath, :Bed, :Date_Avail, :Owner, :Rent, :Security_Deposit, :Type_Heat, :location, :availability, :agent  
 validates_numericality_of :Rent, :Security_Deposit, :Bed, :Bath
