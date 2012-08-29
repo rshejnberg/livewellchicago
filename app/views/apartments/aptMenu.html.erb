@@ -1,36 +1,28 @@
 <head>
  <%= stylesheet_link_tag "tableStyle", :media => "all" %>
 </head>
-<br />
- <navApt>
- 
- 	<span id="home2"> <%= link_to image_tag("home.png"), root_url %></span>
-    <span id="apartments2"><%= link_to image_tag("apartments.png"), {:action =>'aptMenu', :controller => 'apartments'} %></span>
-    <a href="http://livewellchicago.herokuapp.com/?cat=forms"> <%= image_tag("forms.png") %></a>
-   <a href="http://livewellchicago.herokuapp.com/?cat=landlords"><%= image_tag("landlords.png")%></a>
-    <a href="http://livewellchicago.herokuapp.com/?cat=contactUs"><%= image_tag("contactus.png") %></a>
-    
    
+<div id="aptMenuTable">
+	<span class="aptHeader"><%= link_to "Live Well Chicago", root_url %></span>
+	<navApt>
+ 		<span id="home2"> <%= link_to image_tag("home.png"), root_url %></span>
+ 		<span id="apartments2"><%= link_to image_tag("apartments.png"), {:action 					=>'aptMenu', :controller => 'apartments'} %></span>
+ 		<a href="http://livewellchicago.herokuapp.com/?cat=forms"> <%= 								image_tag("forms.png") 		%></a>
+ 		<a href="http://livewellchicago.herokuapp.com/?cat=landlords"><%= 							image_tag("landlords.png")%></a>
+ 		<a href="http://livewellchicago.herokuapp.com/?cat=contactUs"><%= 				 			image_tag("contactus.png") %></a>
     </navApt>
     
-    
-    
-    
-<div id="aptMenuTable">
-<br /><br /><br /><br /><br />
-
     <div id="aptMenu" class="aptMenu"><center>
-    <span class="menuSel" id="studioBut"> Studio </span>
-    <span class="menuSel" id="1bdr"> 1BDR </span>
-    <span class="menuSel" id="2bdr"> 2BDR </span>
-    <span class="menuSel" id="3bdr"> 3BDR </span>
-    <span class="menuSel" id="4bdrSel"> 4+BDR </span>
-    <span class="menuSel" id="all"> All Units </span></center>
+    	<span class="menuSel" id="studioBut"> Studio </span>
+    	<span class="menuSel" id="1bdr"> 1BDR </span>
+    	<span class="menuSel" id="2bdr"> 2BDR </span>
+    	<span class="menuSel" id="3bdr"> 3BDR </span>
+    	<span class="menuSel" id="4bdrSel"> 4+BDR </span>
+    	<span class="menuSel" id="all"> All Units </span></center>
     </div>
-  <br /><br /><br />
+ 
   
   <table id="aptAll">
-    <div id="allApt" >
         <% @apartments.each do |apartment| %>
        <tr><td>
         Area: <%= apartment.location %><br />  
@@ -48,10 +40,9 @@
         AC: <%= apartment.AC %> </td><td><%= link_to (apartment) do  %>
         <%= image_tag apartment.photo.url (:small) %> <br /><% end %>
         </td></tr>
-        <% end %></div>
+        <% end %>
   </table>
     <table id="studio">
-    <div id="studio0">
         <% @studio.each do |apartment| %>   
         <tr><td>
         Area: <%= apartment.location %><br />  
@@ -69,10 +60,9 @@
         AC: <%= apartment.AC %> </td><td><%= link_to (apartment) do  %>
         <%= image_tag apartment.photo.url (:small) %> <br /><% end %>
         </td></tr>
-        <% end %></div>
+        <% end %>
   </table>
   <table id="oneBdr">
-    <div id="one1Bdr">
         <% @oneBdr.each do |apartment| %>   
         <tr><td>
         Area: <%= apartment.location %><br />  
@@ -90,10 +80,9 @@
         AC: <%= apartment.AC %> </td><td><%= link_to (apartment) do  %>
         <%= image_tag apartment.photo.url (:small) %> <br /><% end %>
         </td></tr>
-        <% end %></div>
+        <% end %>
   </table>
   <table id="twoBdr">
-    <div id="two2Bdr">
         <% @twoBdr.each do |apartment| %>   
         <tr><td>
         Area: <%= apartment.location %><br />  
@@ -111,10 +100,9 @@
         AC: <%= apartment.AC %> </td><td><%= link_to (apartment) do  %>
         <%= image_tag apartment.photo.url (:small) %> <br /><% end %>
         </td></tr>
-        <% end %></div>
+        <% end %>
   </table>
   <table id="threeBdr">
-    <div id="three3Bdr">
         <% @threeBdr.each do |apartment| %>   
         <tr><td>
         Area: <%= apartment.location %><br />  
@@ -132,10 +120,9 @@
         AC: <%= apartment.AC %> </td><td><%= link_to (apartment) do  %>
         <%= image_tag apartment.photo.url (:small) %> <br /><% end %>
        </td></tr>
-        <% end %></div>  
+        <% end %>  
     </table>
     <table id="fourBdr">
-      <div id="four4Bdr">
         <% @fourPlusBdr.each do |apartment| %>   
         <tr><td>
         Area: <%= apartment.location %><br />  
@@ -153,15 +140,12 @@
         AC: <%= apartment.AC %> </td><td><%= link_to (apartment) do  %>
         <%= image_tag apartment.photo.url (:small) %> <br /><% end %>
         </td></tr>
-        <% end %></div>
-    </table>
-
-<br />
-
+        <% end %>
+    </table><br />
 
 </div>
 <div id="footer">
     Live Well Chicago L.L.C  3725 N Western Ave  Chicago, IL 60618 <br />
-    All information deemed reliable but not guaranteed. All properties are 	subject to, change or withdrawal. <br /> Neither broker(s), agent(s) nor 	Livewellchicago.com, LLC. shall be responsible for any typographical 	errors, misinformation<br /> or misprints, and shall be held totally 	harmless.<br />
-    <%= link_to image_tag("equalHousing.png"), {:action => 	'admin', :controller => 'main'} %>   
+    All information deemed reliable but not guaranteed. All properties are 	subject to, 		change or withdrawal. <br /> Neither broker(s), agent(s) nor 	Livewellchicago.com, 		LLC. shall be responsible for any typographical 	errors, misinformation<br /> or 		misprints, and shall be held totally 	harmless.<br />
+<%= link_to image_tag("equalHousing.png"), {:action => 	'admin', :controller => 'main'} %>   
 </div>

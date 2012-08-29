@@ -10,19 +10,22 @@
 <body>
 
 <form name="liveWellForm">
-<div id="homePage">
+
+    
+    <div id="main">
+    <span class="homeHeader"><%= link_to "Live Well Chicago", root_url %></span>
+    
     <nav><br />
         <img src="assets/home.png" class="home">
-       <span class="apartments">
-       <span class="aptBut"><img src="assets/apartments.png" 	class="apartmentsBut"></span>
-       <span class="hovApart" > <%= link_to 	image_tag("hovapartments.png"), {:action => 'aptMenu', :controller => 		'apartments'} %> </span>
-       </span>
+        <span class="apartments">
+        <span class="aptBut"><img src="assets/apartments.png" class="apartmentsBut"></span>
+        <span class="hovApart" > <%= link_to image_tag("hovapartments.png"), {:action => 		'aptMenu', :controller => 'apartments'} %> </span>
+        </span>
         <img src="assets/forms.png" class="forms">
         <img src="assets/landlords.png" class="landlords">
         <img src="assets/contactus.png" class="contactUs">
     </nav>
-    <div id="main">
-       <br /><br /><br /><br /><br />
+       <br />
 
 
     <div id="contactUs">
@@ -52,84 +55,84 @@
             
         </div>
         <div id="map">
-        <center>
+       
         
-        <iframe width="425" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=3725+n+western&amp;sll=41.913741,-87.658969&amp;sspn=0.092996,0.163078&amp;ie=UTF8&amp;hq=&amp;hnear=3725+N+Western+Ave,+Chicago,+Cook,+Illinois+60618&amp;t=m&amp;ll=41.954341,-87.69315&amp;spn=0.022279,0.036478&amp;z=16&amp;iwloc=A&amp;output=embed"></iframe>
-        <br /></center>
-        <div id="mapInfo"> <br />Live Well Chicago LLC, &nbsp
-                3725 N Western Ave, &nbsp Chicago, IL 60618 <br />
-              <img src="assets/phone.png"> 773.840.8104 <img src="assets/fax.png"> 773.537.0321 
-                <a href="mailto:officemanager@livewellchgo.com">officemanager@livewellchgo.com</a><br /></div>
+        <iframe width="425" height="450" frameborder="0" scrolling="no" marginheight="0" 			marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp; 					hl=en&amp;geocode=&amp;q=3725+n																+western&amp;sll=41.913741,-87.658969&amp;sspn=0.092996,0.163078&amp;ie=UTF8&amp; 			hq=&amp;hnear=3725+N+Western+Ave,+Chicago,+Cook,+Illinois									+60618&amp;t=m&amp;ll=41.954341,-87.69315&amp;spn=0.022279,0.036478&amp;z=16&amp; 			iwloc=A&amp;output=embed"></iframe>
+        <br />
+        <div id="mapInfo">
+        	<br />Live Well Chicago LLC, &nbsp
+          3725 N Western Ave, &nbsp Chicago, IL 60618 <br />
+          <img src="assets/phone.png"> 773.840.8104 <img src="assets/fax.png"> 					      773.537.0321 
+          <a href="mailto:officemanager@livewellchgo.com">officemanager@livewellchgo.com</a> 
+          <br /></div>
         </div>
     </div>
-    <div id="landlords">
-        
+    
+    <div id="landlords">     
         Landlords,
-         thanks for your interest in Live Well Chicago, here is a short summary of who we are and why we are an excellent choice to help you find qualified tenants for your current and upcoming availabilities.
+        thanks for your interest in Live Well Chicago, here is a short summary of who we 			are and why we are an excellent choice to help you find qualified tenants for your 			current and upcoming availabilities.
         <br /><br />
-        Live Well Chicago is different from other agencies because unlike others all of our agents are highly experienced and extremely motivated each with seven to twelve years of leasing experience. These agents solely work as full time leasing professionals, and have specialized in leasing over the duration of their real estate careers. This experience will take better advantage of any prospective renters that view your property and will also assure accurate information and complete professionalism from start to finish of the leasing process.
+        Live Well Chicago is different from other agencies because unlike others all of our 		agents are highly experienced and extremely motivated each with seven to twelve 			years of leasing experience. These agents solely work as full time leasing 					professionals, and have specialized in leasing over the duration of their real 				estate careers. This experience will take better advantage of any prospective 				renters that view your property and will also assure accurate information and 				complete professionalism from start to finish of the leasing process.
         <br /><br />
-        The rental process begins with advertising the available apartment, fielding calls, screening prospective tenants, showing the unit, taking applications, employment verification, current landlord references, running credit through the #1 residential screening service in the industry, and finally presenting the completed application to the owner/landlord for approval. Upon approval Live Well Chicago can either turn the applicant over to you or handle the lease signing on your behalf.
+        The rental process begins with advertising the available apartment, fielding calls, 		screening prospective tenants, showing the unit, taking applications, employment 			verification, current landlord references, running credit through the #1 residential 		screening service in the industry, and finally presenting the completed application 		to the owner/landlord for approval. Upon approval Live Well Chicago can either turn 		the applicant over to you or handle the lease signing on your behalf.
         <br /><br />
-        Live Well Chicago makes the leasing process easy and smooth for the landlord and for the renter, which makes for a generally convenient process and encourages a longer stay for the tenant!
+        Live Well Chicago makes the leasing process easy and smooth for the landlord and for 		the renter, which makes for a generally convenient process and encourages a longer 			stay for the tenant!
         <br /><br />
-        Please feel free to contact us by phone or e-mail with any questions or instructions regarding the listing/showing of your available apartments.
+        Please feel free to contact us by phone or e-mail with any questions or instructions 		regarding the listing/showing of your available apartments.
         <br /><br />
         Thanks for your time and consideration
     </div>
-    <div id="forms">
-
-        <center>
-        <span class="formFiles"> <a href="http://www.livewellchgo.com/sitebuildercontent/sitebuilderfiles/ 	rentalapplicationgenerallwc.pdf"><img src="assets/rentApp2.png" class="rentApp"></a>&nbsp&nbsp
-         <a href="http://www.livewellchgo.com/sitebuildercontent/	sitebuilderfiles/creditcardauthorizationlwc.pdf"> <img src="assets/credAuth2.png" class="credAuth"> </a>&nbsp&nbsp
-             <a href="http://www.livewellchgo.com/sitebuildercontent/sitebuilderfiles/cosignerappgenerallivewell.pdf"><img src="assets/cosApp2.png" class="cosApp"></a>
-        </span><br /></center><br /><br />
-        
-     Applying For an Apartment/Condo Rental<br /><br />
-    1. Fill out a lease application. (Co-signer application if needed)
-    (All Adults must fill out an application)<br /><br />
-    2. Have a check for a non-refundable $50/credit/Per applicant made 	out 	to Live Well Chicago Realty. [this is to check your credit<br /><br />
-    3. Have a money order/ cashiers check for 1st month rent made out 	to 	Live Well Chicago Realty. We also accept Visa, MasterCard, and Discover 	Cards. (Please inform the agent if you would like to pay with a credit 	card)<br /><br />
-    4. You will also need your proof of employment (or include it with the 	checks). We accept 2 types of proof of employment: either (a) your last 	2 pay-stub checks; or (b) a signed letter from human resource/your 		supervisor stating how long you have been working at your present job, 	your salary (with any upcoming bonuses) and your position <br /><br />
-    5. Drop all of the above at
-    Live Well Chicago Realty
-    3725 N. Western Suite 107
-    Chicago, IL 60618
-    (Agent will also accept some of the documents faxed or email to them)
-    <br /><br />
-    6. Once we look over your file and upon approval, we will contact 	you 	to schedule a time for you to sign the lease. It is at lease signing 	that the security deposit or move-in fee is due.
-    <br /><br />
-    For any questions or inquiries please contact your Live Well Chicago 	Agent.
-    </div>
-<div id="home">
-<div id="wrapper">
-       
-
-        <div class="slider-wrapper theme-default">
-            <div id="slider" class="nivoSlider">
-               <img src="assets/slide1.jpeg" alt="" data-transition="slideInLeft" />
-                <img src="assets/slide2.jpeg" alt="" data-transition="slideInLeft"  />
-                <img src="assets/slide3.jpeg" alt="" data-transition="slideInLeft" />
-                <img src="assets/slide4.jpeg" alt="" data-transition="slideInLeft"  />
-            </div>            
-        </div>
-    </div>
-               
     
-<div id="aboutUs">
-    Thanks for your interest in Live Well Chicago,<br /><br />
-    “THE” Premier Leasing Company on the north side of Chicago.  Very often, the thought of looking for a new apartment is a daunting task that most dread. “Well, Dread no more people!”  Unlike most agencies, Live Well Chicago strives to make the rental process easy, quick, and free of inconvenience! <br /><i><br />“How do we do that,"  you ask?</i><br /><br />
-    First off, our entire leasing staff consists of experienced realtors.  Our leasing specialists are trained to listen to your wants and needs, then match you to your ideal apartment!<br /><br />
-    Secondly, our agents love what they do! These leasing professionals are easy to talk to, easy to work with, and won’t pressure you into a decision. All of which while being energetic and enthusiastic about finding you your next home and making sure it suits your specific needs!<br /><br />
+    <div id="forms">
+        <span class="formFiles"> <a href="http://www.livewellchgo.com/sitebuildercontent/			sitebuilderfiles/rentalapplicationgenerallwc.pdf"><img src="assets/rentApp2.png" 			class="rentApp"></a>&nbsp&nbsp
+        <a href="http://www.livewellchgo.com/sitebuildercontent/	sitebuilderfiles/				creditcardauthorizationlwc.pdf"> <img src="assets/credAuth2.png" class="credAuth"> 			</a>&nbsp&nbsp
+        <a href="http://www.livewellchgo.com/sitebuildercontent/sitebuilderfiles/					cosignerappgenerallivewell.pdf"><img src="assets/cosApp2.png" class="cosApp"></a>
+        </span><br /><br /><br />
+        
+        Applying For an Apartment/Condo Rental<br /><br />
+        1. Fill out a lease application. (Co-signer application if needed)
+        (All Adults must fill out an application)<br /><br />
+        2. Have a check for a non-refundable $50/credit/Per applicant made 	out to Live Well 		Chicago Realty. [this is to check your credit<br /><br />
+        3. Have a money order/ cashiers check for 1st month rent made out 	to 	Live Well 			Chicago Realty. We also accept Visa, MasterCard, and Discover 	Cards. (Please 				inform 	the agent if you would like to pay with a credit 	card)<br /><br />
+        4. You will also need your proof of employment (or include it with the 	checks). We 		accept 2 types of proof of employment: either (a) your last 	2 pay-stub checks; 			or 	(b) a signed letter from human resource/your 		supervisor stating how long 		you have been working at your present job, 	your salary (with any upcoming bonuses) 		and your position <br /><br />
+        5. Drop all of the above at
+        Live Well Chicago Realty
+        3725 N. Western Suite 107
+        Chicago, IL 60618
+        (Agent will also accept some of the documents faxed or email to them)
+        <br /><br />
+        6. Once we look over your file and upon approval, we will contact 	you 	to 				schedule a time for you to sign the lease. It is at lease signing 	that the 				security deposit or move-in fee is due.
+        <br /><br />
+        For any questions or inquiries please contact your Live Well Chicago 	Agent.
+    </div>
+
+    <div id="home">
+    	<div id="wrapper">
+       		 <div class="slider-wrapper theme-default">
+       		 	<div id="slider" class="nivoSlider">
+       		 		<img src="assets/slide1.jpeg" alt="" data-transition="fade" />
+       		 		<img src="assets/slide2.jpeg" alt="" data-transition="fade"  />
+       		 		<img src="assets/slide3.jpeg" alt="" data-transition="fade" />
+       		 		<img src="assets/slide4.jpeg" alt="" data-transition="fade"  />
+       		 	</div>            
+       		 </div>
+       	</div>
+               
+       	<div id="aboutUs">
+       		Thanks for your interest in Live Well Chicago,<br /><br />
+       		“THE” Premier Leasing Company on the north side of Chicago.  Very often, the 				thought of looking for a new apartment is a daunting task that most dread. 					“Well, Dread no more people!”  Unlike most agencies, Live Well Chicago strives 				to make the rental process easy, quick, and free of inconvenience! 							<br /><i><br />“How do we do that,"  you ask?</i><br /><br />
+       		First off, our entire leasing staff consists of experienced realtors.  Our 					leasing specialists are trained to listen to your wants and needs, then match 				you to your ideal apartment!<br /><br />
+       		Secondly, our agents love what they do! These leasing professionals are easy to 			talk to, easy to work with, and won’t pressure you into a decision. All of which 			while being energetic and enthusiastic about finding you your next home and 				making sure it suits your specific needs!<br /><br />
     	</div>
     </div>
+    <div id="footer">
+   		 Live Well Chicago L.L.C  3725 N Western Ave  Chicago, IL 60618 <br />
+   		 All information deemed reliable but not guaranteed. All properties are 	subject 		to, change or withdrawal. <br /> Neither broker(s), agent(s) nor 							Livewellchicago.com, LLC. shall be responsible for any typographical 	errors, 			misinformation<br /> or misprints, and shall be held totally 	harmless.<br />
+    <%= link_to image_tag("equalHousing.png"), {:action =>'admin', :controller => 'main'} %>   
+    </div>
 </div>
-<div id="footer">
-    Live Well Chicago L.L.C  3725 N Western Ave  Chicago, IL 60618 <br />
-    All information deemed reliable but not guaranteed. All properties are 	subject to, change or withdrawal. <br /> Neither broker(s), agent(s) nor 	Livewellchicago.com, LLC. shall be responsible for any typographical 	errors, misinformation<br /> or misprints, and shall be held totally 	harmless.<br />
-    <%= link_to image_tag("equalHousing.png"), {:action => 	'admin', :controller => 'main'} %>   
-</div>
-</div>
+
+<br /><br />
 </body> 
 </html>
 
