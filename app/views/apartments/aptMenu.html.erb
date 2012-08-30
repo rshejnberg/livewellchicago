@@ -12,17 +12,17 @@
  		<a href="http://livewellchicago.herokuapp.com/?cat=contactUs"><%= 				 			image_tag("contactus.png") %></a>
     </navApt>
     
-    <div id="aptMenu" class="aptMenu"><center>
-    	<span class="menuSel" id="studioBut"> Studio </span>
-    	<span class="menuSel" id="1bdr"> 1BDR </span>
-    	<span class="menuSel" id="2bdr"> 2BDR </span>
-    	<span class="menuSel" id="3bdr"> 3BDR </span>
-    	<span class="menuSel" id="4bdrSel"> 4+BDR </span>
-    	<span class="menuSel" id="all"> All Units </span></center>
+    <div id="aptMenu" class="aptMenu" ><center>
+    	<span class="menuSel" style="cursor: pointer" id="studioBut"> Studio </span>
+    	<span class="menuSel" style="cursor: pointer" id="1bdr"> 1BDR </span>
+    	<span class="menuSel" style="cursor: pointer" id="2bdr"> 2BDR </span>
+    	<span class="menuSel" style="cursor: pointer" id="3bdr"> 3BDR </span>
+    	<span class="menuSel" style="cursor: pointer" id="4bdrSel"> 4+BDR </span>
+    	<span class="menuSel" style="cursor: pointer" id="all"> All Units </span></center>
     </div>
  
   
-  <table id="aptAll">
+  <table id="aptAll"> 
         <% @apartments.each do |apartment| %>
        <tr><td>
         Area: <%= apartment.location %><br />  

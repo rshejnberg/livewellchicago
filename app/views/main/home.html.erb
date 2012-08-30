@@ -16,14 +16,14 @@
     <span class="homeHeader"><%= link_to "Live Well Chicago", root_url %></span>
     
     <nav><br />
-        <img src="assets/home.png" class="home">
-        <span class="apartments">
+        <img src="assets/home.png" style="cursor: pointer" class="home">
+        <span class="apartments" >
         <span class="aptBut"><img src="assets/apartments.png" class="apartmentsBut"></span>
         <span class="hovApart" > <%= link_to image_tag("hovapartments.png"), {:action => 		'aptMenu', :controller => 'apartments'} %> </span>
         </span>
-        <img src="assets/forms.png" class="forms">
-        <img src="assets/landlords.png" class="landlords">
-        <img src="assets/contactus.png" class="contactUs">
+        <img src="assets/forms.png" style="cursor: pointer" class="forms">
+        <img src="assets/landlords.png" style="cursor: pointer" class="landlords">
+        <img src="assets/contactus.png" style="cursor: pointer" class="contactUs">
     </nav>
        <br />
 
@@ -120,9 +120,12 @@
                
        	<div id="aboutUs">
        		Thanks for your interest in Live Well Chicago,<br /><br />
-       		“THE” Premier Leasing Company on the north side of Chicago.  Very often, the 				thought of looking for a new apartment is a daunting task that most dread. 					“Well, Dread no more people!”  Unlike most agencies, Live Well Chicago strives 				to make the rental process easy, quick, and free of inconvenience! 							<br /><i><br />“How do we do that,"  you ask?</i><br /><br />
+       		“THE” Premier Leasing Company on the north side of Chicago.  Very often, the 				thought of looking for a new apartment is a daunting task that most dread. 					“Well, dread no more people!” Unlike most agencies, Live Well Chicago strives 				to make the rental process easy, quick, and free of inconvenience! 							<br /><i>“How do we do that,"  you ask?</i><br />
        		First off, our entire leasing staff consists of experienced realtors.  Our 					leasing specialists are trained to listen to your wants and needs, then match 				you to your ideal apartment!<br /><br />
        		Secondly, our agents love what they do! These leasing professionals are easy to 			talk to, easy to work with, and won’t pressure you into a decision. All of which 			while being energetic and enthusiastic about finding you your next home and 				making sure it suits your specific needs!<br /><br />
+       		“Finally, we make the rental process easy!”   Our leasing specialists are 					available for showings 7 days a week all year long so setting up showings is a 				breeze!<br /><br />
+       		Live Well Chicago works with many different landlords on the north side of 					Chicago as well as having access to the largest database in Chicago (MLS) so 				there are 	usually a few options for you to choose from!<br /><br /> 
+       		Finding the perfect place for you is our #1 goal and Live Well Chicago will do 				whatever it takes to help you along the way and make the process smooth and 				easy.  
     	</div>
     </div>
     <div id="footer">
