@@ -3,7 +3,7 @@
 </head>
    
 <div id="aptMenuTable">
-	<span class="aptHeader"><%= link_to "Live Well Chicago", root_url %></span>
+	<span class="aptHeader" ><%= link_to "Live Well Chicago", root_url %></span>
 	<navApt>
  		<span id="home2"> <%= link_to image_tag("home.png"), root_url %></span>
  		<span id="apartments2"><%= link_to image_tag("apartments.png"), {:action 					=>'aptMenu', :controller => 'apartments'} %></span>
@@ -143,9 +143,4 @@
         <% end %>
     </table><br />
 
-</div>
-<div id="footer">
-    Live Well Chicago L.L.C  3725 N Western Ave  Chicago, IL 60618 <br />
-    All information deemed reliable but not guaranteed. All properties are 	subject to, 		change or withdrawal. <br /> Neither broker(s), agent(s) nor 	Livewellchicago.com, 		LLC. shall be responsible for any typographical 	errors, misinformation<br /> or 		misprints, and shall be held totally 	harmless.<br />
-<%= link_to image_tag("equalHousing.png"), {:action => 	'admin', :controller => 'main'} %>   
 </div>
