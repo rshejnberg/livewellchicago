@@ -13,6 +13,7 @@ gem 'mysql2'
 
 #gem "rmagick"
 
+gem 'aws-sdk', '~> 1.3.4'
 
 group :development, :test do
 	gem 'sqlite3'
