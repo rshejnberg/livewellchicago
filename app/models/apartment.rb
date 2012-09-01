@@ -7,10 +7,9 @@ class Apartment < ActiveRecord::Base
     has_attached_file :photo, 
     				  :styles => {:small => "150x150>", :large => "800x720>"},
     				  :storage => :s3,
-    				  :s3_credentials => {:bucket => ENV['Live-Well-Chicago-Photos'],
-	    			  :access_key_id     => ENV['AKIAI43J7MMNC5AEURZQ'],
-	    			  :secret_access_key => ENV['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']
-	    			  }
+    				  :s3_credentials => "#{Rails.root}/config/s3.yml",
+    				  :path => ":attachment/:id/:style.:extension",
+    				  :bucket => 'Live-Well-Chicago-Photos'
 	    			  
     has_attached_file :photo2, :styles => {:small => "150x150>", :large => "800x720>" }
     has_attached_file :photo3, :styles => {:small => "150x150>", :large => "800x720>"}
