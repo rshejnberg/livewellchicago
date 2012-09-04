@@ -161,6 +161,10 @@ a:hover {color: white}
 		width: 900px;  
 		text-align: center;
 		}
+#home {
+		position: relative;
+		top: 300px;
+}
 /* Home-Page Elements */
 #map {
 		position:relative; 
@@ -283,4 +287,26 @@ tr { padding: 10px; }
 #aptList{background-color: white; opacity: 0.5; color: black; width: 350px; text-align: left; padding: 20px}
 
 b {color :#599100;}
+
+/* Home Slideshow */
+#slideshow {	
+   		position:absolute;
+   		height:360px;
+   		width: 650px;
+   		right: -95px;
+   		overflow: hidden;
+   		z-index: 3;
+}
+#slideshow IMG {
+    	position:absolute;
+    	top:0;
+    	left:0;
+    	z-index:8;
+    	opacity:0.0;
+}
+#slideshow IMG.active {
+    	z-index:10;
+    	opacity:1.0;
+}
+#slideshow IMG.last-active {z-index:9;}
 
