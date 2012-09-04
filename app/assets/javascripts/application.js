@@ -21,10 +21,12 @@ b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^|\\s)"+b[3]+"(?:\\s|$)"
 (jQuery),
 $(window).load(
 	function(){
-			$("#slider").nivoSlider()}),
+			$('#slider').nivoSlider();
+			}),
 			$(function(){
 					$("#forms").hide(),
-					$(".hovApart").hide(),
+					$(".hovApt").hide(),
+					$(".aptMenuHomeHover").hide(),
 					$("#contactUs").hide(),
 					$("#landlords").hide(),
 					$("#apartments").hide(),
@@ -129,10 +131,10 @@ $(window).load(
 							$(".apartments").hover(
 									function(){
 									$(".aptBut").hide(),
-									$(".hovApart").show()
+									$(".hovApt").show()
 									},
 									function(){
-									$(".hovApart").hide(),
+									$(".hovApt").hide(),
 									$(".aptBut").show()
 									}),
 							$(".home").hover(
@@ -155,6 +157,42 @@ $(window).load(
 									},
 									function(){
 									this.src=this.src.replace("assets/hovcontactus","assets/contactus")
-									})
+									}),
+	$("#navHome").hover(
+			function(){
+			$(".navBarHome").animate({position: 'absolute', top: '-20px'}, 200)
+			},
+			function(){
+			$(".navBarHome").animate({position: 'absolute', top: '0px'}, 100)
+			}),
+	$("#navApt").hover(
+			function(){
+			$(".navBarApt").animate({position: 'absolute', top: '-20px'}, 200)
+			},
+			function(){
+			$(".navBarApt").animate({position: 'absolute', top: '0px'}, 100)
+			}),
+		$("#navForms").hover(
+			function(){
+			$(".navBarForms").animate({position: 'absolute', top: '-20px'}, 200)
+			},
+			function(){
+			$(".navBarForms").animate({position: 'absolute', top: '0px'}, 100)
+			}),
+	$("#navLandlords").hover(
+			function(){
+			$(".navBarLandlords").animate({position: 'absolute', top: '-20px'}, 200)
+			},
+			function(){
+			$(".navBarLandlords").animate({position: 'absolute', top: '0px'}, 100)
+			}),
+	$("#navContactUs").hover(
+			function(){
+			$(".navBarContactUs").animate({position: 'absolute', top: '-20px'}, 200)
+			},
+			function(){
+			$(".navBarContactUs").animate({position: 'absolute', top: '0px'}, 100)
+			})
+
 			
-		});
+					});

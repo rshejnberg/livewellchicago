@@ -56,18 +56,15 @@ body {
 
 /* Navigation */
 nav {
-		letter-spacing: 10px; 
-		z-index: -10; 
+	z-index: -10; 
 		width: 600px; 
 		position: absolute; 
 		margin: 0 auto; 
 		left: 400px; 
-		top: -70px; 
-		z-index: 4;
-		opacity: 1.0;
+		top: -80px; 
+		z-index: 4
 		}
 navApt {
-		letter-spacing: 10px; 
 		z-index: -10; 
 		width: 600px; 
 		position: absolute; 
@@ -86,7 +83,34 @@ navShow {
 		left: 25%;
 		top: 150px;
 		}
+.navButton { 
+		position: relative; 
+		top: 25px; 
+		right: -50px;   
+  		cursor: pointer;
+  		text-align: center;   
+  		z-index: 6; 
+  		padding-top: 10px;
+  		padding-bottom: 10px;
+  		font-family: "Trebuchet MS"; 
+  		font-weight: bold; 
+  		font-size: 	20px;
+  		}
+#navButtonBar {
+		background-color: #7dc030;
+		position: relative;
+		right: -35px;
+		padding-left: 70px;
+		padding-top: : -10px;
+		line-height: -10px;
+		font-size: 3px;
+}
+
 .home:hover {opacity:1.4;}
+.navBarHome {left: 40px;}
+.navBarContactUs {left: 60px;}
+.navBarLandlords {left: 40px;}
+.navBarContactUs {left: 60px;}
 /* Headers */
 .homeHeader {
 		width: 400px; 
@@ -118,6 +142,12 @@ navShow {
 /* Links & Link Attributes */
 .homeHeader > a:visited {color: white;}
 .homeHeader > a:link {color: white;}
+navApt > a:link {color: white;}
+navApt > a:visited {color: white;}
+nav > a:link {color: white;}
+nav > a:visited {color: white;}
+.navButton > a:link {color: white;}
+.navButton > a:visited {color: white;}
 .aptHeader > a:visited {color: white;}
 .aptHeader, .aptHeader > a:link {color: white;}
 a:link,a:visited {color:#599100;text-decoration:none;}
@@ -145,7 +175,7 @@ a:hover {color: white}
 		line-height: -15px;
 		position: relative;
 		margin: 0 auto; 
-		top: -140px;
+		top: -430px;
 		 }
 #contactUs {
 		text-align: center;
@@ -277,10 +307,8 @@ tr { padding: 10px; }
 
 
 #general {float:center; top: 200px; background-color:black; opacity: 0.7;}
-
 .form-file:hover {opacity: 0.8;}
-.hovApart {position: relative; z-index: 2;}
-.apartments {position: relative; z-index: 3;}
+
 #formApt {text-align: left; padding: 40px}
 
 
@@ -289,24 +317,6 @@ tr { padding: 10px; }
 b {color :#599100;}
 
 /* Home Slideshow */
-#slideshow {	
-   		position:absolute;
-   		height:360px;
-   		width: 650px;
-   		right: -95px;
-   		overflow: hidden;
-   		z-index: 3;
-}
-#slideshow IMG {
-    	position:absolute;
-    	top:0;
-    	left:0;
-    	z-index:8;
-    	opacity:0.0;
-}
-#slideshow IMG.active {
-    	z-index:10;
-    	opacity:1.0;
-}
-#slideshow IMG.last-active {z-index:9;}
 
+.slider-wrapper {}
+#full-slide-wrapper {width: 950px;position: relative; top: -300px;}

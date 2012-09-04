@@ -2,9 +2,17 @@
 <html>
 <head>
 <%= javascript_include_tag "application" %>
+
+<link rel="stylesheet" type="text/css" href="assets/default.css" />
+<link rel="stylesheet" type="text/css" href="assets/nivo-slider.css" media="screen"/>
+<script src="assets/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+<script src="assets/jquery.nivo.slider.js" type="text/javascript"></script>
 <script src="assets/slides.min.jquery.js"></script>
-
-
+<script type="text/javascript">   
+$(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
 </head>
 
 <body>
@@ -16,14 +24,28 @@
     <span class="homeHeader"><%= link_to "Live Well Chicago", root_url %></span>
     
     <nav><br />
-        <img src="assets/home.png" style="cursor: pointer" class="home">
-        <span class="apartments" >
-        <span class="aptBut"><img src="assets/apartments.png" class="apartmentsBut"></span>
-        <span class="hovApart" > <%= link_to image_tag("hovapartments.png"), {:action => 		'aptMenu', :controller => 'apartments'} %> </span>
-        </span>
-        <img src="assets/forms.png" style="cursor: pointer" class="forms">
-        <img src="assets/landlords.png" style="cursor: pointer" class="landlords">
-        <img src="assets/contactus.png" style="cursor: pointer" class="contactUs">
+		
+		<span class="navButton" id="navHome" ><%= link_to "home", root_url %></span>
+		&nbsp&nbsp&nbsp&nbsp&nbsp
+		<a href="http://livewellchicago.herokuapp.com/apartments/aptMenu">
+		<span class="navButton" id="navApt">apartments </span></a>
+		&nbsp&nbsp&nbsp&nbsp&nbsp
+		<span class="navButton" id="navForms">forms</span>
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		<span class="navButton" id="navLandlords">landlords</span>
+		&nbsp&nbsp&nbsp&nbsp&nbsp
+		<span class="navButton" id="navContactUs">contact us</span>
+		<br /><br /><br />
+		
+		<span id="navButtonBar" class="navBarHome">  .</span>
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		<span id="navButtonBar" class="navBarApt">  .</span>
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		<span id="navButtonBar" class="navBarForms">  .</span>
+		&nbsp&nbsp&nbsp&nbsp&nbsp
+		<span id="navButtonBar" class="navBarLandlords">  .</span>
+		&nbsp&nbsp&nbsp&nbsp
+		<span id="navButtonBar" class="navBarContactUs">  .</span>
     </nav>
        <br />
 
@@ -107,26 +129,17 @@
     </div>
 
     <div id="home">
-    
-    	<div id="hideOverflow">
-			<div id="slideshow">
-       		 		<img src="assets/slide1.jpeg"	alt="Slideshow Image 1" class="active"/>
-       		 		<img src="assets/slide2.jpeg"	alt="Slideshow Image 2" />
-       		 		<img src="assets/slide3.jpeg"	alt="Slideshow Image 3"  />
-       		 		<img src="assets/slide4.jpeg" 	alt="Slideshow Image 4"  />
-  			</div>
-		</div>
-    
-    	<div id="wrapper">
-       		 <div class="slider-wrapper theme-default">
-       		 	<div id="slider" class="nivoSlider">
-       		 		<img src="assets/slide1.jpeg" alt="" data-transition="fade" />
-       		 		<img src="assets/slide2.jpeg" alt="" data-transition="fade"  />
-       		 		<img src="assets/slide3.jpeg" alt="" data-transition="fade" />
-       		 		<img src="assets/slide4.jpeg" alt="" data-transition="fade"  />
-       		 	</div>            
-       		 </div>
-       	</div>
+    <div id="full-slide-wrapper">
+     <div class="slider-wrapper theme-default">
+            <div id="slider" class="nivoSlider">
+                <img src="assets/slide1.jpeg" data-thumb="assets/slide1.jpeg" data-transition="fade" alt="" />
+                <img src="assets/slide2.jpeg" data-thumb="images/up.jpg" alt="" title="This is an example of a caption" data-transition="fade" />
+                <img src="assets/slide3.jpeg" data-thumb="assets/slide3.jpeg" alt="" data-transition="fade" />
+                <img src="assets/slide4.jpeg" data-thumb="assets/slide4.jpeg" alt="" title="#htmlcaption"data-transition="fade"  />
+            </div>
+       
+        </div>
+    </div>
                
        	<div id="aboutUs">
        		Thanks for your interest in Live Well Chicago,<br /><br />
