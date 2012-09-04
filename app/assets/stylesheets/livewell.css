@@ -194,7 +194,9 @@ a:hover {color: white}
 		top:15px; 
 		font-size: 15px; 
 		padding: 10px; 
+		border-radius: 20px;
 		}
+.menuSel:hover {background-color: #5d4f55;}
 #aptMenu {
 		background-color: #2E272A; 
 		z-index: 3; 
@@ -272,7 +274,7 @@ tr { padding: 10px; }
 
 #general {float:center; top: 200px; background-color:black; opacity: 0.7;}
 
-
+.form-file:hover {opacity: 0.8;}
 .hovApart {position: relative; z-index: 2;}
 .apartments {position: relative; z-index: 3;}
 #formApt {text-align: left; padding: 40px}

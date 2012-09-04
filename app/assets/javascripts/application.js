@@ -198,9 +198,7 @@ $(".apartments").hover(
   $(".studio").hover(
                   function(){this.src = this.src.replace("assets/studio","assets/hovstudio");},
                   function(){this.src = this.src.replace("assets/hovstudio","assets/studio");});
-  $(".menuSel").hover(function(){$(this).css('background-color', 'gray', 'color', 'black');},
-  				      function() {$(this).css('background-color', '#2E272A', 'color', 'white');});
-  });
+   });
 
 //Url Parser (From Reflection at webmasterworld.com 
 
