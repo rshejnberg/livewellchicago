@@ -17,10 +17,22 @@ body {
 		font-size: 12px; 
 		font-family: "Lucida Sans Unicode";
 		}
-#main, #aptMenuTable {
+#main  {
 		position: relative; 
 		width: 950px; 
 		height: 1000px; 
+		top: -175px; 
+		font-size: 15px;
+		margin: 0 auto; 
+		font-family: "Narrator";
+		background-color: rgba(0,0,0,0.71);
+		color: white; 
+		opacity: 0.9;
+		}
+#aptMenuTable {
+		position: relative; 
+		width: 950px; 
+		height: 100px; 
 		top: -175px; 
 		font-size: 15px;
 		margin: 0 auto; 
@@ -106,7 +118,7 @@ navShow {
 		font-size: 3px;
 }
 
-.home:hover {opacity:1.4;}
+
 .navBarHome {left: 40px;}
 .navBarContactUs {left: 60px;}
 .navBarLandlords {left: 40px;}
