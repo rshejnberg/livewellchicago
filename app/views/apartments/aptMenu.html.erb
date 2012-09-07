@@ -1,9 +1,104 @@
 <head>
  <%= stylesheet_link_tag "tableStyle", :media => "all" %>
- <script type="text/javascript"> 
- 	$(".hovhomeAptMenu").hide();
-
+ <script type="text/javascript">
+ $(".aptHeader").hide();
  </script>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function(){
+
+	showAll();
+	$("#studioBut").click(function(){showStudio()});
+	$("#1bdr").click(function(){show1bdr()});
+	$("#2bdr").click(function(){show2bdr()});
+	$("#3bdr").click(function(){show3bdr()});
+	$("#4bdr").click(function(){show4bdr()});
+	$("#all").click(function(){showAll()});
+	function showStudio(){
+				$("studio").fadeIn('1000');
+				$("#oneBdr").hide();
+				$("#aptAll").hide();
+				$("#twoBdr").hide();
+				$("#threeBdr").hide();
+				$("#fourBdr").hide();
+				}
+	function show1bdr(){
+				$("studio").hide();
+				$("#oneBdr").show();
+				$("#aptAll").hide();
+				$("#twoBdr").hide();
+				$("#threeBdr").hide();
+				$("#fourBdr").hide();
+				}
+	function show2bdr(){
+				$("studio").hide();
+				$("#oneBdr").hide();
+				$("#aptAll").hide();
+				$("#twoBdr").show();
+				$("#threeBdr").hide();
+				$("#fourBdr").hide();
+				}
+	function show3bdr(){
+				$("studio").hide();
+				$("#oneBdr").hide();
+				$("#aptAll").hide();
+				$("#twoBdr").hide();
+				$("#threeBdr").fadeIn('1000');
+				$("#fourBdr").hide();
+				}
+	function show4bdr(){
+				$("#oneBdr").hide();
+				$("#aptAll").hide();
+				$("#twoBdr").hide();
+				$("#threeBdr").hide();
+				$("#fourBdr").fadeIn('1000');
+				$("studio").hide();
+				}
+	function showAll(){
+				$("studio").hide();
+				$("#oneBdr").hide();
+				$("#aptAll").fadeIn('1000');
+				$("#twoBdr").hide();
+				$("#threeBdr").hide();
+				$("#fourBdr").hide();
+				}
+	$("#navHome").hover(
+				function(){
+				$(".navBarHome").animate({position: 'absolute', top: '-20px'}, 200)
+				},
+				function(){
+				$(".navBarHome").animate({position: 'absolute', top: '0px'}, 100)
+				});
+	$("#navApt").hover(
+				function(){
+				$(".navBarApt").animate({position: 'absolute', top: '-20px'}, 200)
+				},
+				function(){
+				$(".navBarApt").animate({position: 'absolute', top: '0px'}, 100)
+				});
+	$("#navForms").hover(
+				function(){
+				$(".navBarForms").animate({position: 'absolute', top: '-20px'}, 200)
+				},
+				function(){
+				$(".navBarForms").animate({position: 'absolute', top: '0px'}, 100)
+				});
+	$("#navLandlords").hover(
+				function(){
+				$(".navBarLandlords").animate({position:'absolute',top:'-20px'}, 200)
+				},
+				function(){
+				$(".navBarLandlords").animate({position:'absolute',top:'0px'}, 100)
+				});
+	$("#navContactUs").hover(
+				function(){
+				$(".navBarContactUs").animate({position:'absolute',top:'-20px'}, 200)
+				},
+				function(){
+				$(".navBarContactUs").animate({position: 'absolute',top:'0px'}, 100)
+				});
+	});
+</script>
 </head>
    
 <div id="aptMenuTable">
@@ -38,7 +133,7 @@
     	<span class="menuSel" style="cursor: pointer" id="1bdr"> 1BDR </span>
     	<span class="menuSel" style="cursor: pointer" id="2bdr"> 2BDR </span>
     	<span class="menuSel" style="cursor: pointer" id="3bdr"> 3BDR </span>
-    	<span class="menuSel" style="cursor: pointer" id="4bdrSel"> 4+BDR </span>
+    	<span class="menuSel" style="cursor: pointer" id="4bdr"> 4+BDR </span>
     	<span class="menuSel" style="cursor: pointer" id="all"> All Units </span></center>
     </div>
  
