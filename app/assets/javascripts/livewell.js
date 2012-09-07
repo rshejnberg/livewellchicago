@@ -67,7 +67,7 @@ $(window).ready(function()
 				$("#home").hide();
 				$("#aboutUs").hide();
 				}
-		});
+
 	
 
 $("#navHome").hover(
