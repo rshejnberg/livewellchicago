@@ -7,8 +7,13 @@ body
 {
 	line-height: 1.6em;
 }
+#aptTables {
+	position: relative;
+	top: 200px;
+}
 #aptAll, #studio, #oneBdr, #twoBdr, #threeBdr, #fourBdr
 {
+	
 	font-family: "Trebuchet MS";
 	font-size: 12px;
 	margin: 0 auto;
@@ -17,7 +22,7 @@ body
 	border-collapse: collapse;
 	border: solid 10px #2E272A;
 	position: relative;
-	top: 95px;
+	top: 595px;
 }
 #aptAll th
 {

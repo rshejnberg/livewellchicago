@@ -12,20 +12,7 @@ class ApartmentsController < ApplicationController
     end
   end
     
-  def aptMenu
-      @apartments = Apartment.all
-      @studio = Apartment.where(:Bed => '0').all
-      @oneBdr = Apartment.where(:Bed => '1').all
-      @twoBdr = Apartment.where(:Bed => '2').all
-      @threeBdr = Apartment.where(:Bed => '3').all
-      @fourPlusBdr = Apartment.where(:Bed => '4').all
-      
-        respond_to do |format|
-            format.html # index.html.erb
-            format.json { render :json => @apartments }
-    end
-      
-  end
+
     def showPublic
         @apartment = Apartment.find(params[:id])
         

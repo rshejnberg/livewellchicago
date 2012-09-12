@@ -1,0 +1,21 @@
+<table id="aptAll"> 
+        <% apartments.each do |apartment| %>
+       <tr><td>
+        Area: <%= apartment.location %><br />  
+        <%= apartment.availability %><br />
+        Available: <%= apartment.Date_Avail %><br />
+        Bed: <%= apartment.Bed %>&nbsp&nbsp
+        Bath: <%= apartment.Bath %><br />
+        Agent: <%= apartment.agent %><br />
+        Rent: $<%= apartment.Rent %><br /></td><td>
+        Deposit: $<%= apartment.Security_Deposit %><br />
+        Pets: <%= apartment.Pets %><br />
+        Parking: <%= apartment.Parking %><br />
+        Laundy: <%= apartment.Laundy %><br />
+        Heat: <%= apartment.Type_Heat %><br />
+        AC: <%= apartment.AC %> </td><td><%= link_to (apartment) do  %>
+        <%= image_tag apartment.photo.url (:small) %> <br /><% end %>
+        </td></tr>
+        <% end %>
+</table>
+   

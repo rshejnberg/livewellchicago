@@ -74,7 +74,8 @@ nav {
 		margin: 0 auto; 
 		left: 400px; 
 		top: -80px; 
-		z-index: 4
+		z-index: 4;
+		
 		}
 navApt {
 		z-index: -10; 
@@ -118,7 +119,7 @@ navShow {
 		font-size: 3px;
 
 }
-
+#navSpacer {height: 40px;}
 .navBarHome {left: 40px;}
 .navBarContactUs {left: 60px;}
 .navBarLandlords {left: 40px;}
@@ -331,6 +332,9 @@ tr { padding: 10px; }
 b {color :#599100;}
 
 /* Home Slideshow */
-
+#aptTables {
+	position: relative;
+	top: 200px;
+}
 .slider-wrapper {}
 #full-slide-wrapper {width: 950px;position: relative; top: -300px;}
