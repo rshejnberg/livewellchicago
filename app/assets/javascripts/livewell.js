@@ -83,35 +83,35 @@ $("#navHome").hover(
 			$(".navBarHome").animate({position: 'absolute', top: '-20px'}, 200)
 			},
 		function(){
-			$(".navBarHome").animate({position: 'absolute', top: '0px'}, 100)
+			$(".navBarHome").animate({position: 'absolute', top: '-10px'}, 100)
 			});
-$("#navApt").hover(
+$("#navApartment").hover(
 		function(){
-			$(".navBarApt").animate({position: 'absolute', top: '-20px'}, 200)
+			$(".navBarApartment").animate({position: 'absolute', top: '-20px'}, 200)
 			},
 		function(){
-			$(".navBarApt").animate({position: 'absolute', top: '0px'}, 100)
+			$(".navBarApartment").animate({position: 'absolute', top: '-10px'}, 100)
 			});
 $("#navForms").hover(
 		function(){
 			$(".navBarForms").animate({position: 'absolute', top: '-20px'}, 200)
 			},
 		function(){
-			$(".navBarForms").animate({position: 'absolute', top: '0px'}, 100)
+			$(".navBarForms").animate({position: 'absolute', top: '-10px'}, 100)
 			});
 $("#navLandlords").hover(
 		function(){
 			$(".navBarLandlords").animate({position:'absolute',top:'-20px'},200)
 			},
 		function(){
-			$(".navBarLandlords").animate({position:'absolute',top:'0px'}, 100)
+			$(".navBarLandlords").animate({position:'absolute',top:'-10px'}, 100)
 			});
 $("#navContactUs").hover(
 		function(){
 			$(".navBarContactUs").animate({position:'absolute',top:'-20px'},200)
 			},
 		function(){
-			$(".navBarContactUs").animate({position: 'absolute',top:'0px'}, 100)
+			$(".navBarContactUs").animate({position: 'absolute',top:'-10px'}, 100)
 			});
 //Apartments Controls	
 	showAll();
