@@ -3,6 +3,7 @@ class ApartmentsController < ApplicationController
   # GET /apartments.json
     skip_before_filter :authorize, :only => :aptMenu
     skip_before_filter :authorize, :only => :show
+    layout :resolve_layout
   def index
     @apartments = Apartment.all
 
@@ -31,7 +32,14 @@ class ApartmentsController < ApplicationController
       format.json { render :json => @apartment }
     end
   end
-
+  def resolve_layout
+  	case action_name
+  	when "edit", "new"
+  	  "admin"
+  	else
+  	  "application"
+  end
+  end
   # GET /apartments/new
   # GET /apartments/new.json
   def new

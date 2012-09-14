@@ -13,34 +13,22 @@
 
 /* Primary Wrapping Elements */
 body {
-		background-color: white ;
+		background-image: url("green-wallpaper.jpeg");  
 		font-size: 12px; 
 		font-family: "Lucida Sans Unicode";
 		}
 #main  {
-
-background: #638400; /* Old browsers */
-background: -moz-linear-gradient(top, #638400 0%, #78a800 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#638400), color-stop(100%,#78a800)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, #638400 0%,#78a800 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, #638400 0%,#78a800 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, #638400 0%,#78a800 100%); /* IE10+ */
-background: linear-gradient(to bottom, #638400 0%,#78a800 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#638400', endColorstr='#78a800',GradientType=0 ); /* IE6-9 */
-
-
 		position: relative; 
-		width:  1000px; 
-		height: 800px; 
-		top: 150px;
+		width: 950px; 
+		height: 1000px; 
+		top: -175px; 
 		font-size: 15px;
 		margin: 0 auto; 
 		font-family: "Narrator";
-	color: white;
+		background-color: rgba(0,0,0,0.71);
+		color: white; 
+		opacity: 0.9;
 		}
-#mainHeader {
-	
-}
 #aptMenuTable {
 		position: relative; 
 		width: 950px; 
@@ -62,35 +50,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#638400', end
 		position: relative; 
 		width: 960px; 
 		height: 1200px; 
-		top: -15px; 
+		top: -215px; 
 		margin: 0 auto;
 		padding: 20px; 
-		background-color:  #638400;
+		background-color: rgba(0,0,0,0.71);
 		color: white; 
 		opacity: 0.9;
-		border-radius: 5px;
 		}
 
 
 /* Navigation */
 nav {
-background: #45484d; /* Old browsers */
-background: -moz-linear-gradient(top, #45484d 0%, #000000 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(100%,#000000)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, #45484d 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, #45484d 0%,#000000 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, #45484d 0%,#000000 100%); /* IE10+ */
-background: linear-gradient(to bottom, #45484d 0%,#000000 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */	
-		text-align: center;
-		z-index: -10; 
-		width: 1000px; 
-		position: relative; 
+	z-index: -10; 
+		width: 600px; 
+		position: absolute; 
 		margin: 0 auto; 
-		height: 70px; 
-		top: -70px; 
+		left: 400px; 
+		top: -80px; 
 		z-index: 4;
-		color: #71a749;
+		
 		}
 navApt {
 		z-index: -10; 
@@ -125,16 +103,15 @@ navShow {
   		font-size: 	20px;
   		}
 #navButtonBar {
-		background-color:#b3ea43;
+		background-color: #7dc030;
 		position: relative;
-		top: -10px;
+		right: -35px;
 		padding-left: 70px;
 		padding-top: : -10px;
 		line-height: -10px;
 		font-size: 3px;
 
 }
-.navBarContactUs {right: 50px;}
 #navSpacer {height: 40px;}
 .navBarHome {left: 40px;}
 .navBarContactUs {left: 60px;}
@@ -142,18 +119,17 @@ navShow {
 .navBarContactUs {left: 60px;}
 /* Headers */
 .homeHeader {
-		width: 700px; 
+		width: 400px; 
 		margin: 0 auto; 
-		 color: #71a749;
-		font-size: 70px;
+		color: white; 
+		font-size: 50px;
 		text-shadow: none; 
 		font-weight: bold;
-		font-family:"Trebuchet MS";
+		font-family:"Bell MT";
 		word-spacing: -7px;
 		padding-bottom: 15px; 
 		position: absolute; 
-		top: -105px;
-		  
+		top: -55px;  
 		z-index: 5
 		}
 .aptHeader {
@@ -170,8 +146,8 @@ navShow {
 		z-index: 5
 		}
 /* Links & Link Attributes */
-.homeHeader > a:visited {color: #71a749}
-.homeHeader > a:link {color: #71a749; }
+.homeHeader > a:visited {color: white;}
+.homeHeader > a:link {color: white;}
 navApt > a:link {color: white;}
 navApt > a:visited {color: white;}
 nav > a:link {color: white;}
@@ -200,13 +176,12 @@ a:hover {color: white}
 		top:1250px
 		}
 #aboutUs{
-		width: 700px;
+		color: white; 
+		width: 800px; 
 		line-height: -15px;
 		position: relative;
-		left: 
 		margin: 0 auto; 
-		top: -350px;
-		right: -100px;
+		top: -430px;
 		 }
 #contactUs {
 		text-align: center;
@@ -215,7 +190,7 @@ a:hover {color: white}
 		}
 #footer {
 		font-size: 10px; 
-		color: black;
+		color: white; 
 		position: absolute; 
 		top: 1000px;  
 		margin: 0 auto; 
@@ -223,8 +198,6 @@ a:hover {color: white}
 		text-align: center;
 		}
 #home {
-		color: white;
-		width: 770px; 
 		position: relative;
 		top: 300px;
 }
@@ -255,7 +228,7 @@ a:hover {color: white}
 
 /* Apartment Menu Elements */
 .menuSel {
-		
+		background-color: #919191;
 		height: 500px; 
 		position:relative; 
 		top:15px; 
@@ -269,14 +242,14 @@ a:hover {color: white}
 		}
 .menuSel:hover {background-color: #816A4A;}
 #aptMenu {
-background-color: #638400;
+		background-color:#919191;
 		z-index: 3; 
 		letter-spacing: 1px; 
-		width: 1000px; 
+		width: 950px; 
 		height: 50px;  
 		position: relative; 
 		margin: 0 auto;
-		top: -70px; 
+		top: 100px; 
 		}
 /* Apartment Elements */
 #showDescription {
@@ -284,17 +257,6 @@ background-color: #638400;
 		top: 70px;
 		width: 800px;
 		margin: 0 auto;
-		left: 7%;
-		background-color: #D8DEAE;
-		color: black;
-		border-radius:10px;
-		}
-#showColumns {
-		-moz-column-count:4; /* Firefox */
-		-webkit-column-count:4; /* Safari and Chrome */
-		column-count:4;
-		position: relative;
-		right: -50px;
 		}
 /* Logged in Elements */
 .logoutButton {
@@ -322,8 +284,8 @@ background-color: #638400;
 		margin: 0 auto;
 		left: 10%;
 		top: 50px
-		
 		}
+
 
 /*Table Elements */
 table {
@@ -352,8 +314,9 @@ b {color :#599100;}
 /* Home Slideshow */
 #aptTables {
 	position: relative;
-	top: 0px;
-	
+	top: 200px;
+	background-color: #2E272A;
+	padding-top: 20px;
 }
-.banner {position: relative; right: %; top: -370px;}
+.slider-wrapper {}
 #full-slide-wrapper {width: 950px;position: relative; top: -300px;}

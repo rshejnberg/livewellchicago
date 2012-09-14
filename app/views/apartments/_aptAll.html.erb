@@ -1,21 +1,24 @@
-<table id="aptAll"> 
-        <% apartments.each do |apartment| %>
-       <tr><td>
-        Area: <%= apartment.location %><br />  
-        <%= apartment.availability %><br />
-        Available: <%= apartment.Date_Avail %><br />
-        Bed: <%= apartment.Bed %>&nbsp&nbsp
-        Bath: <%= apartment.Bath %><br />
-        Agent: <%= apartment.agent %><br />
-        Rent: $<%= apartment.Rent %><br /></td><td>
-        Deposit: $<%= apartment.Security_Deposit %><br />
-        Pets: <%= apartment.Pets %><br />
-        Parking: <%= apartment.Parking %><br />
-        Laundy: <%= apartment.Laundy %><br />
-        Heat: <%= apartment.Type_Heat %><br />
-        AC: <%= apartment.AC %> </td><td><%= link_to (apartment) do  %>
-        <%= image_tag apartment.photo.url (:small) %> <br /><% end %>
-        </td></tr>
-        <% end %>
-</table>
+
    
+   	  <% apartments.each do |apartment| %>
+<table id="aptAll"> 
+	<p>
+	<span class="tablePicture">
+	
+<br />		<%= image_tag apartment.photo.url (:small) %> 
+
+	</span> 
+	<span class="tableHeader"> <br />&nbsp
+        <%= apartment.location %> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <%= apartment.agent %>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <%= apartment.Bed %> BDR / 
+        <%= apartment.Bath %> BTH&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        $<%= apartment.Rent %>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                Available: <%= apartment.Date_Avail %>
+	</span><br />
+        <div id="tableDescription"><%= apartment.description %></div>
+        &nbsp&nbsp<%= link_to (apartment) do  %>[More Information]<% end %><br />
+
+	</p>
+</table><br /><div id="tableSpacer" style="background-color: #638400"> <br /></div>
+           <% end %>

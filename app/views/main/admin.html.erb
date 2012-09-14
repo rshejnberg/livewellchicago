@@ -1,10 +1,47 @@
-<script type="text/javascript" src="admin.js"></script>
+<script type="text/javascript">
+//ans = admin nav selection
+$(function(){
+	$(" #adminUsers, #adminUsersSub").hide();
+	$("#ansApartments").click(
+		function(){
+			$("#adminApartments").fadeIn(100); 
+			$("#adminUsers").hide(); 
+			$("#adminApartmentsSub").show(); 						
+			$("#adminUsersSub").hide();
+			});
+	$("#ansUsers").click(
+		function(){
+			$("#adminUsers").fadeIn(100); 
+			$("#adminApartments").hide(); 
+			$("#adminApartmentsSub").hide();
+			$("#adminUsersSub").show();
+			});
+	
+	});
+</script>
 <div id="adminPage">
-<h2>Site Manager </h2>
-    <br /><br />
-    <%= link_to 'APARTMENTS', :action=>'index', :controller=>'apartments' %><br /><br />
-
-    <%= link_to 'USERS', :action=>'index', :controller=>'users' %><br /><br />
-    <span class="logoutButton">  <%= link_to image_tag("exit.png"), {:action => 'destroy', :controller => 'sessions'} %> </span>
-    </div>
+	<header> Live Well Chicago Apartment Database </header>
+	<div id="adminNavColumn">
+		<div id="adminNavCategories">
+   			<p class="adminNavSelection" id="ansApartments"> APARTMENTS </p>
+   			<p id="adminApartmentsSub"><%= link_to 'New Apartment', 						new_apartment_path %>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+   			 <p class="adminNavSelection" id="ansUsers"> USERS </p>
+   			 <p id="adminUsersSub"> 
+   			 <%= link_to 'New User', new_user_path %>
+   			 </p>
+   		</div>
+   	</div>
+   	<div id="adminMain">
+		<div id="adminApartments">
+			<%= render  :partial => 'apartments/index', :locals => {:apartments 			=> 	@apartments}%>
+		</div>
+		<div id="adminUsers">
+			<%= render  :partial => 'users/index', :locals => {:users => @users}			%>
+		</div>
+	</div>
+   
+    <span class="logoutButton">  
+  		<%= link_to "SIGN OUT", {:action => 'destroy', :controller => 		'sessions'} %> 
+    </span>    
 </div>

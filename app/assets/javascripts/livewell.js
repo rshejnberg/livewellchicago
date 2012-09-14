@@ -46,6 +46,7 @@ $(window).ready(function()
 				$("#apartments").hide();
 				$("#home").hide();
 				$("#aboutUs").hide();
+				
 				}
 	function showForms()
 				{

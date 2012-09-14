@@ -3,15 +3,15 @@
 <br /><h1>Login</h1><br />
 <%= form_tag sessions_path do %>
 <div class="field">
-  &nbsp&nbsp&nbsp&nbsp&nbsp<%= label_tag :email, "e-mail" %>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%= label_tag :email, "e-mail" %>
   <%= text_field_tag :email, params[:email] %>
 </div>
 <div class="field">
   <%= label_tag :password %>
   <%= password_field_tag :password, params[:password] %>
 </div>
-<div class="actions"><br />
-  <%= submit_tag "Login" %>
+<div class="loginButton"><br />
+  <%= image_submit_tag("login.png") %>
 </div>
 <% end %>
 

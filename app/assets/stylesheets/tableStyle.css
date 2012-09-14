@@ -7,47 +7,46 @@ body
 {
 	line-height: 1.6em;
 }
-#aptTables {
-	position: relative;
-	top: 200px;
-}
+
 #aptAll, #studio, #oneBdr, #twoBdr, #threeBdr, #fourBdr
-{
-	
+	{	
 	font-family: "Trebuchet MS";
 	font-size: 12px;
 	margin: 0 auto;
-	width: 530px;
+	width: 830px;
+	background: #D8DEAE;
+	color: black;
+	font-family: "Trebuchet MS";
 	text-align: left;
 	border-collapse: collapse;
-	border: solid 10px #2E272A;
 	position: relative;
-	top: 595px;
-}
-#aptAll th
-{
-	font-size: 13px;
-	font-weight: normal;
-	padding: 8px;
-	background: #b9c9fe;
+	border-spacing:0px 50px;
+	border-radius: 10px;
+	}
+
+.td {
+	height: 60px;
+	text-overflow: clip;
+	overflow: hidden;
+	}
+.tablePicture {float: left;}
+#tableDescription 	
+	{
+	height: 70px;
+	white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+	padding: 10px;
+	}
 	
-	
-	color: white;
-	padding-bottom: 10px;
-}
-#aptAll td
-{
-	padding: 8px;
-	background: #2E272A; 
-	border-bottom: 1px solid #5d4f55;
-	color: white;
-	border-top: 1px solid transparent;
-}
-#aptAll tr:hover td
-{
-	background: #5d4f55;
-	color: white;
-}
+.tableHeader {
+	color: #842727; 
+	font-weight: bold;
+	font-size: 15px;
+	}
+.tablePic {vertical-align: middle;}
+
+
 
 #studio th
 {
@@ -55,16 +54,14 @@ body
 	font-weight: normal;
 	padding: 8px;
 	background: #b9c9fe;
-	border-top: 4px solid #aabcfe;
 	
-	color: white;
+	
+	color: #9DBA1A
 }
 #studio td
 {
 	padding: 8px;
-	background: #2E272A; 
-	
-	color: white;
+	color: #9DBA1A;
 	border-top: 1px solid transparent;
 }
 #studio tr:hover td
@@ -86,8 +83,6 @@ body
 #oneBdr td
 {
 	padding: 8px;
-	background: #2E272A; 
-	
 	color: white;
 	border-top: 1px solid transparent;
 }
@@ -110,8 +105,6 @@ body
 #twoBdr td
 {
 	padding: 8px;
-	background: #2E272A; 
-	
 	color: white;
 	border-top: 1px solid transparent;
 }
@@ -134,14 +127,12 @@ body
 #threeBdr td
 {
 	padding: 8px;
-	background: #2E272A; 
-	
 	color: white;
 	border-top: 1px solid transparent;
 }
 #threeBdr tr:hover td
 {
-	background: #5d4f55;;
+	background: #5d4f55;
 	color: white;
 }
 
@@ -158,8 +149,6 @@ body
 #fourBdr td
 {
 	padding: 8px;
-	background: #2E272A; 
-	
 	color: white;
 	border-top: 1px solid transparent;
 }

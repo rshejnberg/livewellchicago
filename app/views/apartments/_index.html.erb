@@ -1,0 +1,41 @@
+<link rel="stylesheet" type="text/css" href="assets/admin.css" />
+<div id="adminApartmentTable">
+
+<table>
+  <tr>
+    <th>Agent</th>
+    <th>Location</th>
+    <th>Bed</th>
+    <th>Bath</th>
+    <th>Rent</th>
+    <th>Owner</th>
+    <th>Date avail</th>
+    <th>Availability</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+<% @apartments.each do |apartment| %>
+  <tr>
+    <td class="tableSection"><%= apartment.agent %></td>
+    <td class="tableSection"><%= apartment.location %></td>
+    <td class="tableSection"><%= apartment.Bed %></td>
+    <td class="tableSection"><%= apartment.Bath %></td>
+    <td class="tableSection">$<%= apartment.Rent %></td>
+    <td class="tableSection"><%= apartment.Owner %></td>
+    <td class="tableSection"><%= apartment.Date_Avail %></td>
+    <td class="tableSection"><%= apartment.availability %></td>
+    <td id="adminBut" class="showButton" style="cursor: pointer"><%= image_tag("adminShowButton.png") %>
+    SHOW
+    </td>
+    <td id="adminBut" class="editButton" style="cursor: pointer"><%= image_tag("adminEditButton.png") %>
+EDIT</td>
+    <td id="adminBut" class="deleteButton" style="cursor: pointer"><%= image_tag("adminDeleteButton.png") %>
+DELETE</td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+</div>

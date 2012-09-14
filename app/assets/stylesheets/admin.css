@@ -1,0 +1,178 @@
+/*Imported Fonts*/
+
+@font-face {
+			font-family: 'Narrator';
+			src: url('narrator.eot');
+			src: url('narrator.eot?#iefix') format('embedded-opentype'),
+				 url('narrator.woff') format('woff'),
+				 url('narrator.ttf') format('truetype'),
+				 url('narrator.svg#narrator') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+/* Primary Wrapping Elements */
+body {
+	background-color: #c5c1c1;
+	font-size: 12px; 
+	font-family: "Lucida Sans Unicode";
+	}
+a:link, a:visited {text-decoration: none; color: #4c4c4c}
+.adminNavSelection:hover { 
+	
+	color: #3586c4;
+	cursor: pointer;
+	}
+p {width: 275px; color: #4c4c4c; font-family: "Narrator"}
+#adminPage {
+	
+	border-radius: 10px;
+	height: 800px;
+
+	
+	}
+#adminNavColumn {
+	background-color: #eeeeee;
+	float: left;
+	z-index: 2;
+	width: 275px;
+	height: 600px;
+	position: relative;
+	top: 50px;
+	border-radius: 5px;
+	text-align: center;
+	font-family: "Narrator";
+	font-weight: bold;
+	font-size: 17px;
+	line-height: 30px;
+	
+	}
+
+#adminMain {
+	background-color: #eeeeee;
+	width: 800px;
+	overflow: hidden;
+	position: absolute;
+	height: 700px;
+	left: 290px;
+	top: 58px;
+	border-radius: 5px;
+	z-index: 2;
+	}
+
+#adminBut {
+	color: white;
+	font-family: "Narrator";
+	font-size: 15px;
+	font-weight: bold;
+	border-radius: 3px;
+	padding: 2px;
+	padding-left: 10px;
+	padding-right: 10px;
+	}
+#adminApartmentTable th
+{
+	font-size: 13px;
+	font-weight: normal;
+	padding: 8px;
+	color:  #3e3e3e;
+	
+}
+header {
+	text-align: center;
+	font-size: 25px;
+	position: relative;
+	top: 15px;
+	color: #3e3e3e;
+	font-family: 'Narrator';
+	background-color:  #dcdcdc;
+	z-index: 1;
+	left: 35%;
+	padding: 10px;
+	border-radius: 5px;
+	width: 500px;
+	}
+td:hover {background-color: gray;}
+#adminApartmentTable td
+{
+	padding: 8px;	
+	border-top: 1px solid transparent;
+}
+#adminApartmentsSub, #adminUsersSub {
+	font-size: 13px;
+	text-align: right;
+	position: relative;
+	border-top: solid 1px #c5c1c1;
+	border-bottom: solid 1px #c5c1c1;
+	right: 0px;
+	background-color: #e3e3e3; 
+	width: 
+
+	}
+.logoutButton {
+	background-color:  #dcdcdc;
+	z-index: 1;
+	padding: 10px;
+	border-radius: 5px;
+	font-weight: bold;
+	position: relative;
+	left: -250px;
+	top: 28px;
+	font-family: "Narrator";
+	}
+.logoutButton:hover {background-color: #ececec}
+#login {
+	background-color: #f1f1f1;
+	width: 400px;
+	position: relative;
+	left: 30%;
+	top: 200px;
+	padding: 20px;
+	border-radius: 10px;
+	font-family: "Narrator";
+	color: #3586c4;
+	text-align: center;
+	}
+#formApt {
+	background-color:  #eeeeee;
+	border-radius: 5px;
+	width: 700px;
+	padding: 20px;
+	position: relative;
+	left: 25%;
+	top: 25px;
+	color: #369efa;
+	font-weight: bold;
+	-webkit-columns:100px 2;
+	font-family: 'Narrator'
+	}
+	#aptAll th
+{
+	font-size: 13px;
+	font-weight: normal;
+	padding: 8px;
+	background: #b9c9fe;
+	
+	
+	color: white;
+	padding-bottom: 10px;
+}
+#aptAll td
+{
+	padding: 8px;
+	background: #2E272A; 
+	border-bottom: 1px solid #5d4f55;
+	color: white;
+	border-top: 1px solid transparent;
+}
+#aptAll tr:hover td
+{
+	background: #5d4f55;
+	color: white;
+}
+.deleteButton {background-color: #d31f1f;}
+.deleteButton:hover {background-color: #d67979}
+.editButton {background-color: #4f4f4f;}
+.editButton:hover {background-color: #979797}
+.showButton {background-color: #38aaf2;}
+.showButton:hover {background-color: #85cdfa}

@@ -1,4 +1,5 @@
 class MainController < ApplicationController
+	layout :resolve_layout
     skip_before_filter :authorize, :only => :home
     def home
       @apartments = Apartment.all
@@ -10,7 +11,19 @@ class MainController < ApplicationController
   end
 
   def admin
-
+	  @apartments = Apartment.all 
+	  @users = User.all
+  end
+  
+  def resolve_layout
+  	case action_name
+  	when "home"
+  	  "application"
+  	when "admin"
+  	  "admin"
+  	else
+  	  "application"
+  end
   end
     def publicSite
         
