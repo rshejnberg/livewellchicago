@@ -25,13 +25,15 @@
     <td class="tableSection"><%= apartment.Owner %></td>
     <td class="tableSection"><%= apartment.Date_Avail %></td>
     <td class="tableSection"><%= apartment.availability %></td>
-    <td id="adminBut" class="showButton" style="cursor: pointer"><%= image_tag("adminShowButton.png") %>
-    SHOW
+    <td id="adminBut" class="showButton" style="cursor: pointer">
+    <%= link_to 'SHOW', apartment, :style=>'color:#FFFFFF'  %>
+    
     </td>
-    <td id="adminBut" class="editButton" style="cursor: pointer"><%= image_tag("adminEditButton.png") %>
-EDIT</td>
-    <td id="adminBut" class="deleteButton" style="cursor: pointer"><%= image_tag("adminDeleteButton.png") %>
-DELETE</td>
+    <td id="adminBut" class="editButton" style="cursor: pointer">
+    <%= link_to 'EDIT', edit_apartment_path(apartment), :style=>'color:#FFFFFF' 	%></td>
+    <td id="adminBut" class="deleteButton" style="cursor: pointer">
+    <%= link_to 'Destroy', apartment, :confirm => 'Are you sure?', :controller => "apartments", :action => 'destroy', :id => apartment.id, :method => :destroy %>
+    </td>
   </tr>
 <% end %>
 </table>

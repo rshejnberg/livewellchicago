@@ -36,7 +36,9 @@ $(window).ready(function()
 				$("#contactUs").hide();
 				$("#apartments").hide();
 				$("#aboutUs").show();
+	
 				}
+	var home, forms, contactUs, landlords;
 	function showApartments()
 				{
 				$("#apartments").fadeIn('1000');
@@ -56,6 +58,7 @@ $(window).ready(function()
 				$("#apartments").hide();
 				$("#home").hide();
 				$("#aboutUs").hide();
+
 				}
 	function showContactUs()
 				{
@@ -75,44 +78,47 @@ $(window).ready(function()
 				$("#home").hide();
 				$("#aboutUs").hide();
 				}
-
 	
 //Nav hover animation
+$("nav").hover(function(){$(".arrow-up").animate({top: '63px'}, 100)}, function(){$(".arrow-up").animate({top: '80px'}, 100)});
 $("#navHome").hover(
 		function(){
-			$(".navBarHome").animate({position: 'absolute', top: '-20px'}, 200)
+			$(".arrow-up").animate({position: 'absolute', top: '63px', left: '315px'}, 200)
+
 			},
 		function(){
-			$(".navBarHome").animate({position: 'absolute', top: '-10px'}, 100)
+			
 			});
-$("#navApartment").hover(
-		function(){
-			$(".navBarApartment").animate({position: 'absolute', top: '-20px'}, 200)
+$("#navApartments").hover(
+			function(){
+			$(".arrow-up").animate({position: 'absolute', top: '63px', left: '415px'}, 200)
+
 			},
 		function(){
-			$(".navBarApartment").animate({position: 'absolute', top: '-10px'}, 100)
 			});
 $("#navForms").hover(
-		function(){
-			$(".navBarForms").animate({position: 'absolute', top: '-20px'}, 200)
+			function(){
+			$(".arrow-up").animate({position: 'absolute', left: '530px', top: '63px'}, 200)
+
 			},
 		function(){
-			$(".navBarForms").animate({position: 'absolute', top: '-10px'}, 100)
 			});
 $("#navLandlords").hover(
-		function(){
-			$(".navBarLandlords").animate({position:'absolute',top:'-20px'},200)
+			function(){
+			$(".arrow-up").animate({position: 'absolute', left: '630px', top: '63px'}, 200)
+
 			},
 		function(){
-			$(".navBarLandlords").animate({position:'absolute',top:'-10px'}, 100)
-			});
+			
+		});
 $("#navContactUs").hover(
-		function(){
-			$(".navBarContactUs").animate({position:'absolute',top:'-20px'},200)
+			function(){
+			$(".arrow-up").animate({position: 'absolute', top: '63px',left: '755px'}, 200)
+
 			},
 		function(){
-			$(".navBarContactUs").animate({position: 'absolute',top:'-10px'}, 100)
-			});
+			
+		});
 //Apartments Controls	
 	showAll();
 	$("#studioBut").click(function(){showStudio()});

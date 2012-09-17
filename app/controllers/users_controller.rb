@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   # GET /users
   # GET /users.json
+  layout :resolve_layout
   def index
     @users = User.all
 
@@ -79,5 +80,13 @@ class UsersController < ApplicationController
       format.html { redirect_to users_url }
       format.json { head :no_content }
     end
+  end
+    def resolve_layout
+  	case action_name
+  	when "edit", "new"
+  	  "admin"
+  	else
+  	  "application"
+  end
   end
 end

@@ -1,7 +1,118 @@
 
-<div id="new"><center><h1>New apartment</h1>
+<div id="formApt">
 
-<%= render 'form' %>
+<%= form_for @apartment, :html => { :multipart => true } do |f| %>
+  
+  <% if @apartment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@apartment.errors.count, "error") %> prohibited this apartment from being saved:</h2>
+
+      <ul>
+      <% @apartment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <div class="field">
+    agent &nbsp&nbsp&nbsp&nbsp
+  <%= f.collection_select :agent, Apartment::AGENTS, :to_s, :to_s, 
+       :include_blank => true %><br />
+         </div>
+  <div class="field">
+    location&nbsp
+    <%= f.text_field :location %><br />
+  </div>
+    <div class="field">
+   owner &nbsp&nbsp&nbsp
+    <%= f.text_field :Owner %><br />
+  </div>
+  <div class="field">
+    date available
+    <%= f.date_select :Date_Avail %><br />
+  </div>
+    <div class="field">
+    availability
+    <%= f.collection_select :availability, Apartment::AVAILSEL, :to_s, :to_s, 
+       :include_blank => true %><br />
+  </div>
+  <div class="field">
+    bed&nbsp
+    <%= f.number_field :Bed %><br />
+  </div>
+  <div class="field">
+    bath
+    <%= f.number_field :Bath %><br />
+  </div>
+  <div class="field">
+    rent
+    <%= f.text_field :Rent %><br />
+  </div>
+    <div class="field">
+   deposit
+    <%= f.text_field :Security_Deposit %><br />
+  </div>
+  <div class="field">
+    pets&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+     <%= f.collection_select :Pets, Apartment::PETSSEL, :to_s, :to_s, 
+       :include_blank => true %><br />
+  </div>
+
+  <div class="field">
+    parking&nbsp&nbsp&nbsp
+    <%= f.collection_select :Parking, Apartment::PARKINGSEL, :to_s, :to_s, 
+       :include_blank => true %><br />
+  </div>
+  <div class="field">
+    laundry&nbsp&nbsp
+     <%= f.collection_select :Laundy, Apartment::LAUNDRYSEL, :to_s, :to_s, 
+       :include_blank => true %><br />
+  </div>
+  <div class="field">
+    type heat
+    <%= f.collection_select :Type_Heat, Apartment::HEATSEL, :to_s, :to_s, 
+       :include_blank => true %><br />
+  </div>
+  <div class="field">
+    AC&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+     <%= f.collection_select :AC, Apartment::ACSEL, :to_s, :to_s, 
+       :include_blank => true %><br />
+  </div><br />
+    
+    <div class="field">
+     <%= f.file_field :photo %><br />
+     <%= f.file_field :photo2 %><br />
+     <%= f.file_field :photo3 %><br />
+     <%= f.file_field :photo4 %><br />
+  </div><br />
+  
+    <div class="field">
+    <%= f.label :Description %><br />
+    <%= text_area "apartment", "description", "cols" => 60, "rows" => 10 %><br />
+    
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+    <div class="field">
+  <% f.fields_for :apartment_image do |apartment| %>
+  <% if apartment.object.new_record? %>
+  <p>
+  <%= apartment.label :caption, "Image Caption" %>
+  <%= apartment.text_field :caption %>
+  </p>
+  <p>
+ <% end %>
+
+ 
+  </p>
+  
+  </div>
+  <% end %><% end %>
+</div>
+
 <br />
-<%= link_to 'Back', apartments_path %></center>
+ <%= link_to "Back", {:action =>'admin', :controller => 'main'} %>  
+</center>
 </div>
