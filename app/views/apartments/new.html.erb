@@ -2,33 +2,33 @@
 <div id="formApt">
 
 <%= form_for @apartment, :html => { :multipart => true } do |f| %>
-  
-  <% if @apartment.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@apartment.errors.count, "error") %> prohibited this apartment from being saved:</h2>
+
+  <% if @apartment.errors.any?%>
+    <div class="alert alert-error">
+      <h4><%= pluralize(@apartment.errors.count, "error") %> prohibited this apartment from being saved:</h4>
 
       <ul>
       <% @apartment.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
-      </ul>
-    </div>
+      </ul></div>
+    
   <% end %>
     <div class="field">
-    agent &nbsp&nbsp&nbsp&nbsp
+    agent 
   <%= f.collection_select :agent, Apartment::AGENTS, :to_s, :to_s, 
        :include_blank => true %><br />
          </div>
   <div class="field">
-    location&nbsp
+    location
     <%= f.text_field :location %><br />
   </div>
     <div class="field">
-   owner &nbsp&nbsp&nbsp
+   owner <br />
     <%= f.text_field :Owner %><br />
   </div>
   <div class="field">
-    date available
+    date available <br />
     <%= f.date_select :Date_Avail %><br />
   </div>
     <div class="field">
@@ -113,6 +113,6 @@
 </div>
 
 <br />
- <%= link_to "Back", {:action =>'admin', :controller => 'main'} %>  
+ <%= link_to "Back", {:action =>'admin', :controller => 'main',  :class => 'btn btn-mini btn-info'}  %>  
 </center>
 </div>

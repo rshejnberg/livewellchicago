@@ -1,17 +1,21 @@
 <div id="formApt">
 
 <%= form_for @apartment, :html => { :multipart => true } do |f| %>
-  
+ 
+  <div class="alert alert-error">
   <% if @apartment.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@apartment.errors.count, "error") %> prohibited this apartment from being saved:</h2>
+  
+    
+      <h2><%= pluralize(@apartment.errors.count, "error") %> 
+      prohibited this apartment from being saved:</h2>
 
       <ul>
-      <% @apartment.errors.full_messages.each do |msg| %>
+     	 <% @apartment.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
-      <% end %>
+        <% end %>
       </ul>
-    </div>
+    
+  </div>
   <% end %>
     <div class="field">
     <%= f.label :agent %><br />
@@ -91,7 +95,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => 'btn btn-primary' %> %>
   </div>
     <div class="field">
   <% f.fields_for :apartment_image do |apartment| %>

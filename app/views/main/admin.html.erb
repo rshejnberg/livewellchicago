@@ -2,63 +2,14 @@
 <script type="text/javascript">
 //ans = admin nav selection
 
-$(function(){
 
-	$(" #adminUsers, #adminApartmentsNew, #adminUsersNew,#adminUsersSub").hide();
-	$("#ansApartments").click(
-		function(){
-			$("#adminApartments").fadeIn(100); 
-			$("#adminUsers").hide(); 
-			$("#adminApartmentsSub").show(); 						
-			$("#adminUsersSub").hide();
-			});
-	$("#ansUsers").click(
-		function(){
-			$("#adminUsers").fadeIn(100); 
-			$("#adminApartments").hide(); 
-			$("#adminApartmentsSub").hide();
-			$("#adminUsersSub").show();
-			});
-	$("#adminUsersSub").click(
-		function(){
-			$("#adminUsers").fadeIn(200);
-			$("#adminUsersNew").fadeIn(200); 
-			$("#adminApartments").hide(); 
-			$("#adminApartmentsSub").hide();
-			});
-});
 </script>
 <div id="adminPage">
-	<header> Live Well Chicago Apartment Database </header>
-	<div id="adminNavColumn">
-		<div id="adminNavCategories">
-   			<p class="adminNavSelection" id="ansApartments"> APARTMENTS </p>
-   			<p id="adminApartmentsSub">
-   			<%= link_to 'New Apartment', new_apartment_path %>
-			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
-   			 <p class="adminNavSelection" id="ansUsers"> USERS </p>
-   			 <p id="adminUsersSub"> 
-   			 <%= link_to 'New User', new_user_path %>
-   			 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-   			 </p>
-   		</div>
-   	</div>
-   	<div id="adminMain">
-		<div id="adminApartments">
-			<%= render  :partial => 'apartments/index', :locals => {:apartments 			=> 	@apartments}%>
-		</div>
-		<div id="adminApartmentsNew">
-	
-		</div>
-		<div id="adminUsers">
-			<%= render  :partial => 'users/index', :locals => {:users => @users}			%>
-		</div>
-		<div id="adminUsersNew">
-			
-		</div>
-	</div>
+
+
+
    
     <span class="logoutButton">  
-  		<%= link_to "SIGN OUT", {:action => 'destroy', :controller => 		'sessions'} %> 
+  		<%= link_to "SIGN OUT", {:action => 'destroy', :controller => 		'sessions', :class => "btn btn-primary btn-large" } %> 
     </span>    
 </div>

@@ -83,10 +83,10 @@ class UsersController < ApplicationController
   end
     def resolve_layout
   	case action_name
-  	when "edit", "new"
+  	when "edit"
   	  "admin"
   	else
-  	  "application"
+  	  "admin"
   end
   end
 end

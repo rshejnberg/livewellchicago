@@ -1,49 +1,6 @@
 <div id="adminApartmentTable">
 
-
-<table border="4" cellspacing="20">
-  <tr>
-    <th>Agent</th>
-    <th>Location</th>
-    <th>Availability</th>
-    <th>Bed</th>
-    <th>Bath</th>
-    <th>Rent</th>
-    <th>Pets</th>
-    <th>Security deposit</th>
-    <th>Parking</th>
-    <th>Laundy</th>
-    <th>Owner</th>
-    <th>Date avail</th>
-    <th>Type heat</th>
-    <th>AC</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @apartments.each do |apartment| %>
-  <tr>
-    <td><%= apartment.agent %></td>
-    <td><%= apartment.location %></td>
-    <td><%= apartment.availability %></td>
-    <td><%= apartment.Bed %></td>
-    <td><%= apartment.Bath %></td>
-    <td>$<%= apartment.Rent %></td>
-    <td><%= apartment.Pets %></td>
-    <td>$<%= apartment.Security_Deposit %></td>
-    <td><%= apartment.Parking %></td>
-    <td><%= apartment.Laundy %></td>
-    <td><%= apartment.Owner %></td>
-    <td><%= apartment.Date_Avail %></td>
-    <td><%= apartment.Type_Heat %></td>
-    <td><%= apartment.AC %></td>
-    <td><%= link_to 'Show', apartment %></td>
-    <td><%= link_to 'Edit', edit_apartment_path(apartment) %></td>
-    <td><%= link_to 'Destroy', apartment, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+<%= render  :partial => 'apartments/index', :locals => {:apartments 			=> 	@apartments}%>
 
 <br />
 

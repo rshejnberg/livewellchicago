@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="assets/admin.css" />
 <div id="adminApartmentTable">
 
-<table>
+<table class="table table-striped">
   <tr>
     <th>Agent</th>
     <th>Location</th>
@@ -26,13 +26,13 @@
     <td class="tableSection"><%= apartment.Date_Avail %></td>
     <td class="tableSection"><%= apartment.availability %></td>
     <td id="adminBut" class="showButton" style="cursor: pointer">
-    <%= link_to 'SHOW', apartment, :style=>'color:#FFFFFF'  %>
+    <%= link_to 'Show', apartment, :class => 'btn btn-mini btn-info'  %>
     
     </td>
     <td id="adminBut" class="editButton" style="cursor: pointer">
-    <%= link_to 'EDIT', edit_apartment_path(apartment), :style=>'color:#FFFFFF' 	%></td>
+    <%= link_to 'Edit', edit_apartment_path(apartment), :class => 'btn btn-mini btn-info' %></td>
     <td id="adminBut" class="deleteButton" style="cursor: pointer">
-    <%= link_to 'Destroy', apartment, :confirm => 'Are you sure?', :controller => "apartments", :action => 'destroy', :id => apartment.id, :method => :destroy %>
+    <%= link_to 'Destroy', apartment, :confirm => 'Are you sure?', :controller => "apartments", :action => 'destroy', :id => apartment.id, :method => :destroy, :class => 'btn btn-mini btn-danger'  %>
     </td>
   </tr>
 <% end %>
