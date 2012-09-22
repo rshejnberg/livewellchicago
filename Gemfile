@@ -24,6 +24,7 @@ group :production do
 end
 group :production do
 	gem 'thin'
+	 gem 'twitter-bootstrap-rails'
 end
 
 gem "paperclip", "~> 2.0"
