@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-
+//= bootstrap_and_overrides.css.less 
 
 //Project created by Raphael Shejnberg, 2012, IT238
 $(window).ready(function()
