@@ -3,16 +3,12 @@ class Apartment < ActiveRecord::Base
     
     has_many :apartment_image, :dependent => :destroy
     
-    accepts_nested_attributes_for :apartment_image, :reject_if => 	 lambda { |t| t['apartment_image'].nil? }
+    accepts_nested_attributes_for :apartment_image, 
+    :reject_if => lambda { |t| t['apartment_image'].nil? }
     has_attached_file :photo, 
-    				  :styles => {:small => "200x200>", :large => "800x720>"},
-    				  :storage => :s3,
-    				  :s3_credentials => "#{Rails.root}/config/s3.yml",
-    				  :path => ":attachment/:id/:style.:extension",
-    				  :bucket => 'Live-Well-Chicago-Photos'
-	    			  
+    				  :styles => {:small => "200x200>", :large => "800x720>"}	    			  
     has_attached_file :photo2, 
-    				  :styles => {:small => "200x200>", :large => "800x720>" },
+    				  :styles => {:small => "200x200>", :large => "800x720>"},
     				  :storage => :s3,
     				  :s3_credentials => "#{Rails.root}/config/s3.yml",
     				  :path => ":attachment/:id/:style.:extension",
