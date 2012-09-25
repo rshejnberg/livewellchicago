@@ -52,22 +52,22 @@
 	});
 </script>
 
-<style type="text/css">
-	body { 
-		margin: 2em; 
-		font-family: Arial, Helvetica, sans-serif;
-	}
-</style>
 </head>
 
-<body>
+<body >
+<div id="showHeader"  style="position: relative; top: 143px;">
+    <span class="homeHeader"style="left: 15px;"><%= link_to "Live Well Chicago", root_url %></span>
+    <div id="mainHeader">
+    <nav style="height: 20px; top: -73px;">
+		
+
+    </nav>
+    </div></div>
 <div id="showWrapper">
 <div id="show">
-
-<br /><br />
 	
 	<div id="showPictureSlide">
-		<ul id="myGallery">
+		<ul id="myGallery" style="position: relative">
             <li> <%= image_tag @apartment.photo.url (:large) %>
             <li> <%= image_tag @apartment.photo2.url (:large) %>
             <li> <%= image_tag @apartment.photo3.url (:large) %>
@@ -139,16 +139,7 @@
 	</p>
 </div>
 
- <navShow>
- 
- 	<span id="home2"> <%= link_to image_tag("home.png"), root_url %></span>
-    <span id="apartments2"><%= link_to image_tag("apartments.png"), {:action =>'aptMenu', :controller => 'apartments'} %></span>
-    <a href="http://livewellchicago.herokuapp.com/?cat=forms"> <%= image_tag("forms.png") %></a>
-   <a href="http://livewellchicago.herokuapp.com/?cat=landlords"><%= image_tag("landlords.png")%></a>
-    <a href="http://livewellchicago.herokuapp.com/?cat=contactUs"><%= image_tag("contactus.png") %></a>
-    
-   
-    </navShow>
+
 </div>
 </div>
 </body>

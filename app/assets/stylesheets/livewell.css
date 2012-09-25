@@ -77,12 +77,11 @@ body {
 		position: relative; 
 		width: 960px; 
 		height: 1200px; 
-		top: -15px; 
+		top: 50px; 
 		margin: 0 auto;
 		padding: 20px; 
 		background-color:  #638400;
 		color: white; 
-		opacity: 0.9;
 		border-radius: 5px;
 		}
 
@@ -306,6 +305,7 @@ background-color: #638400;
 		position: relative;
 		top: 70px;
 		width: 800px;
+		padding: 40px;
 		margin: 0 auto;
 		left: 7%;
 		background-color: #D8DEAE;
@@ -315,9 +315,11 @@ background-color: #638400;
 #showColumns {
 		-moz-column-count:4; /* Firefox */
 		-webkit-column-count:4; /* Safari and Chrome */
+		-webkit-column-gap: 50px;
+		-moz-column-gap: 50px;
+		column-gap: 50px;
 		column-count:4;
-		position: relative;
-		right: -50px;
+	
 		}
 /* Logged in Elements */
 .logoutButton {
@@ -347,7 +349,7 @@ background-color: #638400;
 		top: 50px
 		
 		}
-
+#myGallery {background-color: red;}
 /*Table Elements */
 table {
 		margin: 0 auto; 
