@@ -34,8 +34,8 @@ class ApartmentsController < ApplicationController
   end
   def resolve_layout
   	case action_name
-  	when "edit"
-  	  "admin"
+  	when "show"
+  	  "application"
   	else
   	  "admin"
   end

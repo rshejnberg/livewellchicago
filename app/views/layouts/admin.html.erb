@@ -24,19 +24,21 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-      <a class="brand" href="#">Live Well Chicago</a>
+      <a class="brand" href="">Live Well Chicago</a>
       <div class="nav-collapse">
         <ul class="nav">
           <li><%= link_to "Apartments", apartments_path %></li>
           <li><%= link_to "Users", users_path %></li>
-          <li><%= link_to "Sign Out", {:action => 'destroy', :controller => 		'sessions'} %></li>
+         
+         
         </ul>
+        <span style="float:right"><%= link_to "Sign Out", {:action => 'destroy', :controller => 		'sessions'} %></span>
       </div>
     </div>
   </div>
 </div>
 <div class="container">
-<h2>Database Manager</h2>
+<h2>Database Manager</h2><%= link_to "Sign Out", "logout" %>
 <%= yield %>
 
 </div>

@@ -2,7 +2,7 @@
 
 <%= form_for @apartment, :html => { :multipart => true } do |f| %>
  
-  <div class="alert alert-error">
+ 
   <% if @apartment.errors.any? %>
   
     
@@ -15,7 +15,7 @@
         <% end %>
       </ul>
     
-  </div>
+ 
   <% end %>
     <div class="field">
     <%= f.label :agent %><br />
