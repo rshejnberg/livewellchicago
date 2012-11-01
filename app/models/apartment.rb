@@ -19,7 +19,7 @@ class Apartment < ActiveRecord::Base
     				  :path => ":attachment/:id/:style.:extension",
     				  :bucket => 'Live-Well-Chicago-Photos'
     				  
-    has_attached_file :photo3, 
+    has_attached_file :photo3,
     				  :styles => {:small => "200x200>", :large => "800x720>"},
     				  :storage => :s3,
     				  :s3_credentials => "#{Rails.root}/config/s3.yml",

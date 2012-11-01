@@ -8,14 +8,14 @@ body
 	line-height: 1.6em;
 }
 
-#aptAll, #studio, #oneBdr, #twoBdr, #threeBdr, #fourBdr
+#aptAll, #aptStudio, #aptOneBdr, #aptTwoBdr, #aptThreeBdr, #aptFourPlusBdr
 	{	
 	font-family: "Trebuchet MS";
 	font-size: 12px;
 	margin: 0 auto;
 	width: 830px;
 	background: #D8DEAE;
-	color: black;
+	color: #2e2c2c;
 	font-family: "Trebuchet MS";
 	text-align: left;
 	border-collapse: collapse;
@@ -49,43 +49,10 @@ hr {color: #638400; background: #638400; border: solid 0px; height: 2px;}
 
 
 
-#studio th
-{
-	font-size: 13px;
-	font-weight: normal;
-	padding: 8px;
-	background: #b9c9fe;
-	
-	
-	color: #9DBA1A
-}
-#studio td
-{
-	padding: 8px;
-	color: #9DBA1A;
-	border-top: 1px solid transparent;
-}
 #studio tr:hover td
 {
 	background: rgba(228,228,228,0);;
 	color: white;
-}
-
-#oneBdr th
-{
-	font-size: 13px;
-	font-weight: normal;
-	padding: 8px;
-	background: #b9c9fe;
-	border-top: 4px solid #aabcfe;
-	
-	color: white;
-}
-#oneBdr td
-{
-	padding: 8px;
-	color: white;
-	border-top: 1px solid transparent;
 }
 #oneBdr tr:hover td
 {
@@ -93,70 +60,16 @@ hr {color: #638400; background: #638400; border: solid 0px; height: 2px;}
 	color: white;
 }
 
-#twoBdr th
-{
-	font-size: 13px;
-	font-weight: normal;
-	padding: 8px;
-	background: #b9c9fe;
-	border-top: 4px solid #aabcfe;
-	
-	color: white;
-}
-#twoBdr td
-{
-	padding: 8px;
-	color: white;
-	border-top: 1px solid transparent;
-}
-#twoBdr tr:hover td
-{
-	background: #5d4f55;;
-	color: white;
-}
 
-#threeBdr th
+#aptAll tr:hover td
 {
-	font-size: 13px;
-	font-weight: normal;
-	padding: 8px;
-	background: #b9c9fe;
-	border-top: 4px solid #aabcfe;
-	
-	color: white;
-}
-#threeBdr td
-{
-	padding: 8px;
-	color: white;
-	border-top: 1px solid transparent;
-}
-#threeBdr tr:hover td
-{
-	background: #5d4f55;
-	color: white;
-}
-
-#fourBdr th
-{
-	font-size: 13px;
-	font-weight: normal;
-	padding: 8px;
-	background: #b9c9fe;
-	border-top: 4px solid #aabcfe;
-	
-	color: white;
-}
-#fourBdr td
-{
-	padding: 8px;
-	color: white;
-	border-top: 1px solid transparent;
+		background: #dfe1ca;
+	border-radius: 10px;
 }
 #fourBdr tr:hover td
 {
-	background: #5d4f55;;
-	color: white;
+	background: #dfe1ca;
+	border-radius: 10px;
 }
 
 

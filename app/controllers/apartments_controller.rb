@@ -4,6 +4,7 @@ class ApartmentsController < ApplicationController
     skip_before_filter :authorize, :only => :aptMenu
     skip_before_filter :authorize, :only => :show
     layout :resolve_layout
+
   def index
     @apartments = Apartment.all
 
