@@ -14,8 +14,8 @@ body
 	font-size: 12px;
 	margin: 0 auto;
 	width: 830px;
-	background: #D8DEAE;
-	color: #2e2c2c;
+
+	color: #faffea;
 	font-family: "Trebuchet MS";
 	text-align: left;
 	border-collapse: collapse;
@@ -40,37 +40,12 @@ body
 	}
 	
 .tableHeader {
-	color: #842727; 
+	color:  #599100; 
 	font-weight: bold;
 	font-size: 15px;
 	}
-hr {color: #638400; background: #638400; border: solid 0px; height: 2px;}
+hr {color:  #599100; background: #638400; border: solid 0px; height: 2px;}
 .tablePic {vertical-align: middle;}
-
-
-
-#studio tr:hover td
-{
-	background: rgba(228,228,228,0);;
-	color: white;
-}
-#oneBdr tr:hover td
-{
-	background: #5d4f55;;
-	color: white;
-}
-
-
-#aptAll tr:hover td
-{
-		background: #dfe1ca;
-	border-radius: 10px;
-}
-#fourBdr tr:hover td
-{
-	background: #dfe1ca;
-	border-radius: 10px;
-}
 
 
 

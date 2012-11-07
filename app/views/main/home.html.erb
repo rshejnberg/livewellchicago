@@ -4,170 +4,173 @@
 <link rel="stylesheet" type="text/css" href="assets/default.css" />
 <link rel="stylesheet" type="text/css" href="assets/nivo-slider.css" media="screen"/>
 <script src="assets/jquery.nivo.slider.js" type="text/javascript"></script>
+
 </head>
 
 <body>
 
 <form name="liveWellForm">
+ 
 
-
-    <div id="main">
-    
-    <span class="homeHeader"><%= link_to "Live Well Chicago", root_url %></span>
     <div id="mainHeader">
-    <nav>
-		
-		<span class="navButton" id="navHome" >home</span>
-		&nbsp&nbsp&nbsp&nbsp&nbsp
-		
-		<span class="navButton" id="navApartments">apartments </span>
-		&nbsp&nbsp&nbsp&nbsp&nbsp
-		<span class="navButton" id="navForms">forms</span>
-		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-		<span class="navButton" id="navLandlords">landlords</span>
-		&nbsp&nbsp&nbsp&nbsp&nbsp
-		<span class="navButton" id="navContactUs">contact us</span>
-		<div class="arrow-up">  </div>
-    </nav>
-    </div>
-       
-    <div id="apartments">
-    	<div id="aptMenu" class="aptMenu" ><center>
-	        <span class="menuSel" style="cursor: pointer" id="studioBut"> 					Studio </span>
-	      	<span class="menuSel" style="cursor: pointer" id="1bdr"> 						1BDR </span>
-	      	<span class="menuSel" style="cursor: pointer" id="2bdr"> 						2BDR </span>
-	      	<span class="menuSel" style="cursor: pointer" id="3bdr"> 						3BDR </span>
-	      	<span class="menuSel" style="cursor: pointer" id="4bdr">						4+BDR </span>
-	      	<span class="menuSel" style="cursor: pointer" id="all"> 						All Units </span></center>
-	    </div>
-    	<div id="aptTables">
-		    <div id="aptAll">
-		    	<%= render  :partial => 'apartments/aptAll', :locals => 						{:apartments => @apartments}%>
-		    </div>
-		    <div id="aptOneBdr">
-		    	<%= render  :partial => 'apartments/aptOneBdr', :locals => 						{:apartments => @apartments}%>
-		    </div>
-		    <div id="aptTwoBdr">
-		    	<%= render  :partial => 'apartments/aptTwoBdr', :locals => 						{:apartments => @apartments}%>
-		    </div>
-		    <div id="aptThreeBdr">
-		    	<%= render  :partial => 'apartments/aptThreeBdr', :locals => 						{:apartments => @apartments}%>
-		    </div>
-		    <div id="aptFourPlusBdr">
-		    	<%= render  :partial => 'apartments/aptFourPlusBdr', :locals => 						{:apartments => @apartments}%>
-		    </div>
-       </div>
-    </div>
-    <div id="contactUs">
-        <br /><br />
-        <div id="agents">
-        <span class="agentName">Serafin Herrera</span><br />
-        Sales and Leasing Specialist<br />
-        <img src="assets/phone.png"> 773.908.5185<br />
-        <img src="assets/fax.png"> 773.336.8434<br />
-        <a href= "mailto:serafin@livewellchgo.com" style="color: beige">serafin@livewellchgo.com</a>
-        
-        <br /><br />
-
-        <span class="agentName"> Alexia Kouklowsky </span><br />
-        Leasing Specialist and Managing Brocker<br />
-        <img src="assets/phone.png"> 773.551.7913<br />
-        <img src="assets/fax.png"> 773.337.9867<br />
-        <a  href= "mailto:alexia@livewellchgo.com">alexia@livewellchgo.com</a>
-        <br /><br />
-        
-         <span class="agentName"> Jason Gold </span><br />
-        Leasing Specialist<br />
-        <img src="assets/phone.png"> 773.491.1713<br />
-        <img src="assets/fax.png"> 773.572.1573<br />
-        <a href= "mailto:jason@livewellchgo.com">jason@livewellchgo.com</a>
-        <br /><br />
-            
-        </div>
-        <div id="map">
-       
-        
-        <iframe width="425" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp; 					hl=en&amp;geocode=&amp;q=3725+n																+western&amp;sll=41.913741,-87.658969&amp;sspn=0.092996,0.163078&amp;ie=UTF8&amp; 			hq=&amp;hnear=3725+N+Western+Ave,+Chicago,+Cook,+Illinois									+60618&amp;t=m&amp;ll=41.954341,-87.69315&amp;spn=0.022279,0.036478&amp;z=16&amp; 			iwloc=A&amp;output=embed"></iframe>
-        <br />
-        <div id="mapInfo">
-        	<br />Live Well Chicago LLC, &nbsp
-          3725 N Western Ave, &nbsp Chicago, IL 60618 <br />
-          <img src="assets/phone.png"> 773.840.8104 <img src="assets/fax.png"> 					      773.537.0321 
-          <a href="mailto:officemanager@livewellchgo.com">officemanager@livewellchgo.com</a> 
-          <br /></div>
-        </div>
-    </div>
-    
-    <div id="landlords">     
-        Landlords,
-        thanks for your interest in Live Well Chicago, here is a short summary of who we 			are and why we are an excellent choice to help you find qualified tenants for your 			current and upcoming availabilities.
-        <br /><br />
-        Live Well Chicago is different from other agencies because unlike others all of our 		agents are highly experienced and extremely motivated each with seven to twelve 			years of leasing experience. These agents solely work as full time leasing 					professionals, and have specialized in leasing over the duration of their real 				estate careers. This experience will take better advantage of any prospective 				renters that view your property and will also assure accurate information and 				complete professionalism from start to finish of the leasing process.
-        <br /><br />
-        The rental process begins with advertising the available apartment, fielding calls, 		screening prospective tenants, showing the unit, taking applications, employment 			verification, current landlord references, running credit through the #1 residential 		screening service in the industry, and finally presenting the completed application 		to the owner/landlord for approval. Upon approval Live Well Chicago can either turn 		the applicant over to you or handle the lease signing on your behalf.
-        <br /><br />
-        Live Well Chicago makes the leasing process easy and smooth for the landlord and for 		the renter, which makes for a generally convenient process and encourages a longer 			stay for the tenant!
-        <br /><br />
-        Please feel free to contact us by phone or e-mail with any questions or instructions 		regarding the listing/showing of your available apartments.
-        <br /><br />
-        Thanks for your time and consideration
-    </div>
-    
-    <div id="forms"><center>
-        <span class="formFiles"> 
-        <a href="http://www.livewellchgo.com/sitebuildercontent/sitebuilderfiles/rentalapplicationgenerallwc.pdf">
-        <span class="form-file">rental application</span></a>&nbsp&nbsp
-        <a href="http://www.livewellchgo.com/sitebuildercontent/	sitebuilderfiles/creditcardauthorizationlwc.pdf"> 
-        <span class="form-file"> credit authorization</span></a>&nbsp&nbsp
-        <a href="http://www.livewellchgo.com/sitebuildercontent/sitebuilderfiles/cosignerappgenerallivewell.pdf">
-        <span class="form-file">cosigner application</span></a>
-        </span><br /><br /><br />
-    </center><br /><br />
-        Applying For an Apartment/Condo Rental<br /><br />
-        1. Fill out a lease application. (Co-signer application if needed)
-        (All Adults must fill out an application)<br /><br />
-        2. Have a check for a non-refundable $50/credit/Per applicant made 	out to Live Well 		Chicago Realty. [this is to check your credit<br /><br />
-        3. Have a money order/ cashiers check for 1st month rent made out 	to 	Live Well 			Chicago Realty. We also accept Visa, MasterCard, and Discover 	Cards. (Please 				inform 	the agent if you would like to pay with a credit 	card)<br /><br />
-        4. You will also need your proof of employment (or include it with the 	checks). We 		accept 2 types of proof of employment: either (a) your last 	2 pay-stub checks; 			or 	(b) a signed letter from human resource/your 		supervisor stating how long 		you have been working at your present job, 	your salary (with any upcoming bonuses) 		and your position <br /><br />
-        5. Drop all of the above at
-        Live Well Chicago Realty
-        3725 N. Western Suite 107
-        Chicago, IL 60618
-        (Agent will also accept some of the documents faxed or email to them)
-        <br /><br />
-        6. Once we look over your file and upon approval, we will contact 	you 	to 				schedule a time for you to sign the lease. It is at lease signing 	that the 				security deposit or move-in fee is due.
-        <br /><br />
-        For any questions or inquiries please contact your Live Well Chicago 	Agent.
-    </div>
-
-    <div id="home">
-    <img class="banner" src="assets/banner.jpeg">
+    	<span class="homeHeader"><%= link_to "Live Well Chicago", root_url %></span>
+    		<nav>
+    			<span class="navButton" id="navHome" >home</span>&nbsp&nbsp&nbsp&nbsp&nbsp
+    			<span class="navButton" id="navApartments">apartments </span>&nbsp&nbsp&nbsp&nbsp&nbsp
+    			<span class="navButton" id="navForms">forms</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    			<span class="navButton" id="navLandlords">landlords</span>&nbsp&nbsp&nbsp&nbsp&nbsp
+    			<span class="navButton" id="navContactUs">contact us</span>
+    		</nav>
+   </div>
    
-               
-       	<div id="aboutUs">
+   <div id="mainContainer">
+   		<p id="bannerContainer"> <img class="banner" src="assets/banner.jpeg"> </p>
+   		<span class="homeTitle">
+    	
+    		beautiful,&nbsp affordable, and accessible apartments<b style="opacity: 1.5"> * </b>
+    	</span>
+    	<div id="aboutUsButton"> <span id="text">find out about us</span> </div>
+    	
+    	<div id="splitScreen">
+	    	<span class="close"> X </span>
+    		<div id="aboutUs">
+       			<div id="aboutUsBanner"> <div id="aboutUsBannerText">About Us</div> </div>
+	       		<p id="aboutUsText">
        		Thanks for your interest in Live Well Chicago,<br /><br />
-       		“THE” Premier Leasing Company on the north side of Chicago.  Very often, the 				thought of looking for a new apartment is a daunting task that most dread. 					“Well, dread no more people!” Unlike most agencies, Live Well Chicago strives 				to make the rental process easy, quick, and free of inconvenience! 							<br /><i>“How do we do that,"  you ask?</i><br />
-       		First off, our entire leasing staff consists of experienced realtors.  Our 					leasing specialists are trained to listen to your wants and needs, then match 				you to your ideal apartment!<br /><br />
-       		Secondly, our agents love what they do! These leasing professionals are easy to 			talk to, easy to work with, and won’t pressure you into a decision. All of which 			while being energetic and enthusiastic about finding you your next home and 				making sure it suits your specific needs!<br /><br />
-       		“Finally, we make the rental process easy!”   Our leasing specialists are 					available for showings 7 days a week all year long so setting up showings is a 				breeze!<br /><br />
-       		Live Well Chicago works with many different landlords on the north side of 					Chicago as well as having access to the largest database in Chicago (MLS) so 				there are 	usually a few options for you to choose from!<br /><br /> 
-       		Finding the perfect place for you is our #1 goal and Live Well Chicago will do 				whatever it takes to help you along the way and make the process smooth and 				easy.  
+       		The premier leasing company on the north side of Chicago.  Very often, the thought of looking for a new 				apartment is a daunting task that most dread. Well, dread no more! Unlike most agencies, Live Well Chicago 				strives to make the rental process easy, quick, and free of inconvenience! “How do we do that,"  you ask?
+       		First off, our entire leasing staff consists of experienced realtors.  Our 	leasing specialists are trained 			to listen to your wants and needs, then match you to your ideal apartment!<br /><br />
+       		Secondly, our agents love what they do! These leasing professionals are easy to talk to, easy to work with, 			and won’t pressure you into a decision. All of which while being energetic and enthusiastic about finding you 			your next home and making sure it suits your specific needs!<br /><br />
+       		“Finally, we make the rental process easy!” Our leasing specialists are available for showings 7 days a week 			all year long so setting up showings is a breeze!<br /><br />
+       		Live Well Chicago works with many different landlords on the north side of Chicago as well as having access 			to the largest database in Chicago (MLS) so there are 	usually a few options for you to choose from!
+       		<br /><br /> 
+       		Finding the perfect place for you is our #1 goal and Live Well Chicago will do whatever it takes to help you 			along the way and make the process smooth and easy. 
+       			</p> 
+       		</div>
+       		
+       		<div id="apartments">
+       			<div id="aptMenu" class="aptMenu" >	        
+       				<p class="menuSel" style="cursor: pointer" id="studioBut"> 	Studio </p><br /><br />
+       				<p class="menuSel" style="cursor: pointer" id="1bdr"> 1BDR </p><br /><br />
+       				<span class="menuSel" style="cursor: pointer" id="2bdr"> 2BDR </span><br /><br />
+       				<span class="menuSel" style="cursor: pointer" id="3bdr"> 3BDR </span><br /><br />
+       				<span class="menuSel" style="cursor: pointer" id="4bdr"> 4+BDR </span><br /><br />
+       				       				<span class="menuSel" style="cursor: pointer" id="all"> All Units </span>
+       			</div>
+       			<div id="aptTables">
+       				<div id="aptAll">
+		    			<%= render  :partial => 'apartments/aptAll', :locals => {:apartments => @apartments}%>
+		    		</div>
+		    		<div id="aptStudio">
+		    			<%= render  :partial => 'apartments/aptStudio', :locals => 	{:apartments => @apartments}%>
+		    		</div>
+		    		<div id="aptOneBdr">
+		    			<%= render  :partial => 'apartments/aptOneBdr', :locals => 	{:apartments => @apartments}%>
+		    		</div>
+		    		<div id="aptTwoBdr">
+		    			<%= render  :partial => 'apartments/aptTwoBdr', :locals => 	{:apartments => @apartments}%>
+		    		</div>
+		    		<div id="aptThreeBdr">
+		    			<%= render  :partial => 'apartments/aptThreeBdr', :locals => {:apartments => @apartments}%>
+		    		</div>
+		    		<div id="aptFourPlusBdr">
+		    			<%= render  :partial => 'apartments/aptFourPlusBdr', :locals => {:apartments => @apartments}%>
+		    		</div>
+		    	</div>
+		    </div>
+    
+		    <div id="contactUs">
+			    <div id="agents">
+			    	<span class="agentName">Serafin Herrera</span><br />
+			    	Sales and Leasing Specialist<br />
+			    	<img src="assets/phone.png"> 773.908.5185<br />
+			    	<img src="assets/fax.png"> 773.336.8434<br />
+			    	<a href= "mailto:serafin@livewellchgo.com" style="color: beige">serafin@livewellchgo.com</a>        
+			    	<br /><br />
+			    	<span class="agentName"> Alexia Kouklowsky </span><br />
+			    	Leasing Specialist and Managing Brocker<br />
+			    	<img src="assets/phone.png"> 773.551.7913<br />
+			    	<img src="assets/fax.png"> 773.337.9867<br />
+			    	<a  href= "mailto:alexia@livewellchgo.com">alexia@livewellchgo.com</a>
+			    	<br /><br />  
+			    	<span class="agentName"> Jason Gold </span><br />
+			    	Leasing Specialist<br />
+			    	<img src="assets/phone.png"> 773.491.1713<br />
+			    	<img src="assets/fax.png"> 773.572.1573<br />
+			    	<a href= "mailto:jason@livewellchgo.com">jason@livewellchgo.com</a>
+			    	<br /><br />
+			    </div>
+			    <div id="map">
+        
+           			<br />
+           			<div id="mapInfo">
+           				<br />Live Well Chicago LLC, &nbsp
+           				3725 N Western Ave, &nbsp Chicago, IL 60618 <br />
+           				<img src="assets/phone.png"> 773.840.8104 <img src="assets/fax.png"> 773.537.0321 
+           				<a href="mailto:officemanager@livewellchgo.com">officemanager@livewellchgo.com</a> 
+           				<br />
+           			</div>
+           		</div>
+           	</div>
+    
+           	<div id="landlords">     
+           	Landlords, thanks for your interest in Live Well Chicago, here is a short summary of who we are and why we 				are an excellent choice to help you find qualified tenants for your current and upcoming availabilities.
+           	<br /><br />
+           	Live Well Chicago is different from other agencies because unlike others all of our agents are highly 					experienced and extremely motivated each with seven to twelve years of leasing experience. These agents 				solely work as full time leasing professionals, and have specialized in leasing over the duration of their 				real estate careers. This experience will take better advantage of any prospective renters that view your 				property and will also assure accurate information and complete professionalism from start to finish of the 			leasing process.
+           	<br /><br />
+           	The rental process begins with advertising the available apartment, fielding calls, screening prospective 				tenants, showing the unit, taking applications, employment verification, current landlord references, running 			credit through the #1 residential screening service in the industry, and finally presenting the completed 				application to the owner/landlord for approval. Upon approval Live Well Chicago can either turn the applicant 			over to you or handle the lease signing on your behalf.
+           	<br /><br />
+           	Live Well Chicago makes the leasing process easy and smooth for the landlord and for the renter, which makes 			for a generally convenient process and encourages a longer stay for the tenant!
+           	<br /><br />
+           	Please feel free to contact us by phone or e-mail with any questions or instruction regarding the listing/				showing of your available apartments.
+           	<br /><br />
+           	Thanks for your time and consideration
+           	</div>
+    
+           	<div id="forms">
+           	<span class="formFiles"> 
+           	<a href="http://www.livewellchgo.com/sitebuildercontent/sitebuilderfiles/rentalapplicationgenerallwc.pdf">
+	        <span class="form-file">rental application</span></a><br />
+	        <a href="http://www.livewellchgo.com/sitebuildercontent/	sitebuilderfiles/creditcardauthorizationlwc.pdf"> 
+		    <span class="form-file"> credit authorization</span></a><br />
+		    <a href="http://www.livewellchgo.com/sitebuildercontent/sitebuilderfiles/cosignerappgenerallivewell.pdf">
+			<span class="form-file">cosigner application</span></a>
+			</span><br /><br /><br />
+			<br /><br />
+			Applying For an Apartment/Condo Rental<br /><br />
+			1. Fill out a lease application. (Co-signer application if needed)
+			(All Adults must fill out an application)<br /><br />
+			2. Have a check for a non-refundable $50/credit/Per applicant made out to Live Well Chicago Realty. 
+			[this is to check your credit<br /><br />
+			3. Have a money order/ cashiers check for 1st month rent made out to Live Well Chicago Realty. 
+			We also accept Visa, MasterCard, and Discover Cards. 
+			(Please inform the agent if you would like to pay with a credit card)<br /><br />
+			4. You will also need your proof of employment (or include it with the 	checks). 
+			We accept 2 types of proof of employment: either (a) your last 	2 pay-stub checks; 
+			or (b) a signed letter from human resource/your supervisor stating how long you have been working at 
+			your present job, your salary (with any upcoming bonuses) and your position <br /><br />
+			5. Drop all of the above at
+			Live Well Chicago Realty
+			3725 N. Western Suite 107
+			Chicago, IL 60618
+			(Agent will also accept some of the documents faxed or email to them)
+			<br /><br />
+			6. Once we look over your file and upon approval, we will contact you to schedule a time for you to 
+			sign the lease. It is at lease signing that the security deposit or move-in fee is due.
+			<br /><br />
+			For any questions or inquiries please contact your Live Well Chicago 	Agent.
+			</div>
+
     	</div>
-    </div>
-    <div id="footer" ><br /><br />
-   		 Live Well Chicago L.L.C  3725 N Western Ave  Chicago, IL 60618 <br />
-   		 All information deemed reliable but not guaranteed. All properties are 	subject 		to, change or withdrawal. <br /> Neither broker(s), agent(s) nor 							Livewellchicago.com, LLC. shall be responsible for any typographical 	errors, 			misinformation<br /> or misprints, and shall be held totally 	harmless.<br />
-    <%= link_to image_tag("equalHousing.png"), {:action =>'admin', :controller => 'main'} %>   
-    </div>
-</div>
+    	
+    	<div id="footer" ><br /><br />
+   		 	Live Well Chicago L.L.C  3725 N Western Ave  Chicago, IL 60618 <br />
+   		 	All information deemed reliable but not guaranteed. All properties are subject to, change or withdrawal.
+   		 	<br /> Neither broker(s), agent(s) nor Livewellchicago.com, LLC. shall be responsible for any 
+   		 	typographical errors, misinformation<br /> or misprints, and shall be held totally harmless.<br />
+   		 	<%= link_to image_tag("equalHousing.png"), {:action =>'admin', :controller => 'main'} %>   
+   		</div>
+   </div>
 
-<br /><br />
-</body> 
+</form>
+</body>
 </html>
-
-
-
-
-
-
-

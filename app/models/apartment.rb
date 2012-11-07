@@ -5,6 +5,7 @@ class Apartment < ActiveRecord::Base
     
     accepts_nested_attributes_for :apartment_image, 
     :reject_if => lambda { |t| t['apartment_image'].nil? }
+    
     has_attached_file :photo, 
     				  :styles => {:small => "200x200>", :large => "800x720>"},
     				  :storage => :s3,
