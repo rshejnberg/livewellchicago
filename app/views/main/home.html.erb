@@ -15,7 +15,7 @@
     <div id="mainHeader">
     	<span class="homeHeader"><%= link_to "Live Well Chicago", root_url %></span>
     		<nav>
-    			<span class="navButton" id="navHome" >home</span>&nbsp&nbsp&nbsp&nbsp&nbsp
+    			<span class="navButton"  id="navHome" >home</span>&nbsp&nbsp&nbsp&nbsp&nbsp
     			<span class="navButton" id="navApartments">apartments </span>&nbsp&nbsp&nbsp&nbsp&nbsp
     			<span class="navButton" id="navForms">forms</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
     			<span class="navButton" id="navLandlords">landlords</span>&nbsp&nbsp&nbsp&nbsp&nbsp
@@ -48,15 +48,7 @@
        		</div>
        		
        		<div id="apartments">
-       			<div id="aptMenu" class="aptMenu" >	        
-       				<p class="menuSel" style="cursor: pointer" id="studioBut"> 	Studio </p><br /><br />
-       				<p class="menuSel" style="cursor: pointer" id="1bdr"> 1BDR </p><br /><br />
-       				<span class="menuSel" style="cursor: pointer" id="2bdr"> 2BDR </span><br /><br />
-       				<span class="menuSel" style="cursor: pointer" id="3bdr"> 3BDR </span><br /><br />
-       				<span class="menuSel" style="cursor: pointer" id="4bdr"> 4+BDR </span><br /><br />
-       				       				<span class="menuSel" style="cursor: pointer" id="all"> All Units </span>
-       			</div>
-       			<div id="aptTables">
+       			       			<div id="aptTables">
        				<div id="aptAll">
 		    			<%= render  :partial => 'apartments/aptAll', :locals => {:apartments => @apartments}%>
 		    		</div>
@@ -161,7 +153,16 @@
 			</div>
 
     	</div>
-    	
+    	<div id="aptMenu" class="aptMenu" >	
+    	<div class="arrow-up"></div>        
+       				<p class="menuSel" style="cursor: pointer" id="studioBut"> 	Studio </p><br /><br />
+       				<p class="menuSel" style="cursor: pointer" id="1bdr"> 1 Bedroom </p><br /><br />
+       				<span class="menuSel" style="cursor: pointer" id="2bdr"> 2 Bedrooms </span><br /><br />
+       				<span class="menuSel" style="cursor: pointer" id="3bdr"> 3 Bedrooms </span><br /><br />
+       				<span class="menuSel" style="cursor: pointer" id="4bdr"> 4+ Bedrooms </span><br /><br />
+       				       				<span class="menuSel" style="cursor: pointer" id="all"> All Units </span>
+       			</div>
+
     	<div id="footer" ><br /><br />
    		 	Live Well Chicago L.L.C  3725 N Western Ave  Chicago, IL 60618 <br />
    		 	All information deemed reliable but not guaranteed. All properties are subject to, change or withdrawal.

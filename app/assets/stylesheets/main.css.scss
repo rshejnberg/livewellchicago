@@ -91,6 +91,7 @@ body {
 			top: -55px;
 			z-index: 14;
 			color: $colGreen;
+			font-family: $fontCursive;
 			.navButton 
 				{ 
 				position: relative; 
@@ -101,7 +102,7 @@ body {
 				z-index: 6; 
 				padding-top: 10px;
 				padding-bottom: 10px;
-				font-family: "Trebuchet MS"; 
+				
 				font-weight: bold; 
 				font-size: 	20px;
   		  		}
@@ -109,13 +110,54 @@ body {
 			}
 
 		}
+#aptMenu 
+		{	
+		//background-color: $colNav;
+		color: $colGreen;
+		line-height: 12px;
+		width: 100px;
+		height: 150px;
+		border-radius: 0px 10px 10px 10px;
+		background-color: $colNav;
+		padding: 13px;
+		position: absolute;
+		top: 80px;
+		left: 650px;			 
+		z-index: 15;
+		border: solid 10px transparent;
+		.arrow-up 
+			{
+			position: relative;
+			top: -25px;
+			right: 0px;
+			width: 0; 
+			height: 0; 
+			border-left: 15px solid transparent;
+			border-right: 15px solid transparent;
+			border-bottom: 15px solid $colNav;
+			}
+		.menuSel 
+			{
+			width: 80px;
+			text-align:  center;
+			cursor: pointer;
+			position:absolute;
+			color: $colOffWhite;
+			font-size: 11px; 
+			padding: 10px; 
+			padding-right: 50px;
+			}
+		.menuSel:hover {color: #98d840; }
+		}
+
 #footer {
-		visibility: hidden;
+		
 		font-size: 10px; 
-		color: black;
-		position: relative; 
-		margin: 0 auto; 
-		width: 900px;  
+		color: white;
+		position: absolute;
+		top: 730px; 
+	
+		width: 1000px;  
 		text-align: center;
 		}
 #mainContainer  
@@ -190,8 +232,6 @@ body {
 	left: 605px;
 	height: 795px;
 	width: 0px;
-	
-	//overflow-x: hidden;
 	overflow: hidden;
 	background-color: rgba(46,41,41,0.84);
 	font-weight: bold;
@@ -255,52 +295,7 @@ body {
 			z-index: 9;
 			overflow: scroll;	
 			color: $colOffWhite;	
-			#aptMenu 
-				{
 				
-				//background-color: $colNav;
-				color: $colGreen;
-				margin-right: 100px;
-				font-weight: bold;
-				z-index: 10; 
-				letter-spacing: 1px; 
-				line-height: 20px;
-				width: 40px;
-				
-				position: relative; 
-				margin: 0 auto;
-				top: 0px; 
-				z-index: 15;
-				.menuSel 
-					{
-					width: 50px;
-					text-align:  center;
-					cursor: pointer;
-					position:absolute;
-					color: $colOffWhite;
-					font-size: 15px; 
-					padding: 10px; 
-					
-					background-color: $colNav;
-					font-weight: bold;
-					
-					border-top: solid 1px #625252;
-					}
-				.menuSel:hover {background-color: #625252; opacity: 0.7;}
-				}
-			#aptMenu 
-				{
-				//background-color: $colNav;
-				color: $colOffWhite;
-				font-weight: bold;
-				 
-				letter-spacing: 1px; 
-				width: 710px; 
-				height: 50px;  
-				position: relative; 
-				margin: 0 auto;
-				
-				}
 			#aptTables 
 				{
 				position: absolute;
@@ -309,7 +304,7 @@ body {
 				height: 550px;
 				overflow-y: scroll;
 				overflow-x: hidden;
-				border-right: solid 10px  $colNav;
+			
 				}
 			}//end apartments
 		#forms 
@@ -346,7 +341,7 @@ body {
 			left: -715px;
 		}
 	}//end splitScreen	
-#aptMenuTable {
+/*#aptMenuTable {
 		position: relative; 
 		width: 950px; 
 		height: 100px; 
@@ -357,23 +352,7 @@ body {
 		background-color: rgba(0,0,0,0.71);
 		color: white; 
 		opacity: 0.9;
-		}
-#show {
-		top: -40px;
-		right: 8%; 
-		position: relative; 
-		}
-#showWrapper {
-		position: relative; 
-		width: 960px; 
-		height: 1200px; 
-		top: 50px; 
-		margin: 0 auto;
-		padding: 20px; 
-		background-color:  #638400;
-		color: white; 
-		border-radius: 5px;
-		}
+		}*/
 
 
 /* Navigation */
@@ -426,7 +405,7 @@ a:link,a:visited {color: #638400; text-decoration:none;}
 
 
 
-#table {border: solid 1px white;}
+
 /* Home-Page Categories */
 
 
@@ -465,78 +444,80 @@ a:link,a:visited {color: #638400; text-decoration:none;}
 		}
 .agentName {font-weight: bold}
 
-/* Apartment Menu Elements */
-/* Apartment Elements */
-#showDescription {
-		position: relative;
-		top: 70px;
-		width: 800px;
-		padding: 40px;
-		margin: 0 auto;
-		left: 7%;
-		background-color: #D8DEAE;
-		color: black;
-		border-radius:10px;
-		}
-#showColumns {
-		-moz-column-count:4; /* Firefox */
-		-webkit-column-count:4; /* Safari and Chrome */
-		-webkit-column-gap: 50px;
-		-moz-column-gap: 50px;
-		column-gap: 50px;
-		column-count:4;
+
+/* Show-Page Elements */
+#showContainer
+	{
+	width: 1220px;
+	height: 675px;
+	background-image: url('banner.jpeg');
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	overflow: scroll;
+	#showApartment
+		{
+		position: absolute;
+		background-color: rgba(146,215,66,0.74);
+		
+		top: 60px;
+		right: 200px;
+		width: 1000px;
+		height: 610px;
+		#showPictureSlide
+			{
+			position: absolute;
+			right: 0px;
 	
+			width: 400px
+			}
+		#showDescription 
+			{
+			position: relative;
+			top: 70px;
+			width: 500px;
+			padding: 40px;
+			#showColumns 
+				{
+				-moz-column-count:4; /* Firefox */
+				-webkit-column-count:4; /* Safari and Chrome */
+				-webkit-column-gap: 50px;
+				-moz-column-gap: 50px;
+				column-gap: 50px;
+				column-count:4;
+				}
+			}
 		}
-/* Logged in Elements */
-.logoutButton {
-		float: left; 
-		position: relative; 
-		top: -130px; 
-		left: 40px;
-		}
-#login{
-		float:center; 
-		background-color:black; 
-		opacity: 0.7;  
-		height: 250px; 
-		text-align: center; 
-		float: center; 
-		color: white; 
-		font-size: 14px
-		}
-.backButton {position: absolute; left: -125px; top: 125px}
+	}
+
+
+
+
+	
+
 
 /* Picture Slide Elements */
 
-#showPictureSlide {
-		position: relative;
-		margin: 0 auto;
-		left: 10%;
-		top: 50px
-		
-		}
-#myGallery {background-color: red;}
+
+
 /*Table Elements */
-table {
-		margin: 0 auto; 
-		width: 800px;
-		}
 
 
-td {padding-bottom: 50px; padding-right: 10px }
-th {padding: 13px}
-tr { padding: 10px; }
+
+
 
 
 
 
 #general {float:center; top: 200px; background-color:black; opacity: 0.7;}
 
-
+/* Admin Interface */
 #formApt {text-align: left; padding: 40px}
+td {padding-bottom: 50px; padding-right: 10px }
+th {padding: 13px}
+tr { padding: 10px; }
 
-
-#aptList{background-color: white; opacity: 0.5; color: black; width: 350px; text-align: left; padding: 20px}
+//#aptList{background-color: white; opacity: 0.5; color: black; width: 350px; text-align: left; padding: 20px}
 
 b {color :#599100;}
 

@@ -70,45 +70,60 @@ $(window).ready(function(){
 				if(currentPage != '#aboutUs')
 					{
 					movePageOffScreen();
-					currentPage = '#aboutUs';
+					currentPage = null;
+					
+					}
+				closeSplitScreen();
+				
+				}
+	function showApartments()
+				{
+				if(currentPage != '#apartments')
+					{
+					movePageOffScreen();
+					currentPage = '#apartments';
 					movePageOnScreen();
 					}
 				splitScreenCheck();
 				}
-	function showApartments()
-				{
-				
-				movePageOffScreen();
-				currentPage = '#apartments';
-				movePageOnScreen();
-				splitScreenCheck();
-				}
 	function showForms()
 				{
-				movePageOffScreen();
-				currentPage = '#forms';
-				movePageOnScreen();
+				if(currentPage != '#forms')
+					{
+					movePageOffScreen();
+					currentPage = '#forms';
+					movePageOnScreen();
+					}
 				splitScreenCheck();
 				}
 	function showContactUs()
 				{
-				movePageOffScreen();
-				currentPage = '#contactUs';
-				movePageOnScreen();
+				if(currentPage != '#contactUs')
+					{
+					movePageOffScreen();
+					currentPage = '#contactUs';
+					movePageOnScreen();
+					}
 				splitScreenCheck();
 				}
 	function showLandlords()
 				{
-				movePageOffScreen();
-				currentPage = '#landlords';
-				movePageOnScreen();
+				if(currentPage != '#landlords')
+					{
+					movePageOffScreen();
+					currentPage = '#landlords';
+					movePageOnScreen();
+					}
 				splitScreenCheck();
 				}
 	function showAboutUs()
 				{
-				movePageOffScreen();
-				currentPage = '#aboutUs';
-				movePageOnScreen();
+				if(currentPage != '#aboutUs')
+					{
+					movePageOffScreen();
+					currentPage = '#aboutUs';
+					movePageOnScreen();
+					}
 				splitScreenCheck();
 				
 				}
@@ -116,14 +131,23 @@ $(window).ready(function(){
 	
 	
 	//Apartments Controls	
-	showAll();
+
 	$("#aptStudioBut").click(function(){showaptStudio()});
 	$("#1bdr").click(function(){show1bdr()});
 	$("#2bdr").click(function(){show2bdr()});
 	$("#3bdr").click(function(){show3bdr()});
 	$("#4bdr").click(function(){show4bdr()});
 	$("#all").click(function(){showAll()});
+	$("#aptMenu").hide();
+	$("#navApartments, #aptMenu").hover(
+		function(){
+			$("#aptMenu").fadeIn(500);
+		}, function(){
+			if(mouseOver().attr('class') != 'aptMenu') $("#aptMenu").fadeOut(500);
+		});
 	function showaptStudio(){
+				splitScreenCheck();
+				showApartments();
 				$("aptStudio").fadeIn('1000');
 				$("#aptOneBdr").hide();
 				$("#aptAll").hide();
@@ -132,6 +156,8 @@ $(window).ready(function(){
 				$("#aptFourPlusBdr").hide();
 				}
 	function show1bdr(){
+				splitScreenCheck();
+				showApartments();
 				$("aptStudio").hide();
 				$("#aptOneBdr").show();
 				$("#aptAll").hide();
@@ -140,6 +166,8 @@ $(window).ready(function(){
 				$("#aptFourPlusBdr").hide();
 				}
 	function show2bdr(){
+				splitScreenCheck();
+				showApartments();
 				$("aptStudio").hide();
 				$("#aptOneBdr").hide();
 				$("#aptAll").hide();
@@ -148,6 +176,8 @@ $(window).ready(function(){
 				$("#aptFourPlusBdr").hide();
 				}
 	function show3bdr(){
+				splitScreenCheck();
+				showApartments();
 				$("aptStudio").hide();
 				$("#aptOneBdr").hide();
 				$("#aptAll").hide();
@@ -156,6 +186,8 @@ $(window).ready(function(){
 				$("#aptFourPlusBdr").hide();
 				}
 	function show4bdr(){
+				splitScreenCheck();
+				showApartments();
 				$("#aptOneBdr").hide();
 				$("#aptAll").hide();
 				$("#aptTwoBdr").hide();
@@ -164,6 +196,8 @@ $(window).ready(function(){
 				$("aptStudio").hide();
 				}
 	function showAll(){
+				splitScreenCheck();
+				showApartments();
 				$("aptStudio").hide();
 				$("#aptOneBdr").hide();
 				$("#aptAll").fadeIn('1000');
