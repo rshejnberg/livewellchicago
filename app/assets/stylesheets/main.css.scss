@@ -91,63 +91,38 @@ body {
 			top: -55px;
 			z-index: 14;
 			color: $colGreen;
-			font-family: $fontCursive;
+			font-family: $fontNarrator;
 			.navButton 
 				{ 
 				position: relative; 
-				top: 25px; 
+				top: 30px; 
 				right: -120px;   
 				cursor: pointer;
 				text-align: center;   
 				z-index: 6; 
 				padding-top: 10px;
-				padding-bottom: 10px;
-				
+				padding-bottom: 5px;
+				border-bottom: solid 2px $colNav;
 				font-weight: bold; 
 				font-size: 	20px;
   		  		}
-  		  	.navButton:hover {color: #93dc5c;}
+  		  	.navButton:hover {color: #93dc5c; border-bottom: solid 2px #93dc5c;}
 			}
 
 		}
 #aptMenu 
 		{	
 		//background-color: $colNav;
-		color: $colGreen;
-		line-height: 12px;
-		width: 100px;
-		height: 150px;
-		border-radius: 0px 10px 10px 10px;
-		background-color: $colNav;
-		padding: 13px;
 		position: absolute;
-		top: 80px;
-		left: 650px;			 
-		z-index: 15;
-		border: solid 10px transparent;
-		.arrow-up 
-			{
-			position: relative;
-			top: -25px;
-			right: 0px;
-			width: 0; 
-			height: 0; 
-			border-left: 15px solid transparent;
-			border-right: 15px solid transparent;
-			border-bottom: 15px solid $colNav;
-			}
-		.menuSel 
-			{
-			width: 80px;
-			text-align:  center;
-			cursor: pointer;
-			position:absolute;
-			color: $colOffWhite;
-			font-size: 11px; 
-			padding: 10px; 
-			padding-right: 50px;
-			}
-		.menuSel:hover {color: #98d840; }
+		
+		//background-color: rgba(45,40,40,0.84);
+		width: 750px;
+		font-weight: bold;
+		top: 51px;
+		left: 10px; 
+		z-index: 9;
+		a {color: #82d547;}
+		.active a {color: black;}
 		}
 
 #footer {
@@ -155,10 +130,29 @@ body {
 		font-size: 10px; 
 		color: white;
 		position: absolute;
-		top: 730px; 
-	
-		width: 1000px;  
-		text-align: center;
+		top: 810px; 
+		left: 611px;
+		line-height: 10px;
+		overflow: hidden;
+		padding-left: 20px;
+		padding-right: 50px;
+		background-color: rgba(19,17,17,0.7);
+		width: 530px;
+		height: 45px;
+		
+
+		#footerText
+			{
+			position: relative;
+			text-align: center;
+			width:100%;
+			}
+		}
+#footerPicture
+		{
+		position: absolute;
+		left: 50px;
+		top: 800px;
 		}
 #mainContainer  
 		{
@@ -230,20 +224,21 @@ body {
 	{
 	position: absolute;
 	left: 605px;
-	height: 795px;
+	height: 755px;
 	width: 0px;
 	overflow: hidden;
 	background-color: rgba(46,41,41,0.84);
-	font-weight: bold;
 	font-family: $fontDosis;
 	border-left: solid 3px $colNav;
 	border-right: solid 3px $colNav;
-	.close
+	.closeScreen
 		{
 		position: absolute;
 		top: 15px;
-		left: 50px;
-		font-size: 40px;
+		left: 10px;
+		font-size: 30px;
+		color: #82d547;
+	
 		z-index: 20;
 		}
 	#aboutUs
@@ -253,35 +248,16 @@ body {
 		line-height: -15px;
 		position: relative;
 		left: -715px;
-		font-weight: bold;
 		z-index: 5;
-		font-family: $fontNarrator;
-		#aboutUsBanner
-			{
-			position: relative;
-			right: 10px;
-			width: 100%;
-			height: 100px;
-			background-color: $colGreen;
-			}
-		#aboutUsBannerText
-			{
-			text-align: center;
-			font-family: $fontCursive;
-			color: $colNav;
-			opacity: 0.8;
-			font-size: 40px;
-			position: relative;
-			left: 20px;
-			top: 40px;
-			}
+		color: white;
+	
 		#aboutUsText
 			{
 			position: relative;
 			top: 75px;
 			padding-left: 10px;
 			padding-right: 10px;
-			color: $colOffWhite;
+			color: white;
 			font-size: 20px;
 			}
 		}//end aboutUs
@@ -294,12 +270,12 @@ body {
 			top: 0px;
 			z-index: 9;
 			overflow: scroll;	
-			color: $colOffWhite;	
+			color: white;	
 				
 			#aptTables 
 				{
 				position: absolute;
-				
+				top: 88px;
 				left: 10px;
 				height: 550px;
 				overflow-y: scroll;
@@ -316,7 +292,13 @@ body {
 			font-size: 20px;
 			top: 0px;
 			left: -715px;
-			color: $colOffWhite;
+			color: white;
+			.formFileButton
+				{color: red; z-index: 10;position: relative; left: 200px;}
+			.formFileButton:hover
+				{
+				color: $colGreen;
+				}
 			}//end forms
 		#landlords 
 			{
@@ -325,7 +307,7 @@ body {
 			text-align: left;
 			font-size: 20px;
 			padding-top: 250px;
-			color: $colOffWhite;
+			color: white;
 			padding: 50px; 
 			position: absolute; 
 			top:0px;
@@ -335,24 +317,38 @@ body {
 			
 			width: 715px;
 			height: 700px;
-			text-align: center;
+			text-align: left;
 			position: absolute;
 			top: 0px;
 			left: -715px;
+			color: white;
+			.agentName {font-weight: bold}
+			#map 
+				{
+				position:relative; 
+				z-index: 1; 
+				left: 00px; 
+				top: -310px
+				}
+			#agents 
+				{
+				position: relative; 
+				left: 50px; 
+				top: 370px;
+				font-size: 15px;
+				}
+			#mapInfo
+				{
+				text-align: right;
+				position: relative; 
+				margin: 0 auto; 
+				left: -150px;
+				font-size: 	15px; 
+				color: white 
+				}
 		}
 	}//end splitScreen	
-/*#aptMenuTable {
-		position: relative; 
-		width: 950px; 
-		height: 100px; 
-		top: -175px; 
-		font-size: 15px;
-		margin: 0 auto; 
-		font-family: "Narrator";
-		background-color: rgba(0,0,0,0.71);
-		color: white; 
-		opacity: 0.9;
-		}*/
+
 
 
 /* Navigation */
@@ -420,29 +416,11 @@ a:link,a:visited {color: #638400; text-decoration:none;}
 		top: 300px;
 }
 /* Home-Page Elements */
-#map {
-		position:relative; 
-		z-index: 1; 
-		left: -180px; 
-		top: -350px
-		}
-#agents {
-		position: relative; 
-		left: 250px; 
-		top: 20px;
-		}
-#mapInfo{
-		text-align: left; 
-		position: relative; 
-		margin: 0 auto; 
-		left: 300px; 
-		color: white 
-		}
+
 .equalHousingPic{
 		height: 50px; 
 		width: 50px
 		}
-.agentName {font-weight: bold}
 
 
 /* Show-Page Elements */
@@ -464,6 +442,9 @@ a:link,a:visited {color: #638400; text-decoration:none;}
 		right: 200px;
 		width: 1000px;
 		height: 610px;
+		color: $colNav;
+		font-family: $fontBariol;
+		b {color: white;}
 		#showPictureSlide
 			{
 			position: absolute;
@@ -474,17 +455,30 @@ a:link,a:visited {color: #638400; text-decoration:none;}
 		#showDescription 
 			{
 			position: relative;
-			top: 70px;
+			top: 40px;
 			width: 500px;
 			padding: 40px;
+			
+			#showDescriptionHeader
+				{
+				position: relative;
+				top: -60px;
+				font-size: 20px;
+				line-height: 20px;
+				}
 			#showColumns 
 				{
+				
+				font-size: 16px;
 				-moz-column-count:4; /* Firefox */
-				-webkit-column-count:4; /* Safari and Chrome */
-				-webkit-column-gap: 50px;
-				-moz-column-gap: 50px;
-				column-gap: 50px;
+				-webkit-column-count:3; /* Safari and Chrome */
+				-webkit-column-gap: 15px;
+				-moz-column-gap: 15px;
+				column-gap: 15px;
 				column-count:4;
+				position: relative;
+				top: -30px;
+				
 				}
 			}
 		}

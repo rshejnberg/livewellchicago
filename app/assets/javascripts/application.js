@@ -19,14 +19,14 @@ $(window).ready(function(){
 	$("#navContactUs").click(function(){showContactUs()});
 	$(".backButton").click(function(){history.back()});
 	$("#aboutUsButton").click(function(){showAboutUs()});
-	$(".close").click(function(){closeSplitScreen()});
+	$(".closeScreen").click(function(){closeSplitScreen()});
 
 	//Split Screen Controls
 	var screenOpen = false;
 	var currentPage = null;
 	function openSplitScreen()
 		{
-		$("#splitScreen").animate({width: '750px'}, 750);
+		$("#splitScreen").animate({width: '709px'}, 750);
 		$("#aboutUsButton").fadeOut(750);
 		screenOpen = true;
 		}
@@ -127,24 +127,44 @@ $(window).ready(function(){
 				splitScreenCheck();
 				
 				}
-	
-	
+
+		$("#aptMenu li").click(function (){
+			$("li").attr('class', ' ');
+			$(this).toggleClass('active')
+			});
 	
 	//Apartments Controls	
-
+	/*var navHoverSettings = 
+		{
+		sensitivity: 4,
+		interval: 75,
+		timeout: 500,
+		over: hoverOver,
+		out: hoverOut
+		}; */
+	var mouseOnAptMenu = false;
+	$(".formFiles").hide()
 	$("#aptStudioBut").click(function(){showaptStudio()});
 	$("#1bdr").click(function(){show1bdr()});
 	$("#2bdr").click(function(){show2bdr()});
 	$("#3bdr").click(function(){show3bdr()});
 	$("#4bdr").click(function(){show4bdr()});
 	$("#all").click(function(){showAll()});
-	$("#aptMenu").hide();
-	$("#navApartments, #aptMenu").hover(
-		function(){
-			$("#aptMenu").fadeIn(500);
-		}, function(){
-			if(mouseOver().attr('class') != 'aptMenu') $("#aptMenu").fadeOut(500);
-		});
+	$("#formFileButton").click(function(){$(".formFiles").fadeIn(200);});
+	$(".aptMenu").hide();
+	/*$("#navApartments, .aptMenu, .menuSel").hoverIntent(navHoverSettings);
+		function hoverOver(){
+			$(".aptMenu").fadeIn(200);
+		}
+		 function hoverOut(){
+		 
+			if(mouseOnAptMenu = false)
+			 $(".aptMenu").fadeOut(200);
+			 
+			
+		}
+	$(".aptMenu").mouseover(function(){ mouseOnAptMenu = true;})
+	$(".aptMenu").mouseout(function(){ mouseOnAptMenu = false; $(".aptMenu").fadeOut(200);})*/
 	function showaptStudio(){
 				splitScreenCheck();
 				showApartments();

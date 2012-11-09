@@ -75,66 +75,52 @@
 				</ul>
 			</div>
 			<div id="showDescription">
+				<div id="showDescriptionHeader">
+				<%= @apartment.location %> 
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<%= @apartment.Bed %> BDR / <%= @apartment.Bath %> BTH
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				$<%= @apartment.Rent %>
+				</div>
 				<div id="showColumns" >
 					<p>
-						<b>Agent:</b>
+						<b>Agent</b>
 						<%= @apartment.agent %>
 					</p>
 					<p>
-						<b>Location:</b>
-						<%= @apartment.location %>
-					</p>
-					<p>
-						<b>Availability:</b>
-						<%= @apartment.availability %>
-					</p>
-					<p>
-						<b>Bed:</b>
-						<%= @apartment.Bed %>
-					</p>
-					<p>
-						<b>Bath:</b>
-						<%= @apartment.Bath %>
-					</p>
-					<p>
-						<b>Rent:</b>
-						$<%= @apartment.Rent %>
-					</p>
-					<p>
-						<b>Pets:</b>
+						<b>Pets</b>
 						<%= @apartment.Pets %>
 					</p>
 					<p>
-						<b>Security deposit:</b>
+						<b>Deposit</b>
 						$<%= @apartment.Security_Deposit %>
 					</p>
 					<p>
-						<b>Parking:</b>
+						<b>Parking</b>
 						<%= @apartment.Parking %>
 					</p>
 					<p>
-						<b>Laundy:</b>
+						<b>Laundry</b>
 						<%= @apartment.Laundy %>
 					</p>
 					<p>
-						<b>Owner:</b>
-						<%= @apartment.Owner %>
-					</p>
-					<p>
-						<b>Date avail:</b>
+						<b>Available </b>
 						<%= @apartment.Date_Avail %>
 					</p>
 					<p>
-						<b>Type heat:</b>
+						<b>Heat</b>
 						<%= @apartment.Type_Heat %>
 					</p>
 					<p>
-						<b>Ac:</b>
+						<b>AC</b>
 						<%= @apartment.AC %>
 					</p>
-				</div>
-				<p>
-					<b>Description:</b>
+				</div>	
+				<p style="font-size: 25px; color:  #dc3b3b;">
+					<%= @apartment.availability %>
+				</p><br />
+				<p style="font-size: 20px">
+				
 					<%= @apartment.description %>
 				</p>
 			</div>

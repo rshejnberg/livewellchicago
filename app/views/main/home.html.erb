@@ -14,13 +14,16 @@
 
     <div id="mainHeader">
     	<span class="homeHeader"><%= link_to "Live Well Chicago", root_url %></span>
+    	
     		<nav>
+    			
     			<span class="navButton"  id="navHome" >home</span>&nbsp&nbsp&nbsp&nbsp&nbsp
     			<span class="navButton" id="navApartments">apartments </span>&nbsp&nbsp&nbsp&nbsp&nbsp
     			<span class="navButton" id="navForms">forms</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
     			<span class="navButton" id="navLandlords">landlords</span>&nbsp&nbsp&nbsp&nbsp&nbsp
     			<span class="navButton" id="navContactUs">contact us</span>
     		</nav>
+    		
    </div>
    
    <div id="mainContainer">
@@ -32,9 +35,9 @@
     	<div id="aboutUsButton"> <span id="text">find out about us</span> </div>
     	
     	<div id="splitScreen">
-	    	<span class="close"> X </span>
+	    	<span class="closeScreen"> <i class="icon-white icon-remove"></i> </span>
     		<div id="aboutUs">
-       			<div id="aboutUsBanner"> <div id="aboutUsBannerText">About Us</div> </div>
+       			
 	       		<p id="aboutUsText">
        		Thanks for your interest in Live Well Chicago,<br /><br />
        		The premier leasing company on the north side of Chicago.  Very often, the thought of looking for a new 				apartment is a daunting task that most dread. Well, dread no more! Unlike most agencies, Live Well Chicago 				strives to make the rental process easy, quick, and free of inconvenience! “How do we do that,"  you ask?
@@ -48,6 +51,16 @@
        		</div>
        		
        		<div id="apartments">
+       		
+       			<ul id="aptMenu" class="nav nav-tabs">
+       				<li class="active" ><a href="#" id="all"> All Units </a></li>
+       				<li><a href="#" id="studioBut">Studio </a></li>
+       				<li><a href="#" id="1bdr">1 Bedroom</a></li>
+       				<li><a href="#" id="2bdr">2 Bedroom</a></li>
+       				<li><a href="#" id="3bdr">3 Bedroom</a></li>
+       				<li><a href="#" id="4bdr"> 4+ Bedrooms </a></li>
+       			</ul>
+
        			       			<div id="aptTables">
        				<div id="aptAll">
 		    			<%= render  :partial => 'apartments/aptAll', :locals => {:apartments => @apartments}%>
@@ -72,12 +85,7 @@
     
 		    <div id="contactUs">
 			    <div id="agents">
-			    	<span class="agentName">Serafin Herrera</span><br />
-			    	Sales and Leasing Specialist<br />
-			    	<img src="assets/phone.png"> 773.908.5185<br />
-			    	<img src="assets/fax.png"> 773.336.8434<br />
-			    	<a href= "mailto:serafin@livewellchgo.com" style="color: beige">serafin@livewellchgo.com</a>        
-			    	<br /><br />
+			    	
 			    	<span class="agentName"> Alexia Kouklowsky </span><br />
 			    	Leasing Specialist and Managing Brocker<br />
 			    	<img src="assets/phone.png"> 773.551.7913<br />
@@ -92,12 +100,18 @@
 			    	<br /><br />
 			    </div>
 			    <div id="map">
-        
+			    	<iframe width="710" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=3725+N+Western+Ave&amp;aq=&amp;sll=41.949405,-87.6824&amp;sspn=0.051068,0.102825&amp;ie=UTF8&amp;hq=&amp;hnear=3725+N+Western+Ave,+Chicago,+Cook,+Illinois+60618&amp;t=m&amp;ll=41.948639,-87.68961&amp;spn=0.022406,0.036478&amp;z=14&amp;output=embed"></iframe><br />
            			<br />
            			<div id="mapInfo">
-           				<br />Live Well Chicago LLC, &nbsp
-           				3725 N Western Ave, &nbsp Chicago, IL 60618 <br />
-           				<img src="assets/phone.png"> 773.840.8104 <img src="assets/fax.png"> 773.537.0321 
+           			<span class="agentName">Serafin Herrera</span><br />
+			    	Sales and Leasing Specialist<br />
+			    	<img src="assets/phone.png"> 773.908.5185<br />
+			    	<img src="assets/fax.png"> 773.336.8434<br />
+			    	<a href= "mailto:serafin@livewellchgo.com" >serafin@livewellchgo.com</a>        
+			    	<br /><br />
+           				<br />Live Well Chicago LLC, <br />
+           				3725 N Western Ave, <br /> Chicago, IL 60618 <br />
+           				<img src="assets/phone.png"> 773.840.8104 <br /><img src="assets/fax.png"> 773.537.0321<br /> 
            				<a href="mailto:officemanager@livewellchgo.com">officemanager@livewellchgo.com</a> 
            				<br />
            			</div>
@@ -119,6 +133,7 @@
            	</div>
     
            	<div id="forms">
+           	<span class="formFileButton"><i class="icon-white icon-folder-open"></i> Forms</span><br />
            	<span class="formFiles"> 
            	<a href="http://www.livewellchgo.com/sitebuildercontent/sitebuilderfiles/rentalapplicationgenerallwc.pdf">
 	        <span class="form-file">rental application</span></a><br />
@@ -153,22 +168,20 @@
 			</div>
 
     	</div>
-    	<div id="aptMenu" class="aptMenu" >	
-    	<div class="arrow-up"></div>        
-       				<p class="menuSel" style="cursor: pointer" id="studioBut"> 	Studio </p><br /><br />
-       				<p class="menuSel" style="cursor: pointer" id="1bdr"> 1 Bedroom </p><br /><br />
-       				<span class="menuSel" style="cursor: pointer" id="2bdr"> 2 Bedrooms </span><br /><br />
-       				<span class="menuSel" style="cursor: pointer" id="3bdr"> 3 Bedrooms </span><br /><br />
-       				<span class="menuSel" style="cursor: pointer" id="4bdr"> 4+ Bedrooms </span><br /><br />
-       				       				<span class="menuSel" style="cursor: pointer" id="all"> All Units </span>
-       			</div>
-
-    	<div id="footer" ><br /><br />
-   		 	Live Well Chicago L.L.C  3725 N Western Ave  Chicago, IL 60618 <br />
+    	
+<div id="footerPicture"><%= link_to image_tag("equalHousing.png"), 
+    		{:action =>'admin', :controller => 'main'} %>  <br /><br />
+    		</div>
+    	<div id="footer" >
+    		
+    		
+    		<span id="footerText">
+   		 	Live Well Chicago L.L.C  3725 N Western Ave  Chicago, IL 60618 
    		 	All information deemed reliable but not guaranteed. All properties are subject to, change or withdrawal.
    		 	<br /> Neither broker(s), agent(s) nor Livewellchicago.com, LLC. shall be responsible for any 
-   		 	typographical errors, misinformation<br /> or misprints, and shall be held totally harmless.<br />
-   		 	<%= link_to image_tag("equalHousing.png"), {:action =>'admin', :controller => 'main'} %>   
+   		 	typographical errors, misinformation or misprints, and shall be held totally harmless.
+   
+    	</span> 
    		</div>
    </div>
 
