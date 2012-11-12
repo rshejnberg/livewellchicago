@@ -290,15 +290,12 @@ body {
 			height: 500px; 
 			padding: 50px; 
 			font-size: 20px;
-			top: 0px;
+			top: -150px;
 			left: -715px;
 			color: white;
-			.formFileButton
-				{color: red; z-index: 10;position: relative; left: 200px;}
-			.formFileButton:hover
-				{
-				color: $colGreen;
-				}
+			a {color: white;}
+			a:hover {color: $colGreen;}
+			.formFiles {position: relative; top: 775px;}
 			}//end forms
 		#landlords 
 			{

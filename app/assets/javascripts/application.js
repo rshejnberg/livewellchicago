@@ -24,6 +24,7 @@ $(window).ready(function(){
 	//Split Screen Controls
 	var screenOpen = false;
 	var currentPage = null;
+	var currentTitle = ".homeTitle";
 	function openSplitScreen()
 		{
 		$("#splitScreen").animate({width: '709px'}, 750);
@@ -54,16 +55,10 @@ $(window).ready(function(){
 		else return;
 		}
 	function movePageOnScreen()
-		{
-		if(currentPage != null)
-			{
-			$(currentPage).animate({left: '0px'}, 750);
-			}
-		}
-	function slideChange()
-		{
-			
-		}
+		{ if(currentPage != null) $(currentPage).animate({left: '0px'}, 750); }
+
+	function moveTitleOnScreen() 
+		{$(currentTitle).animate({top: '-150px'}, 500);}
 	//Show Section Functions
 	function showHome()
 				{
@@ -71,10 +66,11 @@ $(window).ready(function(){
 					{
 					movePageOffScreen();
 					currentPage = null;
-					
 					}
 				closeSplitScreen();
-				
+				moveTitleOffScreen();
+				currentTitle = '.homeTitle';
+				moveTitleOnScreen();
 				}
 	function showApartments()
 				{
@@ -92,7 +88,9 @@ $(window).ready(function(){
 					{
 					movePageOffScreen();
 					currentPage = '#forms';
+					currentTitle = '.landlordsTitle';
 					movePageOnScreen();
+					
 					}
 				splitScreenCheck();
 				}
@@ -115,6 +113,9 @@ $(window).ready(function(){
 					movePageOnScreen();
 					}
 				splitScreenCheck();
+				moveTitleOffScreen();
+				currentTitle = '.landlordsTitle';
+				moveTitleOnScreen();
 				}
 	function showAboutUs()
 				{
@@ -143,14 +144,13 @@ $(window).ready(function(){
 		out: hoverOut
 		}; */
 	var mouseOnAptMenu = false;
-	$(".formFiles").hide()
+
 	$("#aptStudioBut").click(function(){showaptStudio()});
 	$("#1bdr").click(function(){show1bdr()});
 	$("#2bdr").click(function(){show2bdr()});
 	$("#3bdr").click(function(){show3bdr()});
 	$("#4bdr").click(function(){show4bdr()});
 	$("#all").click(function(){showAll()});
-	$("#formFileButton").click(function(){$(".formFiles").fadeIn(200);});
 	$(".aptMenu").hide();
 	/*$("#navApartments, .aptMenu, .menuSel").hoverIntent(navHoverSettings);
 		function hoverOver(){
