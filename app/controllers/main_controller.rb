@@ -3,11 +3,11 @@ class MainController < ApplicationController
     skip_before_filter :authorize, :only => :home
     def home
       @apartments = Apartment.all
-      @studio = Apartment.find(:all, :conditions => ["bed = 0"])
-      @oneBdr = Apartment.find(:all, :conditions => ["bed = 0"])
-      @twoBdr = Apartment.find(:all, :conditions => ["bed = 0"])
-      @threeBdr = Apartment.find(:all, :conditions => ["bed = 0"])
-      @fourPlusBdr = Apartment.find(:all, :conditions => ["bed = 0"])   
+      @studio = Apartment.all
+      @oneBdr = Apartment.all
+      @twoBdr = Apartment.all
+      @threeBdr = Apartment.all
+      @fourPlusBdr = Apartment.all  
   end
 
   def admin
