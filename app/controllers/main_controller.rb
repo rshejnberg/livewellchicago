@@ -2,7 +2,12 @@ class MainController < ApplicationController
 	layout :resolve_layout
     skip_before_filter :authorize, :only => :home
     def home
- 
+      @apartments = Apartment.all
+      @studio = Apartment.where("bed = '0'").all
+      @oneBdr = Apartment.where("bed = '1'").all
+      @twoBdr = Apartment.where("bed = '2'").all
+      @threeBdr = Apartment.where("bed = '3'").all
+      @fourPlusBdr = Apartment.where("bed = '4'").all   
   end
 
   def admin
